@@ -28,9 +28,9 @@
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="group" id="2000">
-				<left>65</left>
-				<top>160</top>
-				<height>830</height>
+				<left>60</left>
+				<top>120</top>
+				<bottom>0</bottom>
 				<animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
 					<effect type="slide" end="0,20" time="60" tween="sine" />
 					<effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
@@ -60,18 +60,21 @@
 							<param name="widget_header" value="$LOCALIZE[31010]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5100"/>
+							<param name="dim_extra" value="ControlGroup(2000).HasFocus"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
 							<param name="content_path" value="special://skin/playlists/recent_unwatched_movies.xsp"/>
 							<param name="widget_header" value="$LOCALIZE[20386]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5200"/>
+							<param name="dim_extra" value="ControlGroup(2000).HasFocus | Integer.IsGreater(Container(5100).NumItems,0)"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
 							<param name="content_path" value="special://skin/playlists/unwatched_movies.xsp"/>
 							<param name="widget_header" value="$LOCALIZE[31007]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5300"/>
+							<param name="dim_extra" value="ControlGroup(2000).HasFocus | Integer.IsGreater(Container(5100).NumItems,0) | Integer.IsGreater(Container(5200).NumItems,0)"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
 							<param name="content_path" value="special://skin/playlists/random_movies.xsp"/>
@@ -79,6 +82,7 @@
 							<param name="widget_target" value="videos"/>
 							<param name="browse_mode" value="never"/>
 							<param name="list_id" value="5400"/>
+							<param name="dim_extra" value="ControlGroup(2000).HasFocus | Integer.IsGreater(Container(5100).NumItems,0) | Integer.IsGreater(Container(5200).NumItems,0) | Integer.IsGreater(Container(5300).NumItems,0)"/>
 						</include>
 						<include content="WidgetListCategories" condition="Library.HasContent(movies)">
 							<param name="content_path" value="videodb://movies/genres/"/>
@@ -87,6 +91,7 @@
 							<param name="list_id" value="5500"/>
 							<param name="icon" value="$VAR[WidgetGenreIconVar]"/>
 							<param name="icon_height" value="70"/>
+							<param name="dim_extra" value="ControlGroup(2000).HasFocus | Integer.IsGreater(Container(5100).NumItems,0) | Integer.IsGreater(Container(5200).NumItems,0) | Integer.IsGreater(Container(5300).NumItems,0) | Integer.IsGreater(Container(5400).NumItems,0)"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
 							<param name="content_path" value="videodb://movies/sets/"/>
@@ -96,6 +101,7 @@
 							<param name="list_id" value="5600"/>
 							<param name="onclick_condition" value="true"/>
 							<param name="onclick_action" value="$VAR[MovieSetOnClickActionVar]"/>
+							<param name="dim_extra" value="ControlGroup(2000).HasFocus | Integer.IsGreater(Container(5100).NumItems,0) | Integer.IsGreater(Container(5200).NumItems,0) | Integer.IsGreater(Container(5300).NumItems,0) | Integer.IsGreater(Container(5400).NumItems,0) | Integer.IsGreater(Container(5500).NumItems,0)"/>
 						</include>
 					</control>
 					<include content="ImageWidget" condition="!Library.HasContent(movies)">
@@ -133,12 +139,14 @@
 							<param name="list_id" value="6100"/>
 							<param name="onclick_condition" value="true"/>
 							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="ControlGroup(2000).HasFocus"/>
 						</include>
 						<include content="WidgetListEpisodes" condition="Library.HasContent(tvshows)">
 							<param name="content_path" value="special://skin/playlists/recent_unwatched_episodes.xsp"/>
 							<param name="widget_header" value="$LOCALIZE[20387]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="6200"/>
+							<param name="dim_extra" value="ControlGroup(2000).HasFocus | Integer.IsGreater(Container(6100).NumItems,0)"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
 							<param name="content_path" value="special://skin/playlists/unwatched_tvshows.xsp"/>
@@ -147,6 +155,7 @@
 							<param name="list_id" value="6300"/>
 							<param name="onclick_condition" value="true"/>
 							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="ControlGroup(2000).HasFocus | Integer.IsGreater(Container(6100).NumItems,0) | Integer.IsGreater(Container(6200).NumItems,0)"/>
 						</include>
 						<include content="WidgetListCategories" condition="Library.HasContent(tvshows)">
 							<param name="content_path" value="videodb://tvshows/genres/"/>
@@ -155,6 +164,7 @@
 							<param name="list_id" value="6400"/>
 							<param name="icon" value="$VAR[WidgetGenreIconVar]"/>
 							<param name="icon_height" value="70"/>
+							<param name="dim_extra" value="ControlGroup(2000).HasFocus | Integer.IsGreater(Container(6100).NumItems,0) | Integer.IsGreater(Container(6200).NumItems,0) | Integer.IsGreater(Container(6300).NumItems,0)"/>
 						</include>
 						<include content="WidgetListCategories" condition="Library.HasContent(tvshows)">
 							<param name="content_path" value="videodb://tvshows/studios/"/>
@@ -163,6 +173,7 @@
 							<param name="list_id" value="6500"/>
 							<param name="icon" value="$VAR[WidgetStudioIconVar]"/>
 							<param name="icon_height" value="70"/>
+							<param name="dim_extra" value="ControlGroup(2000).HasFocus | Integer.IsGreater(Container(6100).NumItems,0) | Integer.IsGreater(Container(6200).NumItems,0) | Integer.IsGreater(Container(6300).NumItems,0) | Integer.IsGreater(Container(6400).NumItems,0)"/>
 						</include>
 					</control>
 					<include content="ImageWidget" condition="!Library.HasContent(tvshows)">
@@ -604,34 +615,6 @@
 						<onleft>SetFocus(9000,99,absolute)</onleft>
 						<onright>noop</onright>
 					</control>
-				</control>
-			</control>
-			<include>BottomBar</include>
-			<control type="group">
-				<depth>DepthBars</depth>
-				<bottom>0</bottom>
-				<height>70</height>
-				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlags">
-					<param name="infolabel_prefix" value="Container." />
-					<param name="resolution_var" value="$VAR[ContainerResolutionFlagVar]" />
-				</include>
-				<control type="rss">
-					<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
-					<left>0</left>
-					<bottom>0</bottom>
-					<height>39</height>
-					<width>100%</width>
-					<font>font12</font>
-					<urlset>1</urlset>
-					<hitrect x="-100" y="0" w="1" h="1" />
-					<titlecolor>button_focus</titlecolor>
-					<textcolor>button_focus</textcolor>
-					<shadowcolor>text_shadow</shadowcolor>
-					<headlinecolor>FFC0C0C0</headlinecolor>
-					<visible>Skin.HasSetting(hide_mediaflags) | !ControlGroup(2000).HasFocus</visible>
-					<animation effect="fade" time="300">VisibleChange</animation>
 				</control>
 			</control>
 		</control>

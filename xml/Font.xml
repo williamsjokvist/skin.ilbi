@@ -145,6 +145,11 @@
 			<size>26</size>
 		</font>
 		<font>
+			<name>font27_title</name>
+			<filename>Nunito-SemiBold.ttf</filename>
+			<size>27</size>
+		</font>
+		<font>
 			<name>font27_menu</name>
 			<filename>Nunito-Medium.ttf</filename>
 			<size>27</size>

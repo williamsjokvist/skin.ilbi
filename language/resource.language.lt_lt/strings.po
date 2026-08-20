@@ -99,10 +99,6 @@ msgctxt "#31016"
 msgid "Recently played channels"
 msgstr "Neseniai žiūrėti kanalai"
 
-msgctxt "#31017"
-msgid "Rated"
-msgstr "Įvertinta"
-
 #. home screen channel widget: recently played radio channels. (please note that in some non-english languages #31018 and #31016 might not be equal)
 msgctxt "#31018"
 msgid "Recently played channels"

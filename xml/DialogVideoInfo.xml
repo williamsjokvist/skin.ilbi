@@ -223,8 +223,8 @@
 					</include>
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="157" />
-						<param name="label" value="[COLOR button_focus]$LOCALIZE[31017]: [/COLOR]$INFO[ListItem.Mpaa]" />
-						<param name="altlabel" value="$LOCALIZE[31017]: $INFO[ListItem.Mpaa]" />
+						<param name="label" value="$INFO[ListItem.Mpaa]" />
+						<param name="altlabel" value="$INFO[ListItem.Mpaa]" />
 						<param name="visible" value="!String.IsEmpty(ListItem.Mpaa)" />
 					</include>
 					<include content="InfoDialogMetadata">
