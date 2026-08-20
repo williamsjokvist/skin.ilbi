@@ -1,0 +1,28 @@
+﻿[B]0.0.1[/B]
+• Initial commit based on Estuary.
+
+[B]New home screen[/B]
+• The side menu is now a centred nav bar across the top of the screen, with text labels
+  and a search icon.
+• The highlight behind the selected item slides across as you move between items, and
+  rounds into a circle over search.
+• Removed the clock bar and Kodi logo from the top of the home screen.
+
+[B]Movies and TV shows only[/B]
+• Music, live TV, radio, games, pictures, add-ons and weather have been removed
+  throughout the skin.
+• "TV shows" is now just "Shows".
+
+[B]Kodi Options[/B]
+• The power menu is now "Kodi Options" and includes Settings, so the separate settings
+  button is gone. It opens from the Kodi logo in the top right.
+
+[B]Darker, simpler look[/B]
+• Black background everywhere, with the patterned backgrounds removed.
+• One fixed colour scheme and one theme instead of a picker for each.
+• New typeface throughout: Nunito.
+
+[B]For developers[/B]
+• Fonts are downloaded by a script rather than committed to the repo (mise task:
+  install-fonts).
+• scripts/mock-library.sh builds a sample movie/TV library for working on the skin.

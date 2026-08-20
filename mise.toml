@@ -1,0 +1,7 @@
+[tasks.install-fonts]
+description = "Fetch fonts from Google Fonts"
+run = "./scripts/install-fonts.sh"
+
+[tasks.generate-mocks]
+description = "Generate a mock Kodi library"
+run = "./scripts/generate-mock-library.sh"

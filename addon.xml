@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.ilbi" version="0.0.1" name="Ilbi" provider-name="williamsjokvist">
+	<requires>
+		<import addon="xbmc.gui" version="5.17.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
+		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
+		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
+		<res width="2040" height="1080" aspect="17:9" default="false" folder="xml" />
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+		<res width="2560" height="1080" aspect="21:9" default="false" folder="xml" />
+		<res width="2338" height="1080" aspect="19.5:9" default="false" folder="xml" />
+		<res width="2160" height="1080" aspect="18:9" default="false" folder="xml" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<license>Creative Commons Attribution Non-Commercial Share-Alike 4.0</license>
+		<forum />
+		<source>https://github.com/williamsjokvist/skin.ilbi/</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+		<summary lang="af_ZA">Minimalistiese oortreksel in stroomdiens-styl deur williamsjokvist</summary>
+		<summary lang="ar_SA">مظهر بسيط بأسلوب خدمات البث من williamsjokvist</summary>
+		<summary lang="be_BY">Мінімалістычная абалонка ў стылі струменевых сэрвісаў ад williamsjokvist</summary>
+		<summary lang="bg_BG">Минималистичен облик в стил стрийминг услуга от williamsjokvist</summary>
+		<summary lang="ca_ES">Aparença minimalista a l&apos;estil dels serveis de reproducció en línia, per williamsjokvist</summary>
+		<summary lang="cs_CZ">Minimalistický vzhled ve stylu streamovacích služeb od williamsjokvist</summary>
+		<summary lang="cy_GB">Croen minimalaidd ar arddull gwasanaeth ffrydio gan williamsjokvist</summary>
+		<summary lang="da_DK">Minimalistisk brugerflade i streamingtjeneste-stil af williamsjokvist</summary>
+		<summary lang="de_DE">Minimalistischer Skin im Stil eines Streamingdienstes von williamsjokvist</summary>
+		<summary lang="el_GR">Μινιμαλιστικό κέλυφος σε στυλ υπηρεσίας ροής από τον williamsjokvist</summary>
+		<summary lang="en_GB">Minimalist, streaming‑service‑style skin by williamsjokvist</summary>
+		<summary lang="en_NZ">Minimalist, streaming‑service‑style skin by williamsjokvist</summary>
+		<summary lang="en_US">Minimalist, streaming‑service‑style skin by williamsjokvist</summary>
+		<summary lang="es_AR">Skin minimalista con el estilo de un servicio de streaming, por williamsjokvist</summary>
+		<summary lang="es_ES">Skin minimalista con el estilo de un servicio de streaming, por williamsjokvist</summary>
+		<summary lang="es_MX">Máscara minimalista con el estilo de un servicio de streaming, por williamsjokvist</summary>
+		<summary lang="et_EE">Minimalistlik voogedastusteenuse stiilis rüü, autor williamsjokvist</summary>
+		<summary lang="eu_ES">Streaming zerbitzuen estiloko azal minimalista, williamsjokvist-ek egina</summary>
+		<summary lang="fa_IR">پوسته‌ای کمینه‌گرا به سبک سرویس‌های پخش آنلاین از williamsjokvist</summary>
+		<summary lang="fi_FI">Minimalistinen, suoratoistopalvelun tyylinen ulkoasu, tekijä williamsjokvist</summary>
+		<summary lang="fr_CA">Habillage minimaliste dans le style d&apos;un service de diffusion en continu par williamsjokvist</summary>
+		<summary lang="fr_FR">Habillage minimaliste dans le style d&apos;un service de streaming par williamsjokvist</summary>
+		<summary lang="gl_ES">Pel minimalista ao estilo dos servizos de streaming, por williamsjokvist</summary>
+		<summary lang="he_IL">מעטפת מינימליסטית בסגנון שירותי הזרמה מאת williamsjokvist</summary>
+		<summary lang="hr_HR">Minimalistička presvlaka u stilu usluga strujanja, autor williamsjokvist</summary>
+		<summary lang="hu_HU">Minimalista, streamingszolgáltatás stílusú felszín. Készítette williamsjokvist</summary>
+		<summary lang="id_ID">Skin minimalis bergaya layanan streaming oleh williamsjokvist</summary>
+		<summary lang="is_IS">Lágstemmt skinn í stíl streymisveitna eftir williamsjokvist</summary>
+		<summary lang="it_IT">Skin minimalista in stile servizio di streaming di williamsjokvist</summary>
+		<summary lang="ja_JP">配信サービス風のミニマルなスキン（作者: williamsjokvist）</summary>
+		<summary lang="ko_KR">williamsjokvist가 만든 스트리밍 서비스 스타일의 미니멀한 스킨</summary>
+		<summary lang="lt_LT">Minimalistinė, srautinio transliavimo paslaugų stiliaus teminė išvaizda, kurią sukūrė williamsjokvist</summary>
+		<summary lang="lv_LV">Minimālistisks straumēšanas pakalpojuma stila apvalks no williamsjokvist</summary>
+		<summary lang="mk_MK">Минималистичка маска во стил на стриминг сервис од williamsjokvist</summary>
+		<summary lang="ms_MY">Kulit minimalis bergaya perkhidmatan penstriman oleh williamsjokvist</summary>
+		<summary lang="nb_NO">Minimalistisk drakt i strømmetjeneste-stil av williamsjokvist</summary>
+		<summary lang="nl_NL">Minimalistische skin in de stijl van een streamingdienst door williamsjokvist</summary>
+		<summary lang="pl_PL">Minimalistyczna skóra w stylu serwisów streamingowych autorstwa williamsjokvist</summary>
+		<summary lang="pt_BR">Skin minimalista no estilo de um serviço de streaming, por williamsjokvist</summary>
+		<summary lang="pt_PT">Visual minimalista ao estilo de um serviço de streaming, de williamsjokvist</summary>
+		<summary lang="ro_RO">Temă minimalistă în stilul unui serviciu de streaming, de williamsjokvist</summary>
+		<summary lang="ru_RU">Минималистичная обложка в стиле стримингового сервиса от williamsjokvist</summary>
+		<summary lang="sk_SK">Minimalistický vzhľad v štýle streamovacích služieb od williamsjokvist</summary>
+		<summary lang="sr_RS">Минималистичка маска у стилу стриминг сервиса, аутор williamsjokvist</summary>
+		<summary lang="sr_RS@latin">Minimalistička maska u stilu striming servisa, autor williamsjokvist</summary>
+		<summary lang="sv_SE">Minimalistiskt skal i streamingtjänst-stil av williamsjokvist</summary>
+		<summary lang="szl">Minimalistyczno skōra we stylu strumiyniowych serwisōw ôd williamsjokvist</summary>
+		<summary lang="th_TH">หน้าตาแบบมินิมอลในสไตล์บริการสตรีมมิง โดย williamsjokvist</summary>
+		<summary lang="tr_TR">williamsjokvist tarafından yayın hizmeti tarzında minimalist dış görünüm</summary>
+		<summary lang="uk_UA">Мінімалістична обкладинка у стилі стрімінгового сервісу від williamsjokvist</summary>
+		<summary lang="vi_VN">Giao diện tối giản theo phong cách dịch vụ phát trực tuyến của williamsjokvist</summary>
+		<summary lang="zh_CN">williamsjokvist 制作的流媒体服务风格极简皮肤</summary>
+		<summary lang="zh_TW">williamsjokvist 製作的串流服務風格極簡佈景主題</summary>
+		<description lang="af_ZA">Ilbi is &apos;n minimalistiese koppelvlak in die styl van &apos;n stroomdiens</description>
+		<description lang="ar_SA">إلبي واجهة بسيطة بأسلوب خدمات البث</description>
+		<description lang="be_BY">Ilbi — мінімалістычны інтэрфейс у стылі струменевых сэрвісаў</description>
+		<description lang="bg_BG">Ilbi е минималистичен интерфейс в стил стрийминг услуга</description>
+		<description lang="ca_ES">Ilbi és una interfície minimalista a l&apos;estil dels serveis de reproducció en línia</description>
+		<description lang="cs_CZ">Ilbi je minimalistické rozhraní ve stylu streamovacích služeb</description>
+		<description lang="cy_GB">Mae Ilbi yn rhyngwyneb minimalaidd ar arddull gwasanaeth ffrydio</description>
+		<description lang="da_DK">Ilbi er en minimalistisk brugerflade i stil med en streamingtjeneste</description>
+		<description lang="de_DE">Ilbi ist eine minimalistische Oberfläche im Stil eines Streamingdienstes</description>
+		<description lang="el_GR">Το Ilbi είναι ένα μινιμαλιστικό περιβάλλον σε στυλ υπηρεσίας ροής</description>
+		<description lang="en_GB">Ilbi is a minimalist, streaming‑service‑style interface</description>
+		<description lang="en_NZ">Ilbi is a minimalist, streaming‑service‑style interface</description>
+		<description lang="en_US">Ilbi is a minimalist, streaming‑service‑style interface</description>
+		<description lang="es_AR">Ilbi es una interfaz minimalista con el estilo de un servicio de streaming</description>
+		<description lang="es_ES">Ilbi es una interfaz minimalista con el estilo de un servicio de streaming</description>
+		<description lang="es_MX">Ilbi es una interfaz minimalista con el estilo de un servicio de streaming</description>
+		<description lang="et_EE">Ilbi on minimalistlik voogedastusteenuse stiilis liides</description>
+		<description lang="eu_ES">Ilbi streaming zerbitzuen estiloko interfaze minimalista bat da</description>
+		<description lang="fa_IR">ایلبی یک واسط کاربری کمینه‌گرا به سبک سرویس‌های پخش آنلاین است</description>
+		<description lang="fi_FI">Ilbi on minimalistinen, suoratoistopalvelun tyylinen käyttöliittymä</description>
+		<description lang="fr_CA">Ilbi est une interface minimaliste dans le style d&apos;un service de diffusion en continu</description>
+		<description lang="fr_FR">Ilbi est une interface minimaliste dans le style d&apos;un service de streaming</description>
+		<description lang="gl_ES">Ilbi é unha interface minimalista ao estilo dos servizos de streaming</description>
+		<description lang="he_IL">Ilbi היא ממשק מינימליסטי בסגנון שירותי הזרמה</description>
+		<description lang="hr_HR">Ilbi je minimalističko sučelje u stilu usluga strujanja</description>
+		<description lang="hu_HU">Az Ilbi egy minimalista, streamingszolgáltatás stílusú felület</description>
+		<description lang="id_ID">Ilbi adalah antarmuka minimalis bergaya layanan streaming</description>
+		<description lang="is_IS">Ilbi er lágstemmt viðmót í stíl streymisveitna</description>
+		<description lang="it_IT">Ilbi è un&apos;interfaccia minimalista in stile servizio di streaming</description>
+		<description lang="ja_JP">Ilbi は配信サービス風のミニマルなインターフェースです</description>
+		<description lang="ko_KR">Ilbi는 스트리밍 서비스 스타일의 미니멀한 인터페이스입니다</description>
+		<description lang="lt_LT">Ilbi yra minimalistinė, srautinio transliavimo paslaugų stiliaus sąsaja</description>
+		<description lang="lv_LV">Ilbi ir minimālistiska, straumēšanas pakalpojuma stila saskarne</description>
+		<description lang="mk_MK">Ilbi е минималистички интерфејс во стил на стриминг сервис</description>
+		<description lang="ms_MY">Ilbi ialah antara muka minimalis bergaya perkhidmatan penstriman</description>
+		<description lang="nb_NO">Ilbi er et minimalistisk grensesnitt i stil med en strømmetjeneste</description>
+		<description lang="nl_NL">Ilbi is een minimalistische interface in de stijl van een streamingdienst</description>
+		<description lang="pl_PL">Ilbi to minimalistyczny interfejs w stylu serwisów streamingowych</description>
+		<description lang="pt_BR">O Ilbi é uma interface minimalista no estilo de um serviço de streaming</description>
+		<description lang="pt_PT">O Ilbi é uma interface minimalista ao estilo de um serviço de streaming</description>
+		<description lang="ro_RO">Ilbi este o interfață minimalistă în stilul unui serviciu de streaming</description>
+		<description lang="ru_RU">Ilbi — минималистичный интерфейс в стиле стримингового сервиса</description>
+		<description lang="sk_SK">Ilbi je minimalistické rozhranie v štýle streamovacích služieb</description>
+		<description lang="sr_RS">Ilbi је минималистички интерфејс у стилу стриминг сервиса</description>
+		<description lang="sr_RS@latin">Ilbi je minimalistički interfejs u stilu striming servisa</description>
+		<description lang="sv_SE">Ilbi är ett minimalistiskt gränssnitt i stil med en streamingtjänst</description>
+		<description lang="szl">Ilbi je minimalistyczny interfejs we stylu strumiyniowych serwisōw</description>
+		<description lang="th_TH">Ilbi เป็นอินเทอร์เฟซแบบมินิมอลในสไตล์บริการสตรีมมิง</description>
+		<description lang="tr_TR">Ilbi, yayın hizmeti tarzında minimalist bir arayüzdür</description>
+		<description lang="uk_UA">Ilbi — мінімалістичний інтерфейс у стилі стрімінгового сервісу</description>
+		<description lang="vi_VN">Ilbi là giao diện tối giản theo phong cách dịch vụ phát trực tuyến</description>
+		<description lang="zh_CN">Ilbi 是一款流媒体服务风格的极简界面</description>
+		<description lang="zh_TW">Ilbi 是一款串流服務風格的極簡介面</description>
+		<disclaimer lang="af_ZA">Ondersteun slegs flieks en TV-reekse</disclaimer>
+		<disclaimer lang="ar_SA">يدعم الأفلام والمسلسلات التلفزيونية فقط</disclaimer>
+		<disclaimer lang="be_BY">Падтрымліваюцца толькі фільмы і серыялы</disclaimer>
+		<disclaimer lang="bg_BG">Поддържа само филми и телевизионни сериали</disclaimer>
+		<disclaimer lang="ca_ES">Només admet pel·lícules i sèries de televisió</disclaimer>
+		<disclaimer lang="cs_CZ">Podporuje pouze filmy a televizní seriály</disclaimer>
+		<disclaimer lang="cy_GB">Dim ond ffilmiau a rhaglenni teledu sy&apos;n cael eu cynnal</disclaimer>
+		<disclaimer lang="da_DK">Understøtter kun film og tv-serier</disclaimer>
+		<disclaimer lang="de_DE">Unterstützt nur Filme und Serien</disclaimer>
+		<disclaimer lang="el_GR">Υποστηρίζει μόνο ταινίες και τηλεοπτικές σειρές</disclaimer>
+		<disclaimer lang="en_GB">Only supports movies and TV shows</disclaimer>
+		<disclaimer lang="en_NZ">Only supports movies and TV shows</disclaimer>
+		<disclaimer lang="en_US">Only supports movies and TV shows</disclaimer>
+		<disclaimer lang="es_AR">Solo admite películas y series de TV</disclaimer>
+		<disclaimer lang="es_ES">Solo admite películas y series de TV</disclaimer>
+		<disclaimer lang="es_MX">Solo admite películas y series de TV</disclaimer>
+		<disclaimer lang="et_EE">Toetab ainult filme ja telesarju</disclaimer>
+		<disclaimer lang="eu_ES">Filmak eta telesailak soilik onartzen ditu</disclaimer>
+		<disclaimer lang="fa_IR">تنها از فیلم‌ها و سریال‌های تلویزیونی پشتیبانی می‌کند</disclaimer>
+		<disclaimer lang="fi_FI">Tukee vain elokuvia ja TV-sarjoja</disclaimer>
+		<disclaimer lang="fr_CA">Ne prend en charge que les films et les séries télévisées</disclaimer>
+		<disclaimer lang="fr_FR">Ne prend en charge que les films et les séries télévisées</disclaimer>
+		<disclaimer lang="gl_ES">Só admite películas e series de televisión</disclaimer>
+		<disclaimer lang="he_IL">תומך בסרטים ובסדרות טלוויזיה בלבד</disclaimer>
+		<disclaimer lang="hr_HR">Podržava samo filmove i TV serije</disclaimer>
+		<disclaimer lang="hu_HU">Csak filmeket és sorozatokat támogat</disclaimer>
+		<disclaimer lang="id_ID">Hanya mendukung film dan acara TV</disclaimer>
+		<disclaimer lang="is_IS">Styður aðeins kvikmyndir og sjónvarpsþætti</disclaimer>
+		<disclaimer lang="it_IT">Supporta solo film e serie TV</disclaimer>
+		<disclaimer lang="ja_JP">映画とテレビ番組のみ対応しています</disclaimer>
+		<disclaimer lang="ko_KR">영화와 TV 프로그램만 지원합니다</disclaimer>
+		<disclaimer lang="lt_LT">Palaiko tik filmus ir TV serialus</disclaimer>
+		<disclaimer lang="lv_LV">Atbalsta tikai filmas un TV pārraides</disclaimer>
+		<disclaimer lang="mk_MK">Поддржува само филмови и ТВ серии</disclaimer>
+		<disclaimer lang="ms_MY">Hanya menyokong filem dan rancangan TV</disclaimer>
+		<disclaimer lang="nb_NO">Støtter bare filmer og TV-serier</disclaimer>
+		<disclaimer lang="nl_NL">Ondersteunt alleen films en tv-series</disclaimer>
+		<disclaimer lang="pl_PL">Obsługuje tylko filmy i seriale telewizyjne</disclaimer>
+		<disclaimer lang="pt_BR">Suporta apenas filmes e séries de TV</disclaimer>
+		<disclaimer lang="pt_PT">Apenas suporta filmes e séries de TV</disclaimer>
+		<disclaimer lang="ro_RO">Suportă doar filme și seriale TV</disclaimer>
+		<disclaimer lang="ru_RU">Поддерживаются только фильмы и сериалы</disclaimer>
+		<disclaimer lang="sk_SK">Podporuje iba filmy a televízne seriály</disclaimer>
+		<disclaimer lang="sr_RS">Подржава само филмове и ТВ серије</disclaimer>
+		<disclaimer lang="sr_RS@latin">Podržava samo filmove i TV serije</disclaimer>
+		<disclaimer lang="sv_SE">Stöder endast filmer och TV-serier</disclaimer>
+		<disclaimer lang="szl">Podpiyrŏ ino filmy i telewizyjne seryje</disclaimer>
+		<disclaimer lang="th_TH">รองรับเฉพาะภาพยนตร์และรายการทีวีเท่านั้น</disclaimer>
+		<disclaimer lang="tr_TR">Yalnızca filmleri ve TV dizilerini destekler</disclaimer>
+		<disclaimer lang="uk_UA">Підтримуються лише фільми та серіали</disclaimer>
+		<disclaimer lang="vi_VN">Chỉ hỗ trợ phim và chương trình TV</disclaimer>
+		<disclaimer lang="zh_CN">仅支持电影和电视剧。</disclaimer>
+		<disclaimer lang="zh_TW">僅支援電影與電視節目</disclaimer>
+	</extension>
+</addon>
