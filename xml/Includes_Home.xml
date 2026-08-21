@@ -60,6 +60,67 @@
 			</control>
 		</definition>
 	</include>
+	<include name="HomeWideLayout">
+		<definition>
+			<control type="image">
+				<description>opaque backing: stops posters showing through while the fanart cross-fades</description>
+				<left>0</left>
+				<top>0</top>
+				<width>1020</width>
+				<height>465</height>
+				<texture>colors/black.png</texture>
+			</control>
+			<control type="image">
+				<description>fanart</description>
+				<left>0</left>
+				<top>0</top>
+				<width>1020</width>
+				<height>465</height>
+				<fadetime>300</fadetime>
+				<texture background="true" fallback="DefaultVideo.png">$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)]</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="image">
+				<description>bottom scrim so the logo stays legible</description>
+				<left>0</left>
+				<top>265</top>
+				<width>1020</width>
+				<height>200</height>
+				<texture colordiffuse="DD000000">overlays/overlayfade.png</texture>
+			</control>
+			<control type="image">
+				<description>rounds the corners against the black background</description>
+				<left>0</left>
+				<top>0</top>
+				<width>1020</width>
+				<height>465</height>
+				<texture border="24">poster_mask.png</texture>
+			</control>
+			<control type="image">
+				<description>clearlogo, bottom left</description>
+				<left>28</left>
+				<top>305</top>
+				<width>320</width>
+				<height>120</height>
+				<aspectratio align="left" aligny="bottom">keep</aspectratio>
+				<fadetime>250</fadetime>
+				<texture>$INFO[Container($PARAM[list_id]).ListItem.Art(clearlogo)]</texture>
+				<visible>!String.IsEmpty(Container($PARAM[list_id]).ListItem.Art(clearlogo))</visible>
+			</control>
+			<control type="label">
+				<description>title fallback when there is no clearlogo</description>
+				<left>28</left>
+				<top>365</top>
+				<width>964</width>
+				<height>60</height>
+				<aligny>center</aligny>
+				<font>font36_title</font>
+				<label>$INFO[Container($PARAM[list_id]).ListItem.Label]</label>
+				<shadowcolor>text_shadow</shadowcolor>
+				<visible>String.IsEmpty(Container($PARAM[list_id]).ListItem.Art(clearlogo))</visible>
+			</control>
+		</definition>
+	</include>
 	<include name="WidgetListPoster">
 		<param name="dim_extra">true</param>
 		<param name="onclick_condition">false</param>
@@ -69,9 +130,18 @@
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="posy" value="250"/>
 			</include>
-			<control type="list" id="$PARAM[list_id]">
-				<animation effect="fade" start="100" end="35" time="200" condition="!Control.HasFocus($PARAM[list_id]) + [$PARAM[dim_extra]]">Conditional</animation>
-				<left>0</left>
+			<control type="fixedlist" id="$PARAM[list_id]">
+				<scrolltime>0</scrolltime>
+        <movement>0</movement>
+        <orientation>horizontal</orientation>
+        <pagecontrol>25</pagecontrol>
+        <scrolltime tween="sine" easing="out">200</scrolltime>
+        <focusposition>0</focusposition>
+        <movement>6</movement>				<!--
+				<focusposition>0</focusposition>
+				<movement>1</movement>
+				<animation effect="fade" start="100" end="35" time="125" condition="!Control.HasFocus($PARAM[list_id]) + [$PARAM[dim_extra]]">Conditional</animation>-->
+				<left>15</left>
 				<top>0</top>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<right>0</right>
@@ -82,23 +152,17 @@
 				</include>
 				<itemlayout width="340" height="480">
 					<control type="group">
-						<left>15</left>
+						<left>0</left>
 						<top>62</top>
-						<include content="HomePosterLayout">						</include>
+						<include content="HomePosterLayout"/>
 					</control>
 				</itemlayout>
-				<focusedlayout width="340" height="480">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<left>15</left>
-						<top>62</top>
-						<animation type="Focus">
-							<effect type="zoom" start="100" end="105" center="auto" time="200" tween="sine" easing="inout" />
-						</animation>
-						<animation type="Unfocus">
-							<effect type="zoom" start="105" end="100" center="auto" time="200" tween="sine" easing="inout" />
-						</animation>
-						<include content="HomePosterLayout">						</include>
+				<focusedlayout width="1050" height="480">
+					<control type="image">
+						<description>empty slot - the wide card occupies this space</description>
+						<width>1</width>
+						<height>1</height>
+						<texture />
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="15" browse="$PARAM[browse_mode]">$PARAM[content_path]</content>
@@ -108,6 +172,15 @@
 				<top>-241</top>
 				<height>1</height>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<control type="group">
+					<description>wide card, pinned over the focused slot</description>
+					<left>15</left>
+					<top>-777</top>
+          <animation effect="fade" start="100" end="60" time="200" condition="!Control.HasFocus($PARAM[list_id]) + [$PARAM[dim_extra]]">Conditional</animation>
+					<include content="HomeWideLayout">
+						<param name="list_id" value="$PARAM[list_id]"/>
+					</include>
+				</control>
 				<control type="group">
 					<top>-839</top>
 					<include content="CategoryLabel">
@@ -391,7 +464,10 @@
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
-			<control type="panel" id="$PARAM[list_id]">
+			<control type="fixedlist" id="$PARAM[list_id]">
+				<focusposition>0</focusposition>
+				<movement>1</movement>
+				<scrolltime>0</scrolltime>
 				<animation effect="fade" start="100" end="35" time="200" condition="!Control.HasFocus($PARAM[list_id]) + [$PARAM[dim_extra]]">Conditional</animation>
 				<left>0</left>
 				<top>52</top>
