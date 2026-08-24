@@ -121,6 +121,179 @@
 			</control>
 		</definition>
 	</include>
+	<include name="HomeSpotlight">
+		<param name="dim_extra">true</param>
+		<param name="widget_target">videos</param>
+		<param name="visible">true</param>
+		<definition>
+			<control type="group" id="$PARAM[list_id]1">
+				<description>spotlight: one random item, blown up with play / more info</description>
+				<left>0</left>
+				<top>0</top>
+				<height>840</height>
+				<defaultcontrol always="true">$PARAM[list_id]2</defaultcontrol>
+				<visible>$PARAM[visible]</visible>
+				<control type="group">
+					<description>the card itself</description>
+					<animation effect="fade" start="100" end="60" time="200" condition="!ControlGroup($PARAM[list_id]1).HasFocus + [$PARAM[dim_extra]]">Conditional</animation>
+					<control type="image">
+						<description>opaque backing: stops rows showing through while the fanart cross-fades</description>
+						<left>15</left>
+						<top>10</top>
+						<right>75</right>
+						<height>766</height>
+						<texture>colors/black.png</texture>
+					</control>
+					<control type="image">
+						<description>fanart</description>
+						<left>15</left>
+						<top>10</top>
+						<right>75</right>
+						<height>766</height>
+						<fadetime>300</fadetime>
+						<texture background="true" fallback="DefaultVideo.png">$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)]</texture>
+						<aspectratio>scale</aspectratio>
+					</control>
+					<control type="image">
+						<description>bottom scrim so the text block stays legible</description>
+						<left>15</left>
+						<top>306</top>
+						<right>75</right>
+						<height>470</height>
+						<texture colordiffuse="DD000000">overlays/overlayfade.png</texture>
+					</control>
+					<control type="image">
+						<description>rounds the corners against the black background</description>
+						<left>15</left>
+						<top>10</top>
+						<right>75</right>
+						<height>766</height>
+						<texture border="24">poster_mask.png</texture>
+					</control>
+				</control>
+				<control type="group">
+					<description>title, meta, plot - recedes with the row texts when focus is elsewhere</description>
+					<animation effect="fade" start="100" end="35" time="200" condition="!ControlGroup($PARAM[list_id]1).HasFocus + [$PARAM[dim_extra]]">Conditional</animation>
+					<control type="image">
+						<description>clearlogo, sitting on the meta line</description>
+						<left>55</left>
+						<top>336</top>
+						<width>460</width>
+						<height>140</height>
+						<aspectratio align="left" aligny="bottom">keep</aspectratio>
+						<fadetime>250</fadetime>
+						<texture>$INFO[Container($PARAM[list_id]).ListItem.Art(clearlogo)]</texture>
+						<visible>!String.IsEmpty(Container($PARAM[list_id]).ListItem.Art(clearlogo))</visible>
+					</control>
+					<control type="label">
+						<description>title fallback when there is no clearlogo</description>
+						<left>55</left>
+						<top>396</top>
+						<width>1100</width>
+						<height>80</height>
+						<aligny>center</aligny>
+						<font>font45_title</font>
+						<label>$INFO[Container($PARAM[list_id]).ListItem.Label]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+						<visible>String.IsEmpty(Container($PARAM[list_id]).ListItem.Art(clearlogo))</visible>
+					</control>
+					<control type="label">
+						<left>55</left>
+						<top>492</top>
+						<width>1200</width>
+						<height>36</height>
+						<font>font27_title</font>
+						<label>$INFO[Container($PARAM[list_id]).ListItem.Genre]$INFO[Container($PARAM[list_id]).ListItem.Year,   [COLOR 33FFFFFF]•[/COLOR]   ]$INFO[Container($PARAM[list_id]).ListItem.Duration,   [COLOR 33FFFFFF]•[/COLOR]   ]$INFO[Container($PARAM[list_id]).ListItem.Mpaa,   [COLOR 33FFFFFF]•[/COLOR]   ]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+					</control>
+					<control type="textbox">
+						<left>55</left>
+						<top>536</top>
+						<width>900</width>
+						<height>110</height>
+						<font>font27</font>
+						<label>$INFO[Container($PARAM[list_id]).ListItem.Plot]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+					</control>
+				</control>
+				<control type="grouplist" id="$PARAM[list_id]2">
+					<left>55</left>
+					<top>664</top>
+					<width>900</width>
+					<height>64</height>
+					<orientation>horizontal</orientation>
+					<itemgap>20</itemgap>
+					<align>left</align>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>9000</onup>
+					<ondown>5100</ondown>
+					<control type="button" id="$PARAM[list_id]3">
+						<description>play - hands the click to the source list so resume works as it does in the rows</description>
+						<onup>9000</onup>
+						<ondown>5100</ondown>
+						<include content="SpotlightButton">
+							<param name="label" value="$LOCALIZE[208]"/>
+						</include>
+						<onclick>SetFocus($PARAM[list_id])</onclick>
+						<onclick>Action(Select)</onclick>
+					</control>
+					<control type="button" id="$PARAM[list_id]4">
+						<description>more info - opens the same dialog as the context menu information item</description>
+						<onup>9000</onup>
+						<ondown>5100</ondown>
+						<include content="SpotlightButton">
+							<param name="label" value="$LOCALIZE[31703]"/>
+						</include>
+						<onclick>SetFocus($PARAM[list_id])</onclick>
+						<onclick>Action(Info)</onclick>
+					</control>
+				</control>
+				<control type="list" id="$PARAM[list_id]">
+					<description>source list: never navigated to, only focused by the buttons so the actions carry its item</description>
+					<left>15</left>
+					<top>0</top>
+					<width>1</width>
+					<height>1</height>
+					<orientation>horizontal</orientation>
+					<onleft>$PARAM[list_id]3</onleft>
+					<onright>$PARAM[list_id]3</onright>
+					<onup>$PARAM[list_id]3</onup>
+					<ondown>$PARAM[list_id]3</ondown>
+					<itemlayout width="1" height="1">
+						<control type="image">
+							<description>nothing to draw - the card above is the item</description>
+							<width>1</width>
+							<height>1</height>
+							<texture />
+						</control>
+					</itemlayout>
+					<focusedlayout width="1" height="1">
+						<control type="image">
+							<width>1</width>
+							<height>1</height>
+							<texture />
+						</control>
+					</focusedlayout>
+					<content target="$PARAM[widget_target]" limit="1">$PARAM[content_path]</content>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="SpotlightButton">
+		<definition>
+			<width>auto</width>
+			<height>64</height>
+			<label>$PARAM[label]</label>
+			<font>font27_menu</font>
+			<align>center</align>
+			<textoffsetx>40</textoffsetx>
+			<textcolor>white</textcolor>
+			<focusedcolor>FF181818</focusedcolor>
+			<texturefocus border="31">pill.png</texturefocus>
+			<texturenofocus border="31" colordiffuse="33FFFFFF">pill.png</texturenofocus>
+		</definition>
+	</include>
 	<include name="WidgetListPoster">
 		<param name="dim_extra">true</param>
 		<param name="onclick_condition">false</param>
@@ -137,10 +310,8 @@
         <pagecontrol>25</pagecontrol>
         <scrolltime tween="sine" easing="out">200</scrolltime>
         <focusposition>0</focusposition>
-        <movement>6</movement>				<!--
-				<focusposition>0</focusposition>
-				<movement>1</movement>
-				<animation effect="fade" start="100" end="35" time="125" condition="!Control.HasFocus($PARAM[list_id]) + [$PARAM[dim_extra]]">Conditional</animation>-->
+        <movement>6</movement>
+				<animation effect="fade" start="100" end="60" time="200" condition="!Control.HasFocus($PARAM[list_id]) + [$PARAM[dim_extra]]">Conditional</animation>
 				<left>15</left>
 				<top>0</top>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>

@@ -934,3 +934,15 @@ msgstr ""
 msgctxt "#31702"
 msgid "Favorites"
 msgstr ""
+
+#: /xml/Includes_Home.xml
+#. Spotlight button that opens the video information dialog
+msgctxt "#31703"
+msgid "More info"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+#. Home settings toggle for the random movie spotlight on the movies home
+msgctxt "#31704"
+msgid "Random movie spotlight"
+msgstr ""
