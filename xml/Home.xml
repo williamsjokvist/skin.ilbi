@@ -141,7 +141,7 @@
 							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
 							<param name="dim_extra" value="ControlGroup(2000).HasFocus"/>
 						</include>
-						<include content="WidgetListEpisodes" condition="Library.HasContent(tvshows)">
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
 							<param name="content_path" value="special://skin/playlists/recent_unwatched_episodes.xsp"/>
 							<param name="widget_header" value="$LOCALIZE[20387]"/>
 							<param name="widget_target" value="videos"/>

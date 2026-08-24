@@ -36,7 +36,7 @@
 				<top>0</top>
 				<width>310</width>
 				<height>465</height>
-				<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
+				<texture background="true" fallback="DefaultVideo.png">$VAR[HomePosterArtVar]</texture>
 				<aspectratio>scale</aspectratio>
 			</control>
 			<control type="image">
@@ -279,101 +279,6 @@
 							<visible>$PARAM[visible_3]</visible>
 						</control>
 					</control>
-				</control>
-			</control>
-		</definition>
-	</include>
-	<include name="WidgetListEpisodes">
-		<param name="dim_extra">true</param>
-		<param name="main_label">$INFO[ListItem.Title]</param>
-		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
-		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
-		<param name="sortby"></param>
-		<param name="visible">True</param>
-		<param name="sortorder">ascending</param>
-		<param name="widget_limit">15</param>
-		<param name="browse_mode">auto</param>
-		<definition>
-			<include content="BusyListSpinner">
-				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="posy" value="200"/>
-			</include>
-			<control type="list" id="$PARAM[list_id]">
-				<animation effect="fade" start="100" end="35" time="200" condition="!Control.HasFocus($PARAM[list_id]) + [$PARAM[dim_extra]]">Conditional</animation>
-				<left>0</left>
-				<top>0</top>
-				<right>0</right>
-				<height>1080</height>
-				<include content="WidgetListCommon">
-					<param name="list_id" value="$PARAM[list_id]"/>
-				</include>
-				<visible>$PARAM[visible]</visible>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500">
-					<control type="group">
-						<left>70</left>
-						<top>57</top>
-						<include content="InfoWallEpisodeLayout">
-							<param name="main_label" value="$PARAM[main_label]" />
-							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="thumb_label" value="$PARAM[thumb_label]" />
-							<param name="focused" value="false" />
-						</include>
-					</control>
-				</itemlayout>
-				<focusedlayout width="310" height="500">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<left>70</left>
-						<top>57</top>
-						<animation type="Focus">
-							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="230,120" />
-						</animation>
-						<animation type="Unfocus">
-							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="230,120" />
-						</animation>
-						<include content="InfoWallEpisodeLayout">
-							<param name="main_label" value="$PARAM[main_label]" />
-							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="thumb_label" value="$PARAM[thumb_label]" />
-							<param name="focused" value="true" />
-						</include>
-					</control>
-				</focusedlayout>
-				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]" browse="$PARAM[browse_mode]">$PARAM[content_path]</content>
-			</control>
-			<control type="group" id="$PARAM[list_id]777">
-				<description>row chrome: header at the top of the row box, description under the items</description>
-				<top>-241</top>
-				<height>1</height>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<control type="group">
-					<top>-839</top>
-					<include content="CategoryLabel">
-						<param name="label">$PARAM[widget_header]</param>
-						<param name="list_id" value="$PARAM[list_id]"/>
-						<param name="dim_extra" value="$PARAM[dim_extra]"/>
-					</include>
-				</control>
-				<control type="label">
-					<left>15</left>
-					<animation effect="fade" start="100" end="35" time="200" condition="!Control.HasFocus($PARAM[list_id]) + [$PARAM[dim_extra]]">Conditional</animation>
-					<top>-349</top>
-					<width>1500</width>
-					<height>36</height>
-					<font>font27_title</font>
-					<label>$INFO[Container($PARAM[list_id]).ListItem.Genre]$INFO[Container($PARAM[list_id]).ListItem.Year,   [COLOR 33FFFFFF]•[/COLOR]   ]$INFO[Container($PARAM[list_id]).ListItem.Property(TotalEpisodes),   [COLOR 33FFFFFF]•[/COLOR]   , $LOCALIZE[20360]]$INFO[Container($PARAM[list_id]).ListItem.Mpaa,   [COLOR 33FFFFFF]•[/COLOR]   ]</label>
-					<shadowcolor>text_shadow</shadowcolor>
-				</control>
-				<control type="textbox">
-					<left>15</left>
-					<animation effect="fade" start="100" end="35" time="200" condition="!Control.HasFocus($PARAM[list_id]) + [$PARAM[dim_extra]]">Conditional</animation>
-					<top>-303</top>
-					<width>1100</width>
-					<height>150</height>
-					<font>font27</font>
-					<label>$INFO[Container($PARAM[list_id]).ListItem.Plot]</label>
-					<shadowcolor>text_shadow</shadowcolor>
 				</control>
 			</control>
 		</definition>
