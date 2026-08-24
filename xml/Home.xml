@@ -437,10 +437,11 @@
 						</control>
 					</control>
 					<control type="list" id="9000">
+						<description>width must stay at 160 * max item count - any extra grabs mouse hovers over empty space</description>
 						<orientation>horizontal</orientation>
 						<left>0</left>
 						<top>0</top>
-						<width>1920</width>
+						<width>640</width>
 						<height>110</height>
 						<onfocus>ClearProperty(listposition,home)</onfocus>
 						<onleft>noop</onleft>
@@ -457,8 +458,7 @@
 								<texture>$INFO[ListItem.Art(thumb)]</texture>
 								<visible>String.IsEqual(ListItem.Property(id),search)</visible>
 								<animation effect="fade" time="200">VisibleChange</animation>
-								<animation effect="fade" start="100" end="0" time="200">Focus</animation>
-								<animation effect="fade" start="0" end="100" time="0">UnFocus</animation>
+								<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9000) + !System.HasActiveModalDialog">Conditional</animation>
 							</control>
 							<control type="image">
 								<left>66</left>
@@ -483,8 +483,7 @@
 								<shadowcolor>text_shadow</shadowcolor>
 								<visible>!String.IsEqual(ListItem.Property(id),search)</visible>
 								<animation effect="fade" time="200">VisibleChange</animation>
-								<animation effect="fade" start="100" end="0" time="200">Focus</animation>
-								<animation effect="fade" start="0" end="100" time="0">UnFocus</animation>
+								<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9000) + !System.HasActiveModalDialog">Conditional</animation>
 							</control>
 							<control type="label">
 								<left>0</left>
