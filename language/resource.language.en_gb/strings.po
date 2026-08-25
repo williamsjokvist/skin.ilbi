@@ -946,3 +946,9 @@ msgstr ""
 msgctxt "#31704"
 msgid "Random movie spotlight"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+#. Home settings toggle for the random series spotlight on the series home
+msgctxt "#31705"
+msgid "Random series spotlight"
+msgstr ""

@@ -173,6 +173,13 @@
 					<selected>!Skin.HasSetting(HomeMenuNoTVShowButton)</selected>
 					<onclick>Skin.ToggleSetting(HomeMenuNoTVShowButton)</onclick>
 				</control>
+				<control type="radiobutton" id="6121">
+					<label>- $LOCALIZE[31705]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(home_tvshow_spotlight)</selected>
+					<onclick>Skin.ToggleSetting(home_tvshow_spotlight)</onclick>
+					<enable>!Skin.HasSetting(HomeMenuNoTVShowButton)</enable>
+				</control>
 				<control type="button" id="6120">
 					<label>- $LOCALIZE[31157]</label>
 					<include>DefaultSettingButton</include>
