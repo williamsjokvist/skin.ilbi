@@ -2,6 +2,10 @@
 description = "Fetch fonts from Google Fonts"
 run = "./scripts/install-fonts.sh"
 
-[tasks.generate-mocks]
+[tasks.mockgen]
 description = "Generate a mock Kodi library"
-run = "./scripts/generate-mock-library.sh"
+run = "./scripts/mockgen.sh"
+
+[tasks.symlink]
+description = "Symlink the skin into Kodi's addons directory"
+run = "./scripts/symlink.sh"

@@ -19,12 +19,10 @@ Poster rows, with the focused item spotlighted above the row:
 Tasks are run with [mise](https://mise.jdx.dev):
 
 ```sh
-mise run install-fonts    # fetch fonts from Google Fonts
-mise run generate-mocks   # generate a mock Kodi library to browse
+mise install-fonts    # fetch fonts from Google Fonts
+mise mockgen          # generate a mock Kodi library to browse
+mise symlink          # symlink the skin into Kodi's addons directory
 ```
-
-To try the skin, symlink or copy this directory into your Kodi addons folder as
-`skin.ilbi`, then pick it under Settings → Interface → Skin.
 
 ## License
 
