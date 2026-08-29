@@ -20,8 +20,8 @@
 		<source>https://github.com/williamsjokvist/skin.ilbi/</source>
 		<assets>
 			<icon>resources/icon.png</icon>
-			<screenshot>resources/menu.jpg</screenshot>
 			<screenshot>resources/spotlight.jpg</screenshot>
+			<screenshot>resources/movies.jpg</screenshot>
 		</assets>
 		<summary lang="af_ZA">Minimalistiese oortreksel in stroomdiens-styl deur williamsjokvist</summary>
 		<summary lang="ar_SA">مظهر بسيط بأسلوب خدمات البث من williamsjokvist</summary>
