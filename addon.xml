@@ -22,6 +22,7 @@
 			<icon>resources/icon.png</icon>
 			<screenshot>resources/spotlight.jpg</screenshot>
 			<screenshot>resources/movies.jpg</screenshot>
+			<screenshot>resources/favorites.jpg</screenshot>
 		</assets>
 		<summary lang="af_ZA">Minimalistiese oortreksel in stroomdiens-styl</summary>
 		<summary lang="ar_SA">مظهر بسيط بأسلوب خدمات البث</summary>

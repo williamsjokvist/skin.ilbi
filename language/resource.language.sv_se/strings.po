@@ -609,7 +609,7 @@ msgstr "Standardvalåtgärd för album på hemskärmen"
 
 #. Setting to control what happens when clicking a TV show on the home screen
 msgctxt "#31175"
-msgid "Default select action for TV shows on the home screen"
+msgid "Default select action for series on the home screen"
 msgstr "Standardvalsåtgärd för TV-serier på hemskärmen"
 
 #. Setting to control what happens when clicking a movie set on the home screen

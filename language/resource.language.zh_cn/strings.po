@@ -609,7 +609,7 @@ msgstr "主屏幕上相册的默认选择操作"
 
 #. Setting to control what happens when clicking a TV show on the home screen
 msgctxt "#31175"
-msgid "Default select action for TV shows on the home screen"
+msgid "Default select action for series on the home screen"
 msgstr "主屏幕上电视节目的默认选择操作"
 
 #. Setting to control what happens when clicking a movie set on the home screen

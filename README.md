@@ -8,7 +8,9 @@ Scope is deliberately narrow: **movies and TV shows only**.
 
 ![Spotlight](resources/spotlight.jpg)
 
-![Movie rows](resources/movies.jpg)
+![Movies](resources/movies.jpg)
+
+![Favorites](resources/favorites.jpg)
 
 ## Skin settings
 

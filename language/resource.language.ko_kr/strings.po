@@ -609,7 +609,7 @@ msgstr "홈 화면의 앨범에 대한 기본 작업 선택"
 
 #. Setting to control what happens when clicking a TV show on the home screen
 msgctxt "#31175"
-msgid "Default select action for TV shows on the home screen"
+msgid "Default select action for series on the home screen"
 msgstr "홈 화면의 TV 프로그램에 대한 기본 작업 선택"
 
 #. Setting to control what happens when clicking a movie set on the home screen
