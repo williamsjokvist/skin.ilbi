@@ -48,13 +48,6 @@
 					<control type="grouplist" id="5001">
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>5010</pagecontrol>
-						<!--<include content="WidgetListCategories" condition="Library.HasContent(movies) + !Skin.HasSetting(home_no_categories_widget)">
-							<param name="content_path" value="library://video/movies/"/>
-							<param name="additional_movie_items" value="true"/>
-							<param name="widget_header" value="$LOCALIZE[31148]"/>
-							<param name="widget_target" value="videos"/>
-							<param name="list_id" value="5900"/>
-							</include>-->
 						<include content="HomeSpotlight">
 							<param name="content_path" value="special://skin/playlists/spotlight_movie.xsp"/>
 							<param name="list_id" value="5700"/>
@@ -271,13 +264,6 @@
 					<control type="grouplist" id="6001">
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>6010</pagecontrol>
-						<!--<include content="WidgetListCategories" condition="Library.HasContent(tvshows) + !Skin.HasSetting(home_no_categories_widget)">
-							<param name="content_path" value="library://video/tvshows/"/>
-							<param name="additional_tvshow_items" value="true"/>
-							<param name="widget_header" value="$LOCALIZE[31148]"/>
-							<param name="widget_target" value="videos"/>
-							<param name="list_id" value="6900"/>
-						</include>-->
 						<include content="HomeSpotlight">
 							<param name="content_path" value="special://skin/playlists/spotlight_tvshow.xsp"/>
 							<param name="list_id" value="6700"/>
@@ -856,9 +842,7 @@
 							</item>
 							<item>
 								<label>$LOCALIZE[342]</label>
-								<onclick condition="Library.HasContent(movies) + Skin.HasSetting(home_no_categories_widget) + !System.GetBool(myvideos.flatten)">ActivateWindow(Videos,videodb://movies/,return)</onclick>
-								<onclick condition="Library.HasContent(movies) + Skin.HasSetting(home_no_categories_widget) + System.GetBool(myvideos.flatten)">ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
-								<onclick condition="Library.HasContent(movies) + !Skin.HasSetting(home_no_categories_widget)">ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
+								<onclick condition="Library.HasContent(movies)">ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
 								<onclick condition="!Library.HasContent(movies)">ActivateWindow(Videos,sources://video/,return)</onclick>
 								<property name="menu_id">$NUMBER[5000]</property>
 								<thumb>icons/sidemenu/movies.png</thumb>
@@ -866,9 +850,7 @@
 							</item>
 							<item>
 								<label>$LOCALIZE[31701]</label>
-								<onclick condition="Library.HasContent(tvshows) + Skin.HasSetting(home_no_categories_widget) + !System.GetBool(myvideos.flatten)">ActivateWindow(Videos,videodb://tvshows/,return)</onclick>
-								<onclick condition="Library.HasContent(tvshows) + Skin.HasSetting(home_no_categories_widget) + System.GetBool(myvideos.flatten)">ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
-								<onclick condition="Library.HasContent(tvshows) + !Skin.HasSetting(home_no_categories_widget)">ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
+								<onclick condition="Library.HasContent(tvshows)">ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
 								<onclick condition="!Library.HasContent(tvshows)">ActivateWindow(Videos,sources://video/,return)</onclick>
 								<property name="menu_id">$NUMBER[6000]</property>
 								<thumb>icons/sidemenu/tv.png</thumb>

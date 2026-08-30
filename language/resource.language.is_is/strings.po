@@ -61,10 +61,6 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Óskoðaðar kvikmyndir"
 
-msgctxt "#31008"
-msgid "Enable category widgets"
-msgstr "Virkja viðmótshluta fyrir flokka"
-
 msgctxt "#31009"
 msgid "Download icons"
 msgstr "Sækja táknmyndir"

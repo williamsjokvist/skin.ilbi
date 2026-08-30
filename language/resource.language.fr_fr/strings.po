@@ -61,10 +61,6 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Films non vus"
 
-msgctxt "#31008"
-msgid "Enable category widgets"
-msgstr "Activer les widgets de catégorie"
-
 msgctxt "#31009"
 msgid "Download icons"
 msgstr "Télécharger les icônes"

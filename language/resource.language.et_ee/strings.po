@@ -61,10 +61,6 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Vaatamata filmid"
 
-msgctxt "#31008"
-msgid "Enable category widgets"
-msgstr "Luba kategooria vidinad"
-
 msgctxt "#31009"
 msgid "Download icons"
 msgstr "Lae alla ikoonid"

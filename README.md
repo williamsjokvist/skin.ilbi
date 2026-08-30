@@ -28,7 +28,6 @@ Reachable from Kodi Options (the logo in the top right) → Skin settings. Four 
 
 | Setting | Default | |
 | --- | --- | --- |
-| Enable category widgets | on | Genre / year category rows on the home screen |
 | Random movie spotlight | off | Hero spotlight above the movie rows |
 | Movie genre rows | on | One poster row per genre on the movies home screen |
 | Edit categories | — | Opens the library node editor add-on |

@@ -61,10 +61,6 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Neperžiūrėti filmai"
 
-msgctxt "#31008"
-msgid "Enable category widgets"
-msgstr "Įjungti kategorijos valdiklius"
-
 msgctxt "#31009"
 msgid "Download icons"
 msgstr "Atsisiųsti piktogramas"

@@ -61,10 +61,6 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Ongekykte flieks"
 
-msgctxt "#31008"
-msgid "Enable category widgets"
-msgstr "Stel kategorie widget in staat"
-
 msgctxt "#31009"
 msgid "Download icons"
 msgstr "Aflaai ikone"

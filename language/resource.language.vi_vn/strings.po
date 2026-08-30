@@ -61,10 +61,6 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Phim chưa xem"
 
-msgctxt "#31008"
-msgid "Enable category widgets"
-msgstr "Bật danh mục tiện ích"
-
 msgctxt "#31009"
 msgid "Download icons"
 msgstr "Tải xuống biểu tượng"

@@ -68,10 +68,7 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr ""
 
-#: /xml/SkinSettings.xml
-msgctxt "#31008"
-msgid "Enable category widgets"
-msgstr ""
+#empty string with id 31008
 
 #: /xml/MyVideoNav.xml
 msgctxt "#31009"
@@ -679,7 +676,7 @@ msgctxt "#31147"
 msgid "In cinemas soon"
 msgstr ""
 
-#: /xml/Home.xml
+#: /xml/Includes_MediaMenu.xml
 msgctxt "#31148"
 msgid "Categories"
 msgstr ""
