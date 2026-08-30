@@ -55,8 +55,11 @@ Reachable from Kodi Options (the logo in the top right) → Skin settings. Four 
 Tasks are run with [mise](https://mise.jdx.dev):
 
 ```sh
+mise bump 0.1.0       # set the skin version in addon.xml
+mise bundle           # package the skin into dist/skin.ilbi-<version>.zip
 mise install-fonts    # fetch fonts from Google Fonts
 mise mockgen          # generate a mock Kodi library to browse
+mise release v0.1.0   # tag and push a release (omit the tag to bump the patch)
 mise symlink          # symlink the skin into Kodi's addons directory
 ```
 

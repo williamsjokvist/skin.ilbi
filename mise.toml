@@ -14,6 +14,30 @@ run = "./scripts/install-fonts.sh"
 description = "Generate a mock Kodi library"
 run = "./scripts/mockgen.sh"
 
+[tasks.release]
+description = "Create a release for the skin — usage: mise run release [tag]; omit tag to increment the patch version"
+usage = '''
+arg "[tag]" help="Tag to create; omit to increment the patch version of the latest"
+'''
+run = """
+set -e
+tag="$usage_tag"
+if [ -z "$tag" ]; then
+  git fetch --tags --quiet || true
+  latest=$(git tag --sort=-v:refname | head -n1)
+  if [ -z "$latest" ]; then echo "release: no existing tags to increment" >&2; exit 1; fi
+  tag="v$(printf '%s' "${latest#v}" | awk -F. '{printf "%d.%d.%d", $1, $2, $3 + 1}')"
+fi
+if git rev-parse -q --verify "refs/tags/$tag" >/dev/null; then
+  echo "release: tag $tag already exists" >&2
+  exit 1
+fi
+echo "Releasing $tag"
+git tag "$tag"
+git push origin HEAD
+git push origin "$tag"
+"""
+
 [tasks.symlink]
 description = "Symlink the skin into Kodi's addons directory"
 run = "./scripts/symlink.sh"
