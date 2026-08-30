@@ -93,27 +93,3 @@ Fixing it properly needs **the same service add-on the trailer preview above wan
 `favourites.xml`, resolve each target against the library the way `script.globalsearch`
 does (`VideoLibrary.GetMovies` with a filter), and write `Window(Home).Property(...)` per
 favourite for the skin to read. Worth building once, for both features.
-
-### Keyboard input on the search home
-
-Search itself works: the **Search** entry at the top of the side list (`15100`) raises Kodi's
-keyboard with `Skin.SetString(search_query)` — no value means prompt — and the grid (`15200`)
-fills with library hits in place. What is missing is the design's on-screen key grid, which
-belongs above the side list; the entries start at the top of that column and shift down once
-the keys exist.
-
-- **The keys.** A grid of buttons plus space and backspace. Kodi's `DialogKeyboard.xml` is a
-  modal and cannot be embedded, and XML cannot append a character to a string, so each key
-  needs its own `Skin.SetString(search_query,$INFO[...])` concatenation, or a small service
-  add-on. The results half needs no work when they land: the keys write the same skin string
-  the prompt does.
-- **How the results are queried.** `$VAR[SearchGridContentVar]` (`xml/Variables.xml`) points
-  the grid at `videodb://movies/titles/?xsp={…}` — an xsp filter as a URL option, the same
-  filter object `script.globalsearch` hands to `VideoLibrary.GetMovies`, which Kodi converts
-  into exactly this URL. A container holds one media type, so movies and series are separate
-  paths: probes `15570`/`15571` count each, the side list offers only the types that matched,
-  and `Window(Home).Property(search_type)` picks between them. A query and a genre are held at
-  the same time — `Window(Home).Property(search_mode)` decides which of the two the grid shows,
-  so browsing a genre mid-search and stepping back onto a result type loses neither. Two caveats in the query text —
-  it is interpolated raw into JSON inside a URL, so a `"` breaks the filter and an `&` truncates
-  it at the URL option boundary. Skin XML has no way to escape either.
