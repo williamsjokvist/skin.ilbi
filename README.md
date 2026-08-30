@@ -29,6 +29,7 @@ shows all of them:
 | Use slide animations | on | Slide transitions between windows and views |
 | Enable auto scrolling for plot & review | off | Auto-scrolls long plot text |
 | Show media flags | on | Resolution / codec / audio badges on media items |
+| Rounded poster corners | on | Use rounded corners everywhere |
 | Favorites menu item | off | Standalone Favorites entry in the main menu; its content is also a row on My Kodi |
 | Choose kind of profile identification | — | Profile name, avatar, or none |
 

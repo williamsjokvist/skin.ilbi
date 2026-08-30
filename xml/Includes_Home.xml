@@ -47,6 +47,7 @@
 				<width>310</width>
 				<height>465</height>
 				<texture border="24">poster_mask.png</texture>
+				<visible>!Skin.HasSetting(no_poster_radius)</visible>
 			</control>
 			<control type="group">
 				<description>watched / type overlays</description>
@@ -242,6 +243,7 @@
 				<width>1020</width>
 				<height>465</height>
 				<texture border="24">poster_mask.png</texture>
+				<visible>!Skin.HasSetting(no_poster_radius)</visible>
 			</control>
 			<control type="image">
 				<description>clearlogo, bottom left</description>
@@ -317,6 +319,7 @@
 						<right>75</right>
 						<height>766</height>
 						<texture border="24">poster_mask.png</texture>
+						<visible>!Skin.HasSetting(no_poster_radius)</visible>
 					</control>
 				</control>
 				<control type="group">

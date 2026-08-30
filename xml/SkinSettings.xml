@@ -35,6 +35,12 @@
 					<onclick>Skin.ToggleSetting(hide_mediaflags)</onclick>
 					<selected>!Skin.HasSetting(hide_mediaflags)</selected>
 				</control>
+				<control type="radiobutton" id="708">
+					<label>$LOCALIZE[31720]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(no_poster_radius)</onclick>
+					<selected>!Skin.HasSetting(no_poster_radius)</selected>
+				</control>
 				<control type="radiobutton" id="706">
 					<label>$LOCALIZE[31719]</label>
 					<include>DefaultSettingButton</include>
