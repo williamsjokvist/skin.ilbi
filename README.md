@@ -12,8 +12,7 @@ Scope is deliberately narrow: **movies and TV shows only**.
 
 ## Skin settings
 
-Reachable from Kodi Options (the logo in the top right) → Settings → Interface → Skin →
-Configure skin. Four categories:
+Reachable from Kodi Options (the logo in the top right) → Skin settings. Four categories:
 
 **General**
 
@@ -21,7 +20,6 @@ Configure skin. Four categories:
 | --- | --- | --- |
 | Use slide animations | on | Slide transitions between windows and views |
 | Enable auto scrolling for plot & review | off | Auto-scrolls long plot text |
-| Touch mode | off | Larger touch targets |
 | Show media flags | on | Resolution / codec / audio badges on media items |
 | Choose rating to display for media items | — | User rating, rating, or none |
 | Choose kind of profile identification | — | Profile name, avatar, or none |

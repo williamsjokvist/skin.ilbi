@@ -118,9 +118,6 @@
 						<param name="button_id" value="5500"/>
 						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMovieButton)"/>
 					</include>
-					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
-						<param name="scrollbar_id" value="5010"/>
-					</include>
 				</control>
 				<control type="group" id="6000">
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),tvshows)</visible>
@@ -199,9 +196,6 @@
 						<param name="button_id" value="6400"/>
 						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoTVShowButton)"/>
 					</include>
-					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
-						<param name="scrollbar_id" value="6010"/>
-					</include>
 				</control>
 				<control type="group" id="14000">
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),favorites)</visible>
@@ -253,9 +247,6 @@
 						<param name="visible" value="!Integer.IsGreater(Container(14100).NumItems,0) + !Container(14100).IsUpdating"/>
 						<param name="visible_1" value="false"/>
 						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoFavButton)"/>
-					</include>
-					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
-						<param name="scrollbar_id" value="14010"/>
 					</include>
 				</control>
 			</control>

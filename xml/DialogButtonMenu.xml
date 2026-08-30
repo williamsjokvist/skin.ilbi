@@ -23,6 +23,11 @@
 						<onclick>ActivateWindow(settings)</onclick>
 					</item>
 					<item>
+						<label>$LOCALIZE[20077]</label>
+						<onclick>Dialog.Close(shutdownmenu)</onclick>
+						<onclick>ActivateWindow(skinsettings)</onclick>
+					</item>
+					<item>
 						<label>$LOCALIZE[13012]</label>
 						<onclick>Quit()</onclick>
 						<visible>System.ShowExitButton</visible>
