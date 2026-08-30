@@ -627,10 +627,7 @@ msgctxt "#31167"
 msgid "Animate background"
 msgstr "پویانمایی پس‌زمینه"
 
-#. Label of a setting
-msgctxt "#31168"
-msgid "Show posters instead of thumbs for musicvideos"
-msgstr "نمایش پوستر به جای بندانگشتی‌ها برای نماهنگ‌ها"
+# empty string with id 31168
 
 #. Description label for skin settings area
 msgctxt "#31169"

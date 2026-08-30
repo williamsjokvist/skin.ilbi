@@ -610,11 +610,6 @@ msgctxt "#31167"
 msgid "Animate background"
 msgstr "Animowane tło"
 
-#. Label of a setting
-msgctxt "#31168"
-msgid "Show posters instead of thumbs for musicvideos"
-msgstr "Pokazuj plakaty zamiast miniatur dla teledysków"
-
 #. Description label for skin settings area
 msgctxt "#31169"
 msgid "Artwork related settings."
