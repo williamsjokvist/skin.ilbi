@@ -18,6 +18,10 @@ jobs:
 
       - uses: jdx/mise-action@v4
 
+      - run: mise lint:check
+
+      - run: mise fmt:check
+
       - run: mise bump "${GITHUB_REF_NAME#v}"
 
       - run: mise install-fonts

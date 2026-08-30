@@ -7,7 +7,7 @@ cd "$(dirname "$0")/.."
 VERSION="${1:-}"
 
 if [[ -z $VERSION ]]; then
-  echo "usage: mise run bump <version>   e.g. mise run bump 0.1.0" >&2
+  echo "usage: mise bump <version>   e.g. mise bump 0.1.0" >&2
   exit 1
 fi
 

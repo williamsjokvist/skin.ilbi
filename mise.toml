@@ -6,16 +6,29 @@ run = "./scripts/bump.sh"
 description = "Package the skin into an installable zip"
 run = "./scripts/bundle.sh"
 
+[tasks.fmt]
+description = "Format the skin XML with xmllint"
+run = "./scripts/fmt.sh"
+
+[tasks."fmt:check"]
+description = "Fail if any skin XML is not formatted"
+run = "./scripts/fmt.sh --check"
+
 [tasks.install-fonts]
 description = "Fetch fonts from Google Fonts"
 run = "./scripts/install-fonts.sh"
+
+[tasks.lint]
+description = "Check the skin XML is well-formed"
+alias = "lint:check"
+run = "./scripts/lint.sh"
 
 [tasks.mockgen]
 description = "Generate a mock Kodi library"
 run = "./scripts/mockgen.sh"
 
 [tasks.release]
-description = "Create a release for the skin — usage: mise run release [tag]; omit tag to increment the patch version"
+description = "Create a release for the skin — usage: mise release [tag]; omit tag to increment the patch version"
 usage = '''
 arg "[tag]" help="Tag to create; omit to increment the patch version of the latest"
 '''

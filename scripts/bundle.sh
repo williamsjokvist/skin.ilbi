@@ -12,7 +12,7 @@ if [[ -z $VERSION ]]; then
 fi
 
 if [[ ! -d fonts ]]; then
-  echo "error: no fonts/ directory; run 'mise run install-fonts' first" >&2
+  echo "error: no fonts/ directory; run 'mise install-fonts' first" >&2
   exit 1
 fi
 
