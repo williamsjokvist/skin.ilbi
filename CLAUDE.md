@@ -70,6 +70,30 @@ Suggested order: prove the pipeline with a manual "Preview" button on the spotli
 default off. If YouTube latency makes it unusable, the fallback is local trailer files or
 `theme.mp4` beside the media — instant and add-on free, but they have to be sourced.
 
+### Favourites carry one image, and it cannot be looked up
+
+A favourite stores a single `thumb` in `userdata/favourites.xml` and nothing else, so the
+same image has to serve both the poster slot and the focused wide card in the favourites
+row (`16500`, My Kodi). `HomeWideLayout` falls back to that thumb when `Art(fanart)` is
+empty, which is always for a favourite. Whichever art was on screen when the item was
+favourited is what got saved — expect a mix of posters and fanart in one row.
+
+The art cannot be recovered from the library in skin XML. From `CFavouritesService::GetAll`:
+
+- `SetArt("thumb", …)` is the only art key ever set; there is no fanart key.
+- No database lookup happens. `GetAll` and `LoadFromFile` return the items unenriched.
+- The item's path is a `favourite://` URL with the exec string encoded inside, not the
+  target. `ListItem.FolderPath` gives that URL, so the one lookup a skin has — point a
+  hidden container at a path and read `Container.Art(fanart)` off it, as
+  `MediaFanartVar` in `xml/Variables.xml` does for `tvshow.fanart` — has nothing browsable
+  to aim at. The only other properties are `favourite.action`, `favourite.provider` and
+  `favourite.index`.
+
+Fixing it properly needs **the same service add-on the trailer preview above wants**: read
+`favourites.xml`, resolve each target against the library the way `script.globalsearch`
+does (`VideoLibrary.GetMovies` with a filter), and write `Window(Home).Property(...)` per
+favourite for the skin to read. Worth building once, for both features.
+
 ### Keyboard input on the search home
 
 Search itself works: the **Search** entry at the top of the side list (`15100`) raises Kodi's

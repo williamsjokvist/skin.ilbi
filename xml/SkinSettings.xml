@@ -35,6 +35,12 @@
 					<onclick>Skin.ToggleSetting(hide_mediaflags)</onclick>
 					<selected>!Skin.HasSetting(hide_mediaflags)</selected>
 				</control>
+				<control type="radiobutton" id="706">
+					<label>$LOCALIZE[31719]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(home_favorites_menu)</selected>
+					<onclick>Skin.ToggleSetting(home_favorites_menu)</onclick>
+				</control>
 				<control type="button" id="707">
 					<label>$LOCALIZE[31164]</label>
 					<include>DefaultSettingButton</include>
@@ -65,6 +71,24 @@
 					<selected>!Skin.HasSetting(home_no_movie_genres)</selected>
 					<onclick>Skin.ToggleSetting(home_no_movie_genres)</onclick>
 				</control>
+				<control type="radiobutton" id="6113">
+					<label>$LOCALIZE[31713]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(home_movie_inprogress)</selected>
+					<onclick>Skin.ToggleSetting(home_movie_inprogress)</onclick>
+				</control>
+				<control type="radiobutton" id="6114">
+					<label>$LOCALIZE[31714]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(home_movie_unwatched)</selected>
+					<onclick>Skin.ToggleSetting(home_movie_unwatched)</onclick>
+				</control>
+				<control type="radiobutton" id="6115">
+					<label>$LOCALIZE[31715]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(home_movie_recent)</selected>
+					<onclick>Skin.ToggleSetting(home_movie_recent)</onclick>
+				</control>
 				<control type="button" id="627">
 					<label>$LOCALIZE[31176]</label>
 					<include>DefaultSettingButton</include>
@@ -94,6 +118,24 @@
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(home_no_tvshow_genres)</selected>
 					<onclick>Skin.ToggleSetting(home_no_tvshow_genres)</onclick>
+				</control>
+				<control type="radiobutton" id="6123">
+					<label>$LOCALIZE[31716]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(home_tvshow_inprogress)</selected>
+					<onclick>Skin.ToggleSetting(home_tvshow_inprogress)</onclick>
+				</control>
+				<control type="radiobutton" id="6124">
+					<label>$LOCALIZE[31717]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(home_tvshow_unwatched)</selected>
+					<onclick>Skin.ToggleSetting(home_tvshow_unwatched)</onclick>
+				</control>
+				<control type="radiobutton" id="6125">
+					<label>$LOCALIZE[31718]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(home_tvshow_recent)</selected>
+					<onclick>Skin.ToggleSetting(home_tvshow_recent)</onclick>
 				</control>
 				<control type="button" id="626">
 					<label>$LOCALIZE[31175]</label>

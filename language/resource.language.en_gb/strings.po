@@ -944,3 +944,51 @@ msgstr ""
 msgctxt "#31712"
 msgid "No items to show"
 msgstr ""
+
+#: /xml/Home.xml
+#. Fifth main menu item, the screen collecting the rows the other screens can hide
+msgctxt "#31711"
+msgid "My Kodi"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+#. Home settings toggle for the in-progress row on the movies home
+msgctxt "#31713"
+msgid "In progress movies row"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+#. Home settings toggle for the unwatched row on the movies home
+msgctxt "#31714"
+msgid "Unwatched movies row"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+#. Home settings toggle for the recently added row on the movies home
+msgctxt "#31715"
+msgid "Recently added movies row"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+#. Home settings toggle for the in-progress row on the series home
+msgctxt "#31716"
+msgid "In progress series row"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+#. Home settings toggle for the unwatched row on the series home
+msgctxt "#31717"
+msgid "Unwatched series row"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+#. Home settings toggle for the recently added row on the series home
+msgctxt "#31718"
+msgid "Recently added episodes row"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+#. General settings toggle for the standalone Favorites main menu item
+msgctxt "#31719"
+msgid "Favorites menu item"
+msgstr ""

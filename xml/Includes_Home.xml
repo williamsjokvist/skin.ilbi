@@ -212,8 +212,20 @@
 				<width>1020</width>
 				<height>465</height>
 				<fadetime>300</fadetime>
-				<texture background="true" fallback="DefaultVideo.png">$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)]</texture>
+				<texture background="true">$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)]</texture>
 				<aspectratio>scale</aspectratio>
+				<visible>!String.IsEmpty(Container($PARAM[list_id]).ListItem.Art(fanart))</visible>
+			</control>
+			<control type="image">
+				<description>a favourite stores one image and no fanart, so the card falls back to the thumb it was saved with</description>
+				<left>0</left>
+				<top>0</top>
+				<width>1020</width>
+				<height>465</height>
+				<fadetime>300</fadetime>
+				<texture background="true" fallback="DefaultVideo.png">$INFO[Container($PARAM[list_id]).ListItem.Art(thumb)]</texture>
+				<aspectratio>scale</aspectratio>
+				<visible>String.IsEmpty(Container($PARAM[list_id]).ListItem.Art(fanart))</visible>
 			</control>
 			<control type="image">
 				<description>bottom scrim so the logo stays legible</description>
