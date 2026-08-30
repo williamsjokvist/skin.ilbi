@@ -116,7 +116,7 @@
 						<param name="button_label" value="$LOCALIZE[31110]" />
 						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
 						<param name="button_id" value="5500"/>
-						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMovieButton)"/>
+						<param name="visible_2" value="false"/>
 					</include>
 				</control>
 				<control type="group" id="6000">
@@ -194,7 +194,7 @@
 						<param name="button_label" value="$LOCALIZE[31110]" />
 						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
 						<param name="button_id" value="6400"/>
-						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoTVShowButton)"/>
+						<param name="visible_2" value="false"/>
 					</include>
 				</control>
 				<control type="group" id="14000">
@@ -241,12 +241,10 @@
 					</control>
 					<include content="ImageWidget">
 						<param name="text_label" value="$LOCALIZE[31025]" />
-						<param name="button_label" value="$LOCALIZE[31116]" />
-						<param name="button_onclick" value=""/>
 						<param name="button_id" value="5500"/>
 						<param name="visible" value="!Integer.IsGreater(Container(14100).NumItems,0) + !Container(14100).IsUpdating"/>
 						<param name="visible_1" value="false"/>
-						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoFavButton)"/>
+						<param name="visible_2" value="false"/>
 					</include>
 				</control>
 			</control>
@@ -548,7 +546,6 @@
 								<property name="menu_id">$NUMBER[5000]</property>
 								<thumb>icons/sidemenu/movies.png</thumb>
 								<property name="id">movies</property>
-								<visible>!Skin.HasSetting(HomeMenuNoMovieButton)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[31701]</label>
@@ -559,7 +556,6 @@
 								<property name="menu_id">$NUMBER[6000]</property>
 								<thumb>icons/sidemenu/tv.png</thumb>
 								<property name="id">tvshows</property>
-								<visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[31702]</label>
@@ -567,7 +563,6 @@
 								<property name="menu_id">$NUMBER[14000]</property>
 								<thumb>icons/sidemenu/favourites.png</thumb>
 								<property name="id">favorites</property>
-								<visible>!Skin.HasSetting(HomeMenuNoFavButton)</visible>
 							</item>
 						</content>
 					</control>

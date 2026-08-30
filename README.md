@@ -29,15 +29,12 @@ Reachable from Kodi Options (the logo in the top right) → Skin settings. Four 
 | Setting | Default | |
 | --- | --- | --- |
 | Enable category widgets | on | Genre / year category rows on the home screen |
-| Movies | on | Show the Movies menu item |
-| — Random movie spotlight | off | Hero spotlight above the movie rows |
-| — Edit categories | — | Opens the library node editor add-on |
-| — Default select action for movie sets | — | Browse, continue watching, play from beginning, play next, or queue |
-| TV shows | on | Show the Series menu item |
-| — Random series spotlight | off | Hero spotlight above the series rows |
-| — Edit categories | — | Opens the library node editor add-on |
-| — Default select action for TV shows | — | Same options as movie sets |
-| Favourites | on | Show the Favorites menu item |
+| Random movie spotlight | off | Hero spotlight above the movie rows |
+| Edit categories | — | Opens the library node editor add-on |
+| Default select action for movie sets | — | Browse, continue watching, play from beginning, play next, or queue |
+| Random series spotlight | off | Hero spotlight above the series rows |
+| Edit categories | — | Opens the library node editor add-on |
+| Default select action for TV shows | — | Same options as movie sets |
 
 **Artwork**
 
