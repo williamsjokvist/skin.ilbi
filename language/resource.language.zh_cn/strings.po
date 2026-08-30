@@ -249,10 +249,6 @@ msgctxt "#31061"
 msgid "Main menu items"
 msgstr "主菜单项"
 
-msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr "选择天气同人画包"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "区"
@@ -324,10 +320,6 @@ msgstr "可用组"
 msgctxt "#31092"
 msgid "Video menu"
 msgstr "视频菜单"
-
-msgctxt "#31093"
-msgid "Show weather info in top bar"
-msgstr "在顶部栏显示天气信息"
 
 msgctxt "#31095"
 msgid "Use slide animations"
@@ -577,10 +569,6 @@ msgstr "选择背景图案"
 msgctxt "#31157"
 msgid "Edit categories"
 msgstr "编辑类别"
-
-msgctxt "#31158"
-msgid "Touch mode"
-msgstr "触摸模式"
 
 msgctxt "#31159"
 msgid "Artwork"

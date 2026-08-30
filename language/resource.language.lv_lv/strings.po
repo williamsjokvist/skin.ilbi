@@ -249,9 +249,7 @@ msgctxt "#31061"
 msgid "Main menu items"
 msgstr "Galvenās izvēlnes ieraksti"
 
-msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr ""
+# empty string with id 31062
 
 msgctxt "#31063"
 msgid "Sections"
@@ -327,9 +325,7 @@ msgctxt "#31092"
 msgid "Video menu"
 msgstr "Video izvēlne"
 
-msgctxt "#31093"
-msgid "Show weather info in top bar"
-msgstr ""
+# empty string with id 31093
 
 msgctxt "#31095"
 msgid "Use slide animations"
@@ -582,9 +578,7 @@ msgctxt "#31157"
 msgid "Edit categories"
 msgstr ""
 
-msgctxt "#31158"
-msgid "Touch mode"
-msgstr ""
+# empty string with id 31158
 
 msgctxt "#31159"
 msgid "Artwork"

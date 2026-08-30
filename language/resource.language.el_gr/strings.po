@@ -249,10 +249,6 @@ msgctxt "#31061"
 msgid "Main menu items"
 msgstr "Αντικείμενα βασικού μενού"
 
-msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr "Επιλογή fanart πακέτου καιρού"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Τμήματα"
@@ -324,10 +320,6 @@ msgstr "Διαθέσιμες ομάδες"
 msgctxt "#31092"
 msgid "Video menu"
 msgstr "Μενού βίντεο"
-
-msgctxt "#31093"
-msgid "Show weather info in top bar"
-msgstr "Εμφάνιση πληροφοριών καιρού στην επάνω γραμμή"
 
 msgctxt "#31095"
 msgid "Use slide animations"
@@ -577,10 +569,6 @@ msgstr "Επιλέξτε μοτίβο υποβάθρου"
 msgctxt "#31157"
 msgid "Edit categories"
 msgstr "Επεξεργασία κατηγοριών"
-
-msgctxt "#31158"
-msgid "Touch mode"
-msgstr "Λειτουργία αφής"
 
 msgctxt "#31159"
 msgid "Artwork"

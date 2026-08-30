@@ -249,10 +249,6 @@ msgctxt "#31061"
 msgid "Main menu items"
 msgstr "รายการเมนูหลัก"
 
-msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr "เลือกแพ็คแฟนอาร์ตสภาพอากาศ"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "ส่วน"
@@ -324,10 +320,6 @@ msgstr "กลุ่มที่พบ"
 msgctxt "#31092"
 msgid "Video menu"
 msgstr "เมนูวิดีโอ"
-
-msgctxt "#31093"
-msgid "Show weather info in top bar"
-msgstr "แสดงข้อมูลสภาพอากาศในแถบบน"
 
 msgctxt "#31095"
 msgid "Use slide animations"
@@ -577,10 +569,6 @@ msgstr "เลือกพื้นหลังแบบลวดลาย"
 msgctxt "#31157"
 msgid "Edit categories"
 msgstr "แก้ไขหมวดหมู่"
-
-msgctxt "#31158"
-msgid "Touch mode"
-msgstr "โหมดสัมผัส"
 
 msgctxt "#31159"
 msgid "Artwork"

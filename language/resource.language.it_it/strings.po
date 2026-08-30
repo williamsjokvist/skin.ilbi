@@ -249,10 +249,6 @@ msgctxt "#31061"
 msgid "Main menu items"
 msgstr "Voci menu principale"
 
-msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr "Scegli pacchetto fanart meteo"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Sezioni"
@@ -324,10 +320,6 @@ msgstr "Gruppi disponibili"
 msgctxt "#31092"
 msgid "Video menu"
 msgstr "Menu video"
-
-msgctxt "#31093"
-msgid "Show weather info in top bar"
-msgstr "Mostra informazioni meteo nella barra superiore"
 
 msgctxt "#31095"
 msgid "Use slide animations"
@@ -577,10 +569,6 @@ msgstr "Scegli motivo di sfondo"
 msgctxt "#31157"
 msgid "Edit categories"
 msgstr "Modifica categorie"
-
-msgctxt "#31158"
-msgid "Touch mode"
-msgstr "Modalità touch"
 
 msgctxt "#31159"
 msgid "Artwork"

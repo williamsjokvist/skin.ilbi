@@ -249,10 +249,6 @@ msgctxt "#31061"
 msgid "Main menu items"
 msgstr "Ana menü ögeleri"
 
-msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr "Hava durumu için fanart paketi seçin"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Bölümler"
@@ -324,10 +320,6 @@ msgstr "Kullanılabilir gruplar"
 msgctxt "#31092"
 msgid "Video menu"
 msgstr "Video menüsü"
-
-msgctxt "#31093"
-msgid "Show weather info in top bar"
-msgstr "Hava durumu bilgisini üst çubukta göster"
 
 msgctxt "#31095"
 msgid "Use slide animations"
@@ -577,10 +569,6 @@ msgstr "Arka plan deseni seçin"
 msgctxt "#31157"
 msgid "Edit categories"
 msgstr "Kategorileri düzenle"
-
-msgctxt "#31158"
-msgid "Touch mode"
-msgstr "Dokunmatik mod"
 
 msgctxt "#31159"
 msgid "Artwork"

@@ -249,10 +249,6 @@ msgctxt "#31061"
 msgid "Main menu items"
 msgstr "Элементы главного меню"
 
-msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr "Выбрать набор фанарта погоды"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Разделы"
@@ -324,10 +320,6 @@ msgstr "Доступные группы"
 msgctxt "#31092"
 msgid "Video menu"
 msgstr "Видео меню"
-
-msgctxt "#31093"
-msgid "Show weather info in top bar"
-msgstr "Показывать сведения о погоде на верхней панели"
 
 msgctxt "#31095"
 msgid "Use slide animations"
@@ -577,10 +569,6 @@ msgstr "Выберите фон"
 msgctxt "#31157"
 msgid "Edit categories"
 msgstr "Изменить категории"
-
-msgctxt "#31158"
-msgid "Touch mode"
-msgstr "Режим касания"
 
 msgctxt "#31159"
 msgid "Artwork"

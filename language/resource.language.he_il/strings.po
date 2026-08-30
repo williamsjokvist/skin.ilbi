@@ -249,10 +249,6 @@ msgctxt "#31061"
 msgid "Main menu items"
 msgstr "פריטי תפריט ראשי"
 
-msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr "בחר חבילת פאנארט למזג האוויר"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "מקטעים"
@@ -324,10 +320,6 @@ msgstr "קבוצות זמינות"
 msgctxt "#31092"
 msgid "Video menu"
 msgstr "תפריט ווידאו"
-
-msgctxt "#31093"
-msgid "Show weather info in top bar"
-msgstr "הצג פרטי מזג אוויר בסרגל העליון"
 
 msgctxt "#31095"
 msgid "Use slide animations"
@@ -577,10 +569,6 @@ msgstr "בחר תבנית רקע"
 msgctxt "#31157"
 msgid "Edit categories"
 msgstr "עריכת קטגוריות"
-
-msgctxt "#31158"
-msgid "Touch mode"
-msgstr "מצב לחיצה"
 
 msgctxt "#31159"
 msgid "Artwork"

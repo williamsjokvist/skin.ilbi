@@ -249,10 +249,6 @@ msgctxt "#31061"
 msgid "Main menu items"
 msgstr "Päävalikon kohteet"
 
-msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr "Valitse säätietojen taustapaketti"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Osiot"
@@ -324,10 +320,6 @@ msgstr "Käytettävissä olevat ryhmät"
 msgctxt "#31092"
 msgid "Video menu"
 msgstr "Videon valikko"
-
-msgctxt "#31093"
-msgid "Show weather info in top bar"
-msgstr "Näytä säätiedot yläpalkissa"
 
 msgctxt "#31095"
 msgid "Use slide animations"
@@ -577,10 +569,6 @@ msgstr "Valitse taustan kuvio"
 msgctxt "#31157"
 msgid "Edit categories"
 msgstr "Muokkaa kategorioita"
-
-msgctxt "#31158"
-msgid "Touch mode"
-msgstr "Kosketusnäyttötila"
 
 msgctxt "#31159"
 msgid "Artwork"

@@ -252,9 +252,7 @@ msgctxt "#31061"
 msgid "Main menu items"
 msgstr ""
 
-msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr ""
+# empty string with id 31062
 
 msgctxt "#31063"
 msgid "Sections"
@@ -334,9 +332,7 @@ msgctxt "#31092"
 msgid "Video menu"
 msgstr ""
 
-msgctxt "#31093"
-msgid "Show weather info in top bar"
-msgstr ""
+# empty string with id 31093
 
 # empty string with id 31094
 msgctxt "#31095"
@@ -590,9 +586,7 @@ msgctxt "#31157"
 msgid "Edit categories"
 msgstr ""
 
-msgctxt "#31158"
-msgid "Touch mode"
-msgstr ""
+# empty string with id 31158
 
 msgctxt "#31159"
 msgid "Artwork"

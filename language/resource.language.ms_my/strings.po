@@ -249,10 +249,6 @@ msgctxt "#31061"
 msgid "Main menu items"
 msgstr "Item menu utama"
 
-msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr "Pilih pek cuaca seni peminat"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Seksyen"
@@ -324,10 +320,6 @@ msgstr "Kumpulan tersedia"
 msgctxt "#31092"
 msgid "Video menu"
 msgstr "Menu video"
-
-msgctxt "#31093"
-msgid "Show weather info in top bar"
-msgstr "Tunjuk maklumat cuaca pada palang atas"
 
 msgctxt "#31095"
 msgid "Use slide animations"
@@ -577,10 +569,6 @@ msgstr "Pilih pola latar belakang"
 msgctxt "#31157"
 msgid "Edit categories"
 msgstr "Sunting kategori"
-
-msgctxt "#31158"
-msgid "Touch mode"
-msgstr "Mod sentuh"
 
 msgctxt "#31159"
 msgid "Artwork"

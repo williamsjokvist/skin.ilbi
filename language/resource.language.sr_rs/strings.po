@@ -249,10 +249,6 @@ msgctxt "#31061"
 msgid "Main menu items"
 msgstr "Ставке главног менија"
 
-msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr "Изаберите пакет уметности љубитеља временске прогнозе"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Секције"
@@ -324,10 +320,6 @@ msgstr "Доступне групе"
 msgctxt "#31092"
 msgid "Video menu"
 msgstr "Видео мени"
-
-msgctxt "#31093"
-msgid "Show weather info in top bar"
-msgstr "Прикажи информације о прогнози у горњој траци"
 
 msgctxt "#31095"
 msgid "Use slide animations"
@@ -577,10 +569,6 @@ msgstr "Изаберите шаблон позадине"
 msgctxt "#31157"
 msgid "Edit categories"
 msgstr "Уреди категорије"
-
-msgctxt "#31158"
-msgid "Touch mode"
-msgstr "Режим додира"
 
 msgctxt "#31159"
 msgid "Artwork"

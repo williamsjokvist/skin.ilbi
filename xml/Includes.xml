@@ -528,48 +528,6 @@
 			</control>
 		</definition>
 	</include>
-	<include name="WeatherIconHome">
-		<control type="group">
-			<width>268</width>
-			<visible>!String.IsEmpty($PARAM[label])</visible>
-			<control type="image">
-				<left>40</left>
-				<width>80</width>
-				<height>80</height>
-				<texture colordiffuse="D0FFFFFF">$PARAM[texture]</texture>
-			</control>
-			<control type="textbox">
-				<top>110</top>
-				<width>160</width>
-				<height>63</height>
-				<font>font27_narrow</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$INFO[$PARAM[label]]</label>
-			</control>
-		</control>
-	</include>
-	<include name="WeatherIconMyWeather">
-		<control type="group">
-			<width>268</width>
-			<visible>!String.IsEmpty($PARAM[label])</visible>
-			<control type="image">
-				<left>50</left>
-				<width>60</width>
-				<height>60</height>
-				<texture colordiffuse="D0FFFFFF">$PARAM[texture]</texture>
-			</control>
-			<control type="textbox">
-				<top>68</top>
-				<width>160</width>
-				<height>63</height>
-				<font>font27_narrow</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$INFO[$PARAM[label]]</label>
-			</control>
-		</control>
-	</include>
 	<include name="FileManagerPanel">
 		<param name="width"></param>
 		<param name="right"></param>
@@ -1122,22 +1080,6 @@
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 						<texture>icons/power.png</texture>
 						<visible>System.HasAlarm(shutdowntimer)</visible>
-					</control>
-					<control type="label">
-						<height>50</height>
-						<width>auto</width>
-						<aligny>center</aligny>
-						<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
-						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
-					</control>
-					<control type="image">
-						<top>1</top>
-						<width>50</width>
-						<height>50</height>
-						<fadetime>300</fadetime>
-						<aspectratio aligny="center" align="left">keep</aspectratio>
-						<texture>$INFO[Weather.FanartCode,weather/small/,.png]</texture>
-						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="image">
 						<top>8</top>

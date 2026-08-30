@@ -249,10 +249,6 @@ msgctxt "#31061"
 msgid "Main menu items"
 msgstr "메인 메뉴 항목"
 
-msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr "날씨 팬아트 팩 선택"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "섹션"
@@ -324,10 +320,6 @@ msgstr "사용 가능한 그룹"
 msgctxt "#31092"
 msgid "Video menu"
 msgstr "비디오 메뉴"
-
-msgctxt "#31093"
-msgid "Show weather info in top bar"
-msgstr "상단 막대에 날씨 정보 표시"
 
 msgctxt "#31095"
 msgid "Use slide animations"
@@ -577,10 +569,6 @@ msgstr "배경 패던 선택"
 msgctxt "#31157"
 msgid "Edit categories"
 msgstr "카테고리 편집"
-
-msgctxt "#31158"
-msgid "Touch mode"
-msgstr "터치 모드"
 
 msgctxt "#31159"
 msgid "Artwork"

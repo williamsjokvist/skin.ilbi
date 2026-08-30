@@ -249,10 +249,6 @@ msgctxt "#31061"
 msgid "Main menu items"
 msgstr "メインメニューアイテム"
 
-msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr "天気のファンアートパック選択"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "セクション"
@@ -324,10 +320,6 @@ msgstr "利用可能なグループ"
 msgctxt "#31092"
 msgid "Video menu"
 msgstr "ビデオメニュー"
-
-msgctxt "#31093"
-msgid "Show weather info in top bar"
-msgstr "トップバーに天気予報を表示"
 
 msgctxt "#31095"
 msgid "Use slide animations"
@@ -577,10 +569,6 @@ msgstr "背景のパターン選択"
 msgctxt "#31157"
 msgid "Edit categories"
 msgstr "カテゴリー編集"
-
-msgctxt "#31158"
-msgid "Touch mode"
-msgstr "タッチモード"
 
 msgctxt "#31159"
 msgid "Artwork"

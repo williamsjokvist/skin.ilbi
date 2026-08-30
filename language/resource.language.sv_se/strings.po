@@ -249,10 +249,6 @@ msgctxt "#31061"
 msgid "Main menu items"
 msgstr "Huvudmenyobjekt"
 
-msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr "Välj väder-fanart paket"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Sektioner"
@@ -324,10 +320,6 @@ msgstr "Tillgängliga grupper"
 msgctxt "#31092"
 msgid "Video menu"
 msgstr "Videomeny"
-
-msgctxt "#31093"
-msgid "Show weather info in top bar"
-msgstr "Visa väderinformation i översta fältet"
 
 msgctxt "#31095"
 msgid "Use slide animations"
@@ -577,10 +569,6 @@ msgstr "Välj bakgrundsmönster"
 msgctxt "#31157"
 msgid "Edit categories"
 msgstr "Redigera kategorier"
-
-msgctxt "#31158"
-msgid "Touch mode"
-msgstr "Pekskärmsläge"
 
 msgctxt "#31159"
 msgid "Artwork"

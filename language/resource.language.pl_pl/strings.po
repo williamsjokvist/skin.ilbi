@@ -249,10 +249,6 @@ msgctxt "#31061"
 msgid "Main menu items"
 msgstr "Menu startowe"
 
-msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr "Wybierz pakiet fototapet pogody"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Sekcje"
@@ -324,10 +320,6 @@ msgstr "Dostępne grupy"
 msgctxt "#31092"
 msgid "Video menu"
 msgstr "Menu wideo"
-
-msgctxt "#31093"
-msgid "Show weather info in top bar"
-msgstr "Pokazuj aktualną pogodę w górnym pasku"
 
 msgctxt "#31095"
 msgid "Use slide animations"
@@ -577,10 +569,6 @@ msgstr "Wybierz wzór tła"
 msgctxt "#31157"
 msgid "Edit categories"
 msgstr "Edytuj kategorie"
-
-msgctxt "#31158"
-msgid "Touch mode"
-msgstr "Tryb dotykowy"
 
 msgctxt "#31159"
 msgid "Artwork"
