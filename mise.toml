@@ -1,3 +1,11 @@
+[tasks.bump]
+description = "Set the skin version in addon.xml"
+run = "./scripts/bump.sh"
+
+[tasks.bundle]
+description = "Package the skin into an installable zip"
+run = "./scripts/bundle.sh"
+
 [tasks.install-fonts]
 description = "Fetch fonts from Google Fonts"
 run = "./scripts/install-fonts.sh"

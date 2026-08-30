@@ -1,0 +1,48 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: jdx/mise-action@v4
+
+      - run: mise bump "${GITHUB_REF_NAME#v}"
+
+      - run: mise install-fonts
+
+      - run: mise bundle
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" --generate-notes \
+            "dist/skin.ilbi-${GITHUB_REF_NAME#v}.zip"
+
+      - name: Configure git
+        run: |
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git config user.name 'github-actions[bot]'
+
+      - name: Commit the version bump
+        run: |
+          git add addon.xml
+          if git diff --cached --quiet; then
+            echo "addon.xml already at ${GITHUB_REF_NAME#v} on master"
+            exit 0
+          fi
+          git commit -m "chore: release ${GITHUB_REF_NAME#v}"
+          git pull --rebase
+          git push origin
