@@ -998,3 +998,9 @@ msgstr ""
 msgctxt "#31720"
 msgid "Rounded poster corners"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+#. Home settings toggle for the random row on the movies home
+msgctxt "#31721"
+msgid "Random movies row"
+msgstr ""

@@ -19,8 +19,9 @@ Scope is deliberately narrow: **movies and TV shows only**.
 ## Skin settings
 
 Reachable from Kodi Options (the logo in the top right) → Skin settings. Four categories.
-Every row the Movies and Series toggles can hide is also on the **My Kodi** screen, which always
-shows all of them:
+The in progress, unwatched and recently added rows the Movies and Series toggles can hide are
+also on the **My Kodi** screen, which always shows them; the genre, spotlight and random rows
+are not:
 
 **General**
 
@@ -42,6 +43,7 @@ shows all of them:
 | In progress movies row | off | Continue watching row on the movies home screen |
 | Unwatched movies row | off | Unwatched row on the movies home screen |
 | Recently added movies row | off | Recently added row on the movies home screen |
+| Random movies row | off | Random row on the movies home screen |
 | Default select action for movie sets | — | Browse, continue watching, play from beginning, play next, or queue |
 
 **Series**

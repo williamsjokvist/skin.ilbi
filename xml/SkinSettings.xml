@@ -95,6 +95,12 @@
 					<selected>Skin.HasSetting(home_movie_recent)</selected>
 					<onclick>Skin.ToggleSetting(home_movie_recent)</onclick>
 				</control>
+				<control type="radiobutton" id="6116">
+					<label>$LOCALIZE[31721]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(home_movie_random)</selected>
+					<onclick>Skin.ToggleSetting(home_movie_random)</onclick>
+				</control>
 				<control type="button" id="627">
 					<label>$LOCALIZE[31176]</label>
 					<include>DefaultSettingButton</include>

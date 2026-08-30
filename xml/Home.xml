@@ -589,6 +589,7 @@
 							<param name="widget_target" value="videos"/>
 							<param name="browse_mode" value="never"/>
 							<param name="list_id" value="5400"/>
+							<param name="visible" value="Skin.HasSetting(home_movie_random)"/>
 							<param name="dim_extra" value="ControlGroup(2000).HasFocus | $EXP[home_movie_spotlight_visible] | Integer.IsGreater(Container(5100).NumItems,0) | Integer.IsGreater(Container(5200).NumItems,0) | Integer.IsGreater(Container(5300).NumItems,0)"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
