@@ -11,7 +11,6 @@
 [B]Movies and TV shows only[/B]
 • Music, live TV, radio, games, pictures, add-ons and weather have been removed
   throughout the skin.
-• "TV shows" is now just "Shows".
 
 [B]Kodi Options[/B]
 • The power menu is now "Kodi Options" and includes Settings, so the separate settings
@@ -19,10 +18,5 @@
 
 [B]Darker, simpler look[/B]
 • Black background everywhere, with the patterned backgrounds removed.
-• One fixed colour scheme and one theme instead of a picker for each.
+• For now there's only one fixed colour scheme and one theme instead of a picker for each.
 • New typeface throughout: Nunito.
-
-[B]For developers[/B]
-• Fonts are downloaded by a script rather than committed to the repo (mise task:
-  install-fonts).
-• scripts/mock-library.sh builds a sample movie/TV library for working on the skin.

@@ -8,3 +8,4 @@
 - Propogate description, fanart etc for Favorites (requires add-on)
 - Implement series episode list screen
 - Implement information screen
+- Align OSD styling
