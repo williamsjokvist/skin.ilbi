@@ -33,3 +33,63 @@ Worth doing deliberately, checking each window afterwards.
 `xml/Custom_1109_TopBarOverlay.xml` use. Those are the video playback seek bar and
 top bar, which movies and TV shows rely on. The PVR usages inside them are gated on
 PVR-only conditions and never evaluate true.
+
+### Trailer preview as the spotlight background
+
+Play an item's trailer behind the spotlight card instead of the static fanart, using
+`plugin.video.themoviedb.helper` (installed, 6.16.6) as the metadata source.
+
+What TMDb Helper already gives us:
+
+- Its service watches the container named in `Skin.String(TMDbHelper.MonitorContainer)`
+  and writes `Window(Home).Property(ListItem.*)` for the focused item. This is the only
+  way to react to focus changes — skin XML has no on-focus hook for containers. Gated on
+  `Skin.HasSetting(TMDbHelper.Service)`.
+- A `trailer` infolabel for **tvshow** items, which Kodi's own library lacks: the `tvshow`
+  table has no trailer column, so `ListItem.Trailer` is always empty for series. Movies
+  have it in the DB already.
+- A trailer list route, trailers first:
+  `plugin://plugin.video.themoviedb.helper/?info=videos&tmdb_type=<movie|tv>&tmdb_id=<id>`
+
+Two blockers before any of it runs:
+
+- **No resolver installed.** Every trailer URL in the library points at
+  `plugin.video.youtube` or `plugin.video.tubed`; neither add-on is present. Also expect
+  1-3s to resolve a YouTube URL, which may rule out autoplay-on-dwell entirely.
+- **TMDb Helper only sets properties, it never starts playback.** Something still has to
+  call `PlayMedia`. The spotlight is a single item with real buttons (`HomeSpotlight`,
+  `xml/Includes_Home.xml`), not a list, so `<onfocus>` is usable — but XML cannot delay an
+  action, so dwell-then-play needs a service add-on of our own.
+
+The hard part is teardown, not playback: starting a trailer sets `Player.HasVideo`, which
+flips `DefaultBackground` (`xml/Includes.xml`) to a fullscreen videowindow skin-wide, can
+raise the video OSD, and makes back/stop ambiguous. Every window keys off that flag.
+
+Suggested order: prove the pipeline with a manual "Preview" button on the spotlight (one
+`PlayMedia` call, no timing logic) before building autoplay. Ship behind a skin setting,
+default off. If YouTube latency makes it unusable, the fallback is local trailer files or
+`theme.mp4` beside the media — instant and add-on free, but they have to be sourced.
+
+### Keyboard input on the search home
+
+Search itself works: the **Search** entry at the top of the side list (`15100`) raises Kodi's
+keyboard with `Skin.SetString(search_query)` — no value means prompt — and the grid (`15200`)
+fills with library hits in place. What is missing is the design's on-screen key grid, which
+belongs above the side list; the entries start at the top of that column and shift down once
+the keys exist.
+
+- **The keys.** A grid of buttons plus space and backspace. Kodi's `DialogKeyboard.xml` is a
+  modal and cannot be embedded, and XML cannot append a character to a string, so each key
+  needs its own `Skin.SetString(search_query,$INFO[...])` concatenation, or a small service
+  add-on. The results half needs no work when they land: the keys write the same skin string
+  the prompt does.
+- **How the results are queried.** `$VAR[SearchGridContentVar]` (`xml/Variables.xml`) points
+  the grid at `videodb://movies/titles/?xsp={…}` — an xsp filter as a URL option, the same
+  filter object `script.globalsearch` hands to `VideoLibrary.GetMovies`, which Kodi converts
+  into exactly this URL. A container holds one media type, so movies and series are separate
+  paths: probes `15570`/`15571` count each, the side list offers only the types that matched,
+  and `Window(Home).Property(search_type)` picks between them. A query and a genre are held at
+  the same time — `Window(Home).Property(search_mode)` decides which of the two the grid shows,
+  so browsing a genre mid-search and stepping back onto a result type loses neither. Two caveats in the query text —
+  it is interpolated raw into JSON inside a URL, so a `"` breaks the filter and an `&` truncates
+  it at the URL option boundary. Skin XML has no way to escape either.

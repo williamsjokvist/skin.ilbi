@@ -932,3 +932,15 @@ msgstr ""
 msgctxt "#31709"
 msgid "Series related settings: Configure the series home screen."
 msgstr ""
+
+#: /xml/Home.xml
+#. Header above the poster grid on the search home screen
+msgctxt "#31710"
+msgid "Your search recommendations"
+msgstr ""
+
+#: /xml/Home.xml
+#. Shown on the search home when the chosen playlist comes back empty
+msgctxt "#31712"
+msgid "No items to show"
+msgstr ""

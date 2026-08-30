@@ -32,7 +32,7 @@ Reachable from Kodi Options (the logo in the top right) → Skin settings. Four 
 | Setting | Default | |
 | --- | --- | --- |
 | Random movie spotlight | off | Hero spotlight above the movie rows |
-| Movie genre rows | on | One poster row per genre on the movies home screen |
+| Movie genre rows | on | One poster row per genre on the movies home screen, and the movie half of the search side list |
 | Default select action for movie sets | — | Browse, continue watching, play from beginning, play next, or queue |
 
 **Series**
@@ -40,7 +40,7 @@ Reachable from Kodi Options (the logo in the top right) → Skin settings. Four 
 | Setting | Default | |
 | --- | --- | --- |
 | Random series spotlight | off | Hero spotlight above the series rows |
-| Series genre rows | on | One poster row per genre on the series home screen |
+| Series genre rows | on | One poster row per genre on the series home screen, and the series half of the search side list |
 | Default select action for TV shows | — | Same options as movie sets |
 
 **On screen display**

@@ -284,6 +284,34 @@
 		<!-- favourites carry no poster art, only the thumb saved with the favourite -->
 		<value>$INFO[ListItem.Art(thumb)]</value>
 	</variable>
+	<!-- Library search, run in place by the grid on the search home rather than by navigating away.
+	     The query is an xsp filter on a videodb node - the same filter object script.globalsearch passes to
+	     VideoLibrary.GetMovies, which Kodi turns into this URL option. One container holds one media type, so
+	     movies and series are separate paths and the side list picks between them.
+	     These two are the counts behind the side list entries; keep them in step with SearchGridContentVar. -->
+	<variable name="SearchMovieResultsVar">
+		<value condition="!String.IsEmpty(Skin.String(search_query))">videodb://movies/titles/?xsp={"type":"movies","rules":{"or":[{"field":"title","operator":"contains","value":"$INFO[Skin.String(search_query)]"},{"field":"originaltitle","operator":"contains","value":"$INFO[Skin.String(search_query)]"}]}}</value>
+	</variable>
+	<variable name="SearchTVShowResultsVar">
+		<value condition="!String.IsEmpty(Skin.String(search_query))">videodb://tvshows/titles/?xsp={"type":"tvshows","rules":{"and":[{"field":"title","operator":"contains","value":"$INFO[Skin.String(search_query)]"}]}}</value>
+	</variable>
+	<variable name="SearchGridContentVar">
+		<!-- series results when they are asked for, or when the search found no movies at all -->
+		<value condition="String.IsEqual(Window(Home).Property(search_mode),search) + !String.IsEmpty(Skin.String(search_query)) + [String.IsEqual(Window(Home).Property(search_type),tvshows) | [!Integer.IsGreater(Container(15570).NumItems,0) + !Container(15570).IsUpdating]]">videodb://tvshows/titles/?xsp={"type":"tvshows","rules":{"and":[{"field":"title","operator":"contains","value":"$INFO[Skin.String(search_query)]"}]}}</value>
+		<value condition="String.IsEqual(Window(Home).Property(search_mode),search) + !String.IsEmpty(Skin.String(search_query))">videodb://movies/titles/?xsp={"type":"movies","rules":{"or":[{"field":"title","operator":"contains","value":"$INFO[Skin.String(search_query)]"},{"field":"originaltitle","operator":"contains","value":"$INFO[Skin.String(search_query)]"}]}}</value>
+		<!-- a genre and a search coexist: search_mode says which of the two the grid is showing, so stepping
+		     onto a genre and back onto a result type swaps between them without losing either.
+		     Focusing a genre writes its playlist here; empty means no genre focused yet.
+		     A window property rather than a skin string: this is rewritten on every focus move, and none of it
+		     is worth persisting to settings.xml between sessions -->
+		<value condition="!String.IsEmpty(Window(Home).Property(search_playlist))">$INFO[Window(Home).Property(search_playlist)]</value>
+		<value>special://skin/playlists/random_movies.xsp</value>
+	</variable>
+	<variable name="SearchGridHeaderVar">
+		<value condition="String.IsEqual(Window(Home).Property(search_mode),search) + !String.IsEmpty(Skin.String(search_query))">$LOCALIZE[137]: $INFO[Skin.String(search_query)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(search_playlist_label))">$INFO[Window(Home).Property(search_playlist_label)]</value>
+		<value>$LOCALIZE[31710]</value>
+	</variable>
 	<variable name="WatchedStatusVar">
 		<value condition="String.IsEqual(Listitem.DBType,tvshow) | String.IsEqual(Listitem.DBType,season)">$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</value>
 		<value condition="String.IsEqual(Listitem.DBType,set)">$INFO[ListItem.Property(Watched)]$INFO[ListItem.Property(Total), / ,]</value>

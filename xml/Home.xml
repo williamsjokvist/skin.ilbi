@@ -40,6 +40,510 @@
 					<effect type="slide" end="0,20" time="180" tween="sine" delay="80"/>
 				</animation>
 				<include>OpenClose_Right</include>
+				<control type="group" id="15000">
+					<defaultcontrol>15100</defaultcontrol>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(id),search)</visible>
+					<include content="Visible_Right_Delayed">
+						<param name="id" value="search"/>
+					</include>
+					<!-- side list: the same genre playlists that back the rows on the movies and series homes.
+					     The on-screen keyboard belongs above this list; it is not built yet, so the genres
+					     start at the top of the column for now. -->
+					<control type="grouplist" id="15100">
+						<left>15</left>
+						<top>15</top>
+						<width>420</width>
+						<height>930</height>
+						<orientation>vertical</orientation>
+						<itemgap>0</itemgap>
+						<scrolltime tween="cubic" easing="out">300</scrolltime>
+						<onup>9000</onup>
+						<ondown>noop</ondown>
+						<onleft>noop</onleft>
+						<onright>15200</onright>
+						<include>SearchActionButton</include>
+						<include content="SearchResultTypeButton">
+							<param name="id" value="15591"/>
+							<param name="label" value="$LOCALIZE[342]"/>
+							<param name="type" value="movies"/>
+							<param name="probe_id" value="15570"/>
+						</include>
+						<include content="SearchResultTypeButton">
+							<param name="id" value="15592"/>
+							<param name="label" value="$LOCALIZE[31701]"/>
+							<param name="type" value="tvshows"/>
+							<param name="probe_id" value="15571"/>
+						</include>
+						<include content="SearchSidebarHeader">
+							<param name="id" value="15650"/>
+							<param name="label" value="$LOCALIZE[342]"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + $EXP[home_search_movie_genres_any]"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15601"/>
+							<param name="label" value="Action"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_action.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15801).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15602"/>
+							<param name="label" value="Adventure"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_adventure.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15802).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15603"/>
+							<param name="label" value="Animation"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_animation.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15803).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15604"/>
+							<param name="label" value="Comedy"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_comedy.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15804).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15605"/>
+							<param name="label" value="Crime"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_crime.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15805).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15606"/>
+							<param name="label" value="Documentary"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_documentary.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15806).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15607"/>
+							<param name="label" value="Drama"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_drama.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15807).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15608"/>
+							<param name="label" value="Family"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_family.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15808).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15609"/>
+							<param name="label" value="Fantasy"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_fantasy.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15809).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15610"/>
+							<param name="label" value="History"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_history.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15810).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15611"/>
+							<param name="label" value="Horror"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_horror.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15811).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15612"/>
+							<param name="label" value="Music"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_music.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15812).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15613"/>
+							<param name="label" value="Mystery"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_mystery.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15813).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15614"/>
+							<param name="label" value="Romance"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_romance.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15814).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15615"/>
+							<param name="label" value="Science Fiction"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_science_fiction.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15815).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15616"/>
+							<param name="label" value="Thriller"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_thriller.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15816).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15617"/>
+							<param name="label" value="TV Movie"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_tv_movie.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15817).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15618"/>
+							<param name="label" value="War"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_war.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15818).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15619"/>
+							<param name="label" value="Western"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_western.xsp"/>
+							<param name="visible" value="$EXP[home_search_movie_genres] + Integer.IsGreater(Container(15819).NumItems,0)"/>
+						</include>
+						<include content="SearchSidebarHeader">
+							<param name="id" value="15750"/>
+							<param name="label" value="$LOCALIZE[31701]"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + $EXP[home_search_tvshow_genres_any]"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15701"/>
+							<param name="label" value="Action &amp; Adventure"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_action_adventure.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15901).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15702"/>
+							<param name="label" value="Animation"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_animation.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15902).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15703"/>
+							<param name="label" value="Comedy"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_comedy.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15903).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15704"/>
+							<param name="label" value="Crime"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_crime.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15904).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15705"/>
+							<param name="label" value="Documentary"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_documentary.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15905).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15706"/>
+							<param name="label" value="Drama"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_drama.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15906).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15707"/>
+							<param name="label" value="Family"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_family.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15907).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15708"/>
+							<param name="label" value="Horror"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_horror.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15908).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15709"/>
+							<param name="label" value="Kids"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_kids.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15909).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15710"/>
+							<param name="label" value="Mystery"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_mystery.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15910).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15711"/>
+							<param name="label" value="News"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_news.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15911).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15712"/>
+							<param name="label" value="Reality"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_reality.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15912).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15713"/>
+							<param name="label" value="Romance"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_romance.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15913).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15714"/>
+							<param name="label" value="Sci-Fi &amp; Fantasy"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_scifi_fantasy.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15914).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15715"/>
+							<param name="label" value="Soap"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_soap.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15915).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15716"/>
+							<param name="label" value="Talk"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_talk.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15916).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15717"/>
+							<param name="label" value="Thriller"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_thriller.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15917).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15718"/>
+							<param name="label" value="War &amp; Politics"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_war_politics.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15918).NumItems,0)"/>
+						</include>
+						<include content="SearchGenreButton">
+							<param name="id" value="15719"/>
+							<param name="label" value="Western"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_western.xsp"/>
+							<param name="visible" value="$EXP[home_search_tvshow_genres] + Integer.IsGreater(Container(15919).NumItems,0)"/>
+						</include>
+					</control>
+					<control type="group">
+						<description>result grid - the side list points it at a genre playlist; recommendations until one is picked</description>
+						<left>460</left>
+						<top>15</top>
+						<visible>Library.HasContent(movies) | Library.HasContent(tvshows)</visible>
+						<control type="label">
+							<description>header stays put through an empty genre, so the page never goes blank</description>
+							<left>15</left>
+							<top>0</top>
+							<width>1200</width>
+							<height>52</height>
+							<font>font30_title</font>
+							<label>$VAR[SearchGridHeaderVar]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>62</top>
+							<width>1200</width>
+							<height>52</height>
+							<font>font27_title</font>
+							<textcolor>66FFFFFF</textcolor>
+							<label>$LOCALIZE[31712]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+							<visible>!Integer.IsGreater(Container(15200).NumItems,0) + !Container(15200).IsUpdating</visible>
+						</control>
+						<control type="panel" id="15200">
+							<left>0</left>
+							<top>62</top>
+							<right>0</right>
+							<bottom>0</bottom>
+							<onleft>15100</onleft>
+							<onright>15200</onright>
+							<onup>9000</onup>
+							<ondown>15200</ondown>
+							<preloaditems>2</preloaditems>
+							<scrolltime tween="cubic" easing="out">500</scrolltime>
+							<orientation>vertical</orientation>
+							<pagecontrol>15010</pagecontrol>
+							<!-- no visible condition: a hidden container is not processed, so it would never
+							     pick up the next path the side list writes and would stay empty for good -->
+							<itemlayout width="340" height="480">
+								<control type="group">
+									<include>HomePosterLayout</include>
+								</control>
+							</itemlayout>
+							<focusedlayout width="340" height="480">
+								<control type="group">
+									<depth>DepthContentPopout</depth>
+									<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="155,232">Focus</animation>
+									<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="155,232">UnFocus</animation>
+									<include>HomePosterLayout</include>
+								</control>
+							</focusedlayout>
+							<content target="videos">$VAR[SearchGridContentVar]</content>
+						</control>
+					</control>
+					<control type="group">
+						<description>item counts behind the side list - offscreen, never navigated to</description>
+						<left>-10</left>
+						<top>-10</top>
+						<include content="SearchResultProbe">
+							<param name="list_id" value="15570"/>
+							<param name="content" value="$VAR[SearchMovieResultsVar]"/>
+						</include>
+						<include content="SearchResultProbe">
+							<param name="list_id" value="15571"/>
+							<param name="content" value="$VAR[SearchTVShowResultsVar]"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15801"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_action.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15802"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_adventure.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15803"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_animation.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15804"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_comedy.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15805"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_crime.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15806"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_documentary.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15807"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_drama.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15808"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_family.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15809"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_fantasy.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15810"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_history.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15811"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_horror.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15812"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_music.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15813"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_mystery.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15814"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_romance.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15815"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_science_fiction.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15816"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_thriller.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15817"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_tv_movie.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15818"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_war.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15819"/>
+							<param name="playlist" value="special://skin/playlists/genre_movie_western.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15901"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_action_adventure.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15902"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_animation.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15903"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_comedy.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15904"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_crime.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15905"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_documentary.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15906"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_drama.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15907"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_family.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15908"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_horror.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15909"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_kids.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15910"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_mystery.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15911"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_news.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15912"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_reality.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15913"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_romance.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15914"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_scifi_fantasy.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15915"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_soap.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15916"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_talk.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15917"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_thriller.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15918"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_war_politics.xsp"/>
+						</include>
+						<include content="SearchGenreProbe">
+							<param name="list_id" value="15919"/>
+							<param name="playlist" value="special://skin/playlists/genre_tvshow_western.xsp"/>
+						</include>
+					</control>
+					<include content="ImageWidget">
+						<param name="text_label" value="$LOCALIZE[31104]"/>
+						<param name="button_label" value="$LOCALIZE[31110]"/>
+						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
+						<param name="button_id" value="15500"/>
+						<param name="visible" value="!Library.HasContent(movies) + !Library.HasContent(tvshows)"/>
+						<param name="visible_2" value="false"/>
+					</include>
+				</control>
 				<control type="group" id="5000">
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),movies)</visible>
 					<include content="Visible_Right_Delayed">
@@ -558,46 +1062,16 @@
 					<effect type="slide" start="0,0" end="0,-200" time="300" tween="cubic" easing="out"/>
 				</animation>
 				<control type="group">
-					<description>menu bar - auto-centred on item count</description>
+					<description>menu bar - four fixed sections, so it is centred by its own width.
+					     It must not be positioned off Container(9000): every dialog in the skin has a control
+					     with that id too, and while one is open it shadows this list and the bar jumps.</description>
 					<centerleft>50%</centerleft>
 					<top>10</top>
-					<width>1920</width>
+					<width>640</width>
 					<height>110</height>
-					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,1)">
-						<effect type="slide" start="0,0" end="80,0" time="0"/>
-					</animation>
-					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,2)">
-						<effect type="slide" start="0,0" end="80,0" time="0"/>
-					</animation>
-					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,3)">
-						<effect type="slide" start="0,0" end="80,0" time="0"/>
-					</animation>
-					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,4)">
-						<effect type="slide" start="0,0" end="80,0" time="0"/>
-					</animation>
-					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,5)">
-						<effect type="slide" start="0,0" end="80,0" time="0"/>
-					</animation>
-					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,6)">
-						<effect type="slide" start="0,0" end="80,0" time="0"/>
-					</animation>
-					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,7)">
-						<effect type="slide" start="0,0" end="80,0" time="0"/>
-					</animation>
-					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,8)">
-						<effect type="slide" start="0,0" end="80,0" time="0"/>
-					</animation>
-					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,9)">
-						<effect type="slide" start="0,0" end="80,0" time="0"/>
-					</animation>
-					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,10)">
-						<effect type="slide" start="0,0" end="80,0" time="0"/>
-					</animation>
-					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,11)">
-						<effect type="slide" start="0,0" end="80,0" time="0"/>
-					</animation>
 					<control type="group">
 						<description>morphing pill - active section</description>
+						<visible>!System.HasActiveModalDialog</visible>
 						<control type="group">
 							<animation type="Conditional" condition="Integer.IsGreater(Container(9000).CurrentItem,1)">
 								<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout"/>
@@ -831,30 +1305,28 @@
 						<content>
 							<item id="801">
 								<label>$LOCALIZE[137]</label>
-								<onclick>ActivateWindow(1107)</onclick>
-								<property name="menu_id">$NUMBER[9000]</property>
+								<onclick>SetFocus(15000)</onclick>
+								<property name="menu_id">$NUMBER[15000]</property>
 								<thumb>icons/search.png</thumb>
 								<property name="id">search</property>
 							</item>
 							<item>
 								<label>$LOCALIZE[342]</label>
-								<onclick condition="Library.HasContent(movies)">ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
-								<onclick condition="!Library.HasContent(movies)">ActivateWindow(Videos,sources://video/,return)</onclick>
+								<onclick>SetFocus(5000)</onclick>
 								<property name="menu_id">$NUMBER[5000]</property>
 								<thumb>icons/sidemenu/movies.png</thumb>
 								<property name="id">movies</property>
 							</item>
 							<item>
 								<label>$LOCALIZE[31701]</label>
-								<onclick condition="Library.HasContent(tvshows)">ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
-								<onclick condition="!Library.HasContent(tvshows)">ActivateWindow(Videos,sources://video/,return)</onclick>
+								<onclick>SetFocus(6000)</onclick>
 								<property name="menu_id">$NUMBER[6000]</property>
 								<thumb>icons/sidemenu/tv.png</thumb>
 								<property name="id">tvshows</property>
 							</item>
 							<item>
 								<label>$LOCALIZE[31702]</label>
-								<onclick>ActivateWindow(favouritesbrowser)</onclick>
+								<onclick>SetFocus(14000)</onclick>
 								<property name="menu_id">$NUMBER[14000]</property>
 								<thumb>icons/sidemenu/favourites.png</thumb>
 								<property name="id">favorites</property>

@@ -61,6 +61,140 @@
 			</control>
 		</definition>
 	</include>
+	<include name="SearchSidebarHeader">
+		<param name="visible">true</param>
+		<definition>
+			<control type="label" id="$PARAM[id]">
+				<width>420</width>
+				<height>64</height>
+				<aligny>center</aligny>
+				<font>font27_title</font>
+				<textcolor>66FFFFFF</textcolor>
+				<textoffsetx>24</textoffsetx>
+				<label>$PARAM[label]</label>
+				<shadowcolor>text_shadow</shadowcolor>
+				<visible>$PARAM[visible]</visible>
+			</control>
+		</definition>
+	</include>
+	<!-- side list entries: a faint pill marks the playlist the grid is showing, a solid one marks focus.
+	     Every entry needs its own id: a grouplist wires each child's up/down to its neighbour by id,
+	     and idless controls all collapse onto id 0, which leaves the list unwalkable. -->
+	<include name="SearchSidebarEntryStyle">
+		<width>auto</width>
+		<height>64</height>
+		<font>font27_menu</font>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textoffsetx>24</textoffsetx>
+		<textcolor>AAFFFFFF</textcolor>
+		<focusedcolor>FF181818</focusedcolor>
+		<texturefocus border="31">pill.png</texturefocus>
+		<texturenofocus/>
+		<alttexturefocus border="31">pill.png</alttexturefocus>
+		<alttexturenofocus border="31" colordiffuse="33FFFFFF">pill.png</alttexturenofocus>
+		<onleft>noop</onleft>
+		<onright>15200</onright>
+	</include>
+	<include name="SearchGenreButton">
+		<param name="visible">true</param>
+		<definition>
+			<control type="togglebutton" id="$PARAM[id]">
+				<description>side list entry: points the grid on the right at this genre's smart playlist</description>
+				<include>SearchSidebarEntryStyle</include>
+				<label>$PARAM[label]</label>
+				<usealttexture>String.IsEqual(Window(Home).Property(search_playlist),$PARAM[playlist]) + !String.IsEqual(Window(Home).Property(search_mode),search)</usealttexture>
+				<onfocus>SetProperty(search_playlist,$PARAM[playlist],home)</onfocus>
+				<onfocus>SetProperty(search_playlist_label,$PARAM[label],home)</onfocus>
+				<onfocus>ClearProperty(search_mode,home)</onfocus>
+				<onclick>SetFocus(15200)</onclick>
+				<visible>$PARAM[visible]</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="SearchGenreProbe">
+		<definition>
+			<control type="list" id="$PARAM[list_id]">
+				<description>counts a genre playlist so the side list can drop the ones with nothing in them</description>
+				<left>0</left>
+				<top>0</top>
+				<width>1</width>
+				<height>1</height>
+				<itemlayout width="1" height="1">
+					<control type="image">
+						<description>nothing to draw - only the item count is wanted</description>
+						<width>1</width>
+						<height>1</height>
+						<texture/>
+					</control>
+				</itemlayout>
+				<focusedlayout width="1" height="1">
+					<control type="image">
+						<width>1</width>
+						<height>1</height>
+						<texture/>
+					</control>
+				</focusedlayout>
+				<content limit="1">$PARAM[playlist]</content>
+			</control>
+		</definition>
+	</include>
+	<include name="SearchActionButton">
+		<definition>
+			<control type="button" id="15590">
+				<description>side list action: Skin.SetString with no value raises Kodi's keyboard, and the query lands in the grid</description>
+				<include>SearchSidebarEntryStyle</include>
+				<label>$LOCALIZE[137]</label>
+				<!-- no onfocus: this one only acts when pressed, so passing over it leaves the grid alone -->
+				<!-- reset first so cancelling the keyboard clears the search instead of re-running the last one -->
+				<onclick>Skin.Reset(search_query)</onclick>
+				<onclick>Skin.SetString(search_query)</onclick>
+				<onclick>ClearProperty(search_type,home)</onclick>
+				<onclick>SetProperty(search_mode,search,home)</onclick>
+			</control>
+		</definition>
+	</include>
+	<include name="SearchResultTypeButton">
+		<definition>
+			<control type="togglebutton" id="$PARAM[id]">
+				<description>side list entry: swaps the result grid between the two media types a search can return</description>
+				<include>SearchSidebarEntryStyle</include>
+				<label>$PARAM[label] [COLOR 66FFFFFF]$INFO[Container($PARAM[probe_id]).NumItems][/COLOR]</label>
+				<usealttexture>String.IsEqual(Window(Home).Property(search_type),$PARAM[type]) + String.IsEqual(Window(Home).Property(search_mode),search)</usealttexture>
+				<onfocus>SetProperty(search_type,$PARAM[type],home)</onfocus>
+				<onfocus>SetProperty(search_mode,search,home)</onfocus>
+				<onclick>SetFocus(15200)</onclick>
+				<visible>!String.IsEmpty(Skin.String(search_query)) + Integer.IsGreater(Container($PARAM[probe_id]).NumItems,0)</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="SearchResultProbe">
+		<definition>
+			<control type="list" id="$PARAM[list_id]">
+				<description>counts one media type's search hits, so the side list can offer only the types that matched</description>
+				<left>0</left>
+				<top>0</top>
+				<width>1</width>
+				<height>1</height>
+				<itemlayout width="1" height="1">
+					<control type="image">
+						<description>nothing to draw - only the item count is wanted</description>
+						<width>1</width>
+						<height>1</height>
+						<texture/>
+					</control>
+				</itemlayout>
+				<focusedlayout width="1" height="1">
+					<control type="image">
+						<width>1</width>
+						<height>1</height>
+						<texture/>
+					</control>
+				</focusedlayout>
+				<content>$PARAM[content]</content>
+			</control>
+		</definition>
+	</include>
 	<include name="HomeWideLayout">
 		<definition>
 			<control type="image">
