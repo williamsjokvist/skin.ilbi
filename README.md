@@ -10,11 +10,11 @@ Scope is deliberately narrow: **movies and TV shows only**.
 
 ![Spotlight](resources/spotlight.jpg)
 
-![Movies](resources/movies.jpg)
-
-![Favorites](resources/favorites.jpg)
+![Series](resources/series.jpg)
 
 ![Search](resources/search.jpg)
+
+![Favorites](resources/favorites.jpg)
 
 ## Skin settings
 
