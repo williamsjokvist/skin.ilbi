@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="View_56_Episodes">
+		<definition>
+			<control type="group">
+				<include>OpenClose_Right</include>
+				<visible>Control.IsVisible(56)</visible>
+				<include>Visible_Right</include>
+				<control type="group">
+					<description>show identity and season switcher - the episode list stays the window's own container</description>
+					<visible>Container.Content(episodes)</visible>
+					<control type="image">
+						<description>clearlogo of the show the episodes belong to</description>
+						<left>60</left>
+						<top>130</top>
+						<width>480</width>
+						<height>160</height>
+						<aspectratio align="left" aligny="bottom">keep</aspectratio>
+						<fadetime>250</fadetime>
+						<texture>$INFO[Container.Art(tvshow.clearlogo)]</texture>
+						<visible>!String.IsEmpty(Container.Art(tvshow.clearlogo))</visible>
+					</control>
+					<control type="textbox">
+						<description>title fallback when the show has no clearlogo</description>
+						<left>60</left>
+						<top>150</top>
+						<width>560</width>
+						<height>140</height>
+						<font>font45_title</font>
+						<label>$INFO[Container.Property(showtitle)]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+						<visible>String.IsEmpty(Container.Art(tvshow.clearlogo))</visible>
+					</control>
+					<control type="label">
+						<left>60</left>
+						<top>305</top>
+						<width>560</width>
+						<height>40</height>
+						<font>font27_title</font>
+						<textcolor>99FFFFFF</textcolor>
+						<label>$VAR[SeriesShowMetaVar]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+					</control>
+					<control type="list" id="5620">
+						<description>seasons of this show, reached from the episode's tvshowdbid; clicking one reloads the window's container</description>
+						<left>60</left>
+						<top>380</top>
+						<width>600</width>
+						<bottom>100</bottom>
+						<orientation>vertical</orientation>
+						<scrolltime tween="cubic" easing="out">300</scrolltime>
+						<onleft>9000</onleft>
+						<onright>56</onright>
+						<onup>5620</onup>
+						<ondown>5620</ondown>
+						<onclick>Container.Update($ESCINFO[ListItem.Path])</onclick>
+						<itemlayout width="600" height="72">
+							<include content="SeriesSeasonLayout">
+								<param name="focused" value="false"/>
+								<param name="text_color" value="AAFFFFFF"/>
+								<param name="sub_color" value="66FFFFFF"/>
+							</include>
+						</itemlayout>
+						<focusedlayout width="600" height="72">
+							<include content="SeriesSeasonLayout">
+								<param name="focused" value="Control.HasFocus(5620)"/>
+								<param name="text_color" value="white"/>
+								<param name="sub_color" value="AAFFFFFF"/>
+							</include>
+						</focusedlayout>
+						<content>$VAR[SeriesSeasonsPathVar]</content>
+					</control>
+				</control>
+				<control type="list" id="56">
+					<visible>Container.Content(episodes)</visible>
+					<left>720</left>
+					<top>list_top_offset</top>
+					<right>60</right>
+					<bottom>list_bottom_offset</bottom>
+					<orientation>vertical</orientation>
+					<scrolltime tween="cubic" easing="out">400</scrolltime>
+					<pagecontrol>531</pagecontrol>
+					<onleft>5620</onleft>
+					<onright>531</onright>
+					<onup>56</onup>
+					<ondown>56</ondown>
+					<viewtype label="$LOCALIZE[20360]">list</viewtype>
+					<itemlayout width="1140" height="280" condition="Container.Content(episodes)">
+						<include content="SeriesEpisodeLayout">
+							<param name="focused" value="false"/>
+							<param name="art_diffuse" value="AAFFFFFF"/>
+							<param name="title_color" value="AAFFFFFF"/>
+							<param name="plot_color" value="66FFFFFF"/>
+						</include>
+					</itemlayout>
+					<focusedlayout width="1140" height="280" condition="Container.Content(episodes)">
+						<include content="SeriesEpisodeLayout">
+							<param name="focused" value="Control.HasFocus(56)"/>
+							<param name="art_diffuse" value="white"/>
+							<param name="title_color" value="white"/>
+							<param name="plot_color" value="AAFFFFFF"/>
+						</include>
+					</focusedlayout>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="SeriesSeasonLayout">
+		<definition>
+			<control type="group">
+				<control type="image">
+					<description>focus marker, the faint pill the main menu gives its active section</description>
+					<left>0</left>
+					<top>0</top>
+					<width>600</width>
+					<height>72</height>
+					<texture border="31" colordiffuse="33FFFFFF">pill.png</texture>
+					<visible>$PARAM[focused]</visible>
+				</control>
+				<control type="label">
+					<left>28</left>
+					<top>0</top>
+					<width>390</width>
+					<height>72</height>
+					<aligny>center</aligny>
+					<font>font27_menu</font>
+					<textcolor>$PARAM[text_color]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+				</control>
+				<control type="label">
+					<left>418</left>
+					<top>0</top>
+					<width>154</width>
+					<height>72</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font27</font>
+					<textcolor>$PARAM[sub_color]</textcolor>
+					<label>$INFO[ListItem.Property(totalepisodes)] $LOCALIZE[20360]</label>
+					<visible>!String.IsEmpty(ListItem.Property(totalepisodes))</visible>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="SeriesEpisodeLayout">
+		<definition>
+			<control type="group">
+				<control type="image">
+					<description>white ring behind the still, focused only</description>
+					<left>-6</left>
+					<top>6</top>
+					<width>436</width>
+					<height>250</height>
+					<texture border="31">pill.png</texture>
+					<visible>$PARAM[focused]</visible>
+				</control>
+				<control type="image">
+					<description>episode still</description>
+					<left>0</left>
+					<top>12</top>
+					<width>424</width>
+					<height>238</height>
+					<texture colordiffuse="$PARAM[art_diffuse]" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+				<control type="image">
+					<description>bottom scrim so the episode number stays legible</description>
+					<left>0</left>
+					<top>150</top>
+					<width>424</width>
+					<height>100</height>
+					<texture colordiffuse="CC000000">overlays/overlayfade.png</texture>
+				</control>
+				<control type="image">
+					<description>rounds the still against the background</description>
+					<left>0</left>
+					<top>12</top>
+					<width>424</width>
+					<height>238</height>
+					<texture border="24">poster_mask.png</texture>
+				</control>
+				<control type="label">
+					<left>22</left>
+					<top>186</top>
+					<width>330</width>
+					<height>44</height>
+					<aligny>center</aligny>
+					<font>font27_title</font>
+					<label>$LOCALIZE[20359] $INFO[ListItem.Episode]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+				</control>
+				<control type="image">
+					<description>watched / resumable marker</description>
+					<left>368</left>
+					<top>26</top>
+					<width>40</width>
+					<height>40</height>
+					<texture>$VAR[ListWatchedIconVar]</texture>
+				</control>
+				<control type="progress">
+					<left>16</left>
+					<top>232</top>
+					<width>392</width>
+					<height>6</height>
+					<texturebg/>
+					<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
+					<info>ListItem.PercentPlayed</info>
+					<visible>ListItem.IsResumable</visible>
+				</control>
+				<control type="label">
+					<left>460</left>
+					<top>16</top>
+					<width>680</width>
+					<height>48</height>
+					<aligny>center</aligny>
+					<font>font30_title</font>
+					<textcolor>$PARAM[title_color]</textcolor>
+					<label>$INFO[ListItem.Title]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+				</control>
+				<control type="textbox">
+					<left>460</left>
+					<top>72</top>
+					<width>680</width>
+					<height>102</height>
+					<font>font27</font>
+					<textcolor>$PARAM[plot_color]</textcolor>
+					<label>$INFO[ListItem.Plot]</label>
+				</control>
+				<control type="label">
+					<left>460</left>
+					<top>190</top>
+					<width>680</width>
+					<height>36</height>
+					<aligny>center</aligny>
+					<font>font27</font>
+					<textcolor>66FFFFFF</textcolor>
+					<label>$INFO[ListItem.Duration]</label>
+				</control>
+			</control>
+		</definition>
+	</include>
+</includes>

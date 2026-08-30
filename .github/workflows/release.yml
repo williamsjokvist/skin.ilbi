@@ -31,19 +31,27 @@ jobs:
 
       - run: mise bundle
 
-      - name: Commit the version bump
+      - name: Commit the version bump and move the tag onto it
         run: |
+          version="${GITHUB_REF_NAME#v}"
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           git config user.name 'github-actions[bot]'
           git checkout master
           git add addon.xml
           if git diff --cached --quiet; then
-            echo "addon.xml already at ${GITHUB_REF_NAME#v} on master"
-            exit 0
+            echo "addon.xml already at $version on master"
+          else
+            git commit -m "chore: release $version"
+            git pull --rebase origin master
+            git push origin master
           fi
-          git commit -m "chore: release ${GITHUB_REF_NAME#v}"
-          git pull --rebase origin master
-          git push origin master
+          # The tag that triggered this run points at the commit before the bump.
+          # Move it onto the release commit so the tag, the zip and the generated
+          # notes all describe the same tree.
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse "refs/tags/$GITHUB_REF_NAME")" ]; then
+            git tag -f "$GITHUB_REF_NAME" HEAD
+            git push --force origin "refs/tags/$GITHUB_REF_NAME"
+          fi
 
       - name: Create release
         env:

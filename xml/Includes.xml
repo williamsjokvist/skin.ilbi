@@ -13,6 +13,7 @@
 	<include file="View_53_Shift.xml"/>
 	<include file="View_54_InfoWall.xml"/>
 	<include file="View_55_WideList.xml"/>
+	<include file="View_56_Episodes.xml"/>
 	<include file="View_503_NowPlaying.xml"/>
 	<include file="View_500_Wall.xml"/>
 	<include file="View_501_Banner.xml"/>

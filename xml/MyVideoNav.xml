@@ -2,8 +2,9 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
-	<views>50,51,52,53,54,55,500,501,502</views>
+	<views>56,50,51,52,53,54,55,500,501,502</views>
 	<menucontrol>9000</menucontrol>
+	<onload condition="Container.Content(episodes)">Container.SetViewMode(56)</onload>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
@@ -14,6 +15,7 @@
 			<include>View_53_Shift</include>
 			<include>View_54_InfoWall</include>
 			<include>View_55_WideList</include>
+			<include>View_56_Episodes</include>
 			<include>View_500_Wall</include>
 			<include>View_501_Banner</include>
 			<include>View_502_FanArt</include>
