@@ -91,15 +91,6 @@
 							<param name="list_id" value="5400"/>
 							<param name="dim_extra" value="ControlGroup(2000).HasFocus | $EXP[home_movie_spotlight_visible] | Integer.IsGreater(Container(5100).NumItems,0) | Integer.IsGreater(Container(5200).NumItems,0) | Integer.IsGreater(Container(5300).NumItems,0)"/>
 						</include>
-						<include content="WidgetListCategories" condition="Library.HasContent(movies)">
-							<param name="content_path" value="videodb://movies/genres/"/>
-							<param name="widget_header" value="$LOCALIZE[135]"/>
-							<param name="widget_target" value="videos"/>
-							<param name="list_id" value="5500"/>
-							<param name="icon" value="$VAR[WidgetGenreIconVar]"/>
-							<param name="icon_height" value="70"/>
-							<param name="dim_extra" value="ControlGroup(2000).HasFocus | $EXP[home_movie_spotlight_visible] | Integer.IsGreater(Container(5100).NumItems,0) | Integer.IsGreater(Container(5200).NumItems,0) | Integer.IsGreater(Container(5300).NumItems,0) | Integer.IsGreater(Container(5400).NumItems,0)"/>
-						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
 							<param name="content_path" value="videodb://movies/sets/"/>
 							<param name="widget_header" value="$LOCALIZE[31075]"/>
@@ -108,7 +99,160 @@
 							<param name="list_id" value="5600"/>
 							<param name="onclick_condition" value="true"/>
 							<param name="onclick_action" value="$VAR[MovieSetOnClickActionVar]"/>
-							<param name="dim_extra" value="ControlGroup(2000).HasFocus | $EXP[home_movie_spotlight_visible] | Integer.IsGreater(Container(5100).NumItems,0) | Integer.IsGreater(Container(5200).NumItems,0) | Integer.IsGreater(Container(5300).NumItems,0) | Integer.IsGreater(Container(5400).NumItems,0) | Integer.IsGreater(Container(5500).NumItems,0)"/>
+							<param name="dim_extra" value="ControlGroup(2000).HasFocus | $EXP[home_movie_spotlight_visible] | Integer.IsGreater(Container(5100).NumItems,0) | Integer.IsGreater(Container(5200).NumItems,0) | Integer.IsGreater(Container(5300).NumItems,0) | Integer.IsGreater(Container(5400).NumItems,0)"/>
+						</include>
+						<!-- one row per genre, each backed by its own smart playlist; empty genres collapse -->
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_action.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="Action"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5801"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_adventure.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="Adventure"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5802"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_animation.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="Animation"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5803"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_comedy.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="Comedy"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5804"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_crime.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="Crime"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5805"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_documentary.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="Documentary"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5806"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_drama.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="Drama"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5807"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_family.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="Family"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5808"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_fantasy.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="Fantasy"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5809"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_history.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="History"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5810"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_horror.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="Horror"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5811"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_music.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="Music"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5812"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_mystery.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="Mystery"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5813"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_romance.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="Romance"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5814"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_science_fiction.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="Science Fiction"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5815"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_thriller.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="Thriller"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5816"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_tv_movie.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="TV Movie"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5817"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_war.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="War"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5818"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+							<param name="content_path" value="special://skin/playlists/genre_movie_western.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_movie_genres)"/>
+							<param name="widget_header" value="Western"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="5819"/>
+							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 					</control>
 					<include content="ImageWidget" condition="!Library.HasContent(movies)">
@@ -170,23 +314,196 @@
 							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
 							<param name="dim_extra" value="ControlGroup(2000).HasFocus | $EXP[home_tvshow_spotlight_visible] | Integer.IsGreater(Container(6100).NumItems,0) | Integer.IsGreater(Container(6200).NumItems,0)"/>
 						</include>
-						<include content="WidgetListCategories" condition="Library.HasContent(tvshows)">
-							<param name="content_path" value="videodb://tvshows/genres/"/>
-							<param name="widget_header" value="$LOCALIZE[135]"/>
+						<!-- one row per genre, each backed by its own smart playlist; empty genres collapse -->
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_action_adventure.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="Action &amp; Adventure"/>
 							<param name="widget_target" value="videos"/>
-							<param name="list_id" value="6400"/>
-							<param name="icon" value="$VAR[WidgetGenreIconVar]"/>
-							<param name="icon_height" value="70"/>
-							<param name="dim_extra" value="ControlGroup(2000).HasFocus | $EXP[home_tvshow_spotlight_visible] | Integer.IsGreater(Container(6100).NumItems,0) | Integer.IsGreater(Container(6200).NumItems,0) | Integer.IsGreater(Container(6300).NumItems,0)"/>
+							<param name="list_id" value="6801"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
 						</include>
-						<include content="WidgetListCategories" condition="Library.HasContent(tvshows)">
-							<param name="content_path" value="videodb://tvshows/studios/"/>
-							<param name="widget_header" value="$LOCALIZE[20388]"/>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_animation.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="Animation"/>
 							<param name="widget_target" value="videos"/>
-							<param name="list_id" value="6500"/>
-							<param name="icon" value="$VAR[WidgetStudioIconVar]"/>
-							<param name="icon_height" value="70"/>
-							<param name="dim_extra" value="ControlGroup(2000).HasFocus | $EXP[home_tvshow_spotlight_visible] | Integer.IsGreater(Container(6100).NumItems,0) | Integer.IsGreater(Container(6200).NumItems,0) | Integer.IsGreater(Container(6300).NumItems,0) | Integer.IsGreater(Container(6400).NumItems,0)"/>
+							<param name="list_id" value="6802"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_comedy.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="Comedy"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6803"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_crime.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="Crime"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6804"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_documentary.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="Documentary"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6805"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_drama.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="Drama"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6806"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_family.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="Family"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6807"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_horror.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="Horror"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6808"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_kids.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="Kids"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6809"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_mystery.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="Mystery"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6810"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_news.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="News"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6811"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_reality.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="Reality"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6812"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_romance.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="Romance"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6813"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_scifi_fantasy.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="Sci-Fi &amp; Fantasy"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6814"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_soap.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="Soap"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6815"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_talk.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="Talk"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6816"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_thriller.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="Thriller"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6817"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_war_politics.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="War &amp; Politics"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6818"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
+						</include>
+						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
+							<param name="content_path" value="special://skin/playlists/genre_tvshow_western.xsp"/>
+							<param name="visible" value="!Skin.HasSetting(home_no_tvshow_genres)"/>
+							<param name="widget_header" value="Western"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6819"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<param name="dim_extra" value="$EXP[home_tvshow_genre_row_dim]"/>
 						</include>
 					</control>
 					<include content="ImageWidget" condition="!Library.HasContent(tvshows)">

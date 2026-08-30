@@ -117,6 +117,12 @@
 					<selected>Skin.HasSetting(home_movie_spotlight)</selected>
 					<onclick>Skin.ToggleSetting(home_movie_spotlight)</onclick>
 				</control>
+				<control type="radiobutton" id="6112">
+					<label>$LOCALIZE[31706]</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(home_no_movie_genres)</selected>
+					<onclick>Skin.ToggleSetting(home_no_movie_genres)</onclick>
+				</control>
 				<control type="button" id="6110">
 					<label>$LOCALIZE[31157]</label>
 					<include>DefaultSettingButton</include>
@@ -135,6 +141,12 @@
 					<include>DefaultSettingButton</include>
 					<selected>Skin.HasSetting(home_tvshow_spotlight)</selected>
 					<onclick>Skin.ToggleSetting(home_tvshow_spotlight)</onclick>
+				</control>
+				<control type="radiobutton" id="6122">
+					<label>$LOCALIZE[31707]</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(home_no_tvshow_genres)</selected>
+					<onclick>Skin.ToggleSetting(home_no_tvshow_genres)</onclick>
 				</control>
 				<control type="button" id="6120">
 					<label>$LOCALIZE[31157]</label>

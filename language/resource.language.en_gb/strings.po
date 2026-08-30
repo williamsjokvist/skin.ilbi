@@ -939,3 +939,15 @@ msgstr ""
 msgctxt "#31705"
 msgid "Random series spotlight"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+#. Home settings toggle for the per-genre rows on the movies home
+msgctxt "#31706"
+msgid "Movie genre rows"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+#. Home settings toggle for the per-genre rows on the series home
+msgctxt "#31707"
+msgid "Series genre rows"
+msgstr ""

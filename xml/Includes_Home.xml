@@ -300,10 +300,12 @@
 		<param name="dim_extra">true</param>
 		<param name="onclick_condition">false</param>
 		<param name="browse_mode">auto</param>
+		<param name="visible">true</param>
 		<definition>
 			<include content="BusyListSpinner">
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="posy" value="250"/>
+				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<scrolltime>0</scrolltime>
@@ -317,6 +319,7 @@
 				<left>15</left>
 				<top>0</top>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<visible>$PARAM[visible]</visible>
 				<right>0</right>
 				<height>1080</height>
 				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
@@ -345,6 +348,7 @@
 				<top>-241</top>
 				<height>1</height>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<visible>$PARAM[visible]</visible>
 				<control type="group">
 					<description>wide card, pinned over the focused slot</description>
 					<left>15</left>
