@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "啟動時自動登入"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "主選單項目"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "區"
@@ -441,10 +437,6 @@ msgstr "發行單位"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "適用於佈景主題所有區塊的通用設定。"
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "主選單相關設定：將首頁依照您的喜好做規劃。"
 
 msgctxt "#31132"
 msgid "Select Program"

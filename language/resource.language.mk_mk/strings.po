@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr ""
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Елементи на гловното мени"
-
 # empty string with id 31062
 
 msgctxt "#31063"
@@ -448,10 +444,6 @@ msgstr ""
 
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
-msgstr ""
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr ""
 
 msgctxt "#31132"

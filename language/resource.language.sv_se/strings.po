@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Automatisk inloggning vid uppstart"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Huvudmenyobjekt"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Sektioner"
@@ -441,10 +437,6 @@ msgstr "Bidragsgivare"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "Allmänna inställningar som gäller för alla områden av skalet."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Huvudmeny-relaterade inställningar: Konfigurera startskärmen till ditt tycke och smak."
 
 msgctxt "#31132"
 msgid "Select Program"

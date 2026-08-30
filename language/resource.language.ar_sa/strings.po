@@ -236,10 +236,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "تسجيل الدخول التلقائي عند بدء التشغيل"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "عناصر القائمة الرئيسية"
-
 # empty string with id 31062
 
 msgctxt "#31063"
@@ -457,10 +453,6 @@ msgstr "المساهمون"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "الإعدادات العامة تنطبق على جميع مناطق المظهر."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "الإعدادات المتعلقة بالقائمة الرئيسية: قم بتكوين الشاشة الرئيسية حسب رغبتك."
 
 msgctxt "#31132"
 msgid "Select Program"

@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "スタートアップ時に自動ログイン"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "メインメニューアイテム"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "セクション"
@@ -441,10 +437,6 @@ msgstr "協力者"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "このスキンのすべての範囲に一般設定を適用する。"
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "メインメニュー関連設定: 好きなようにホーム画面を設定できます。"
 
 msgctxt "#31132"
 msgid "Select Program"

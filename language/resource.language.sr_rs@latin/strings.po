@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Automatska Prijava pri uključivanju"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Stavke glavnog menija"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Sekcije"
@@ -441,10 +437,6 @@ msgstr "Autori"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "Opšta podešavanja primenjivanje na sve oblasti maske."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Podešavanja vezana za glavni meni: Podesite glavni ekran prema vašim željama."
 
 msgctxt "#31132"
 msgid "Select Program"

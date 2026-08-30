@@ -348,8 +348,9 @@
 	</variable>
 	<variable name="SkinSettingsHelpTextVar">
 		<value condition="Container(9000).HasFocus(1)">$LOCALIZE[31129]</value>
-		<value condition="Container(9000).HasFocus(2)">$LOCALIZE[31130]</value>
-		<value condition="Container(9000).HasFocus(3)">$LOCALIZE[31171]</value>
+		<value condition="Container(9000).HasFocus(2)">$LOCALIZE[31708]</value>
+		<value condition="Container(9000).HasFocus(3)">$LOCALIZE[31709]</value>
+		<value condition="Container(9000).HasFocus(4)">$LOCALIZE[31171]</value>
 	</variable>
 	<variable name="SkinSettingOSDAutoCloseTime">
 		<value condition="!String.IsEmpty(Skin.String(OSDAutoCloseTime))">$INFO[Skin.String(OSDAutoCloseTime)]</value>

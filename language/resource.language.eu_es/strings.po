@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Hasi saioa automatikoki abioan"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Menuko elementu nagusiak"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Sekzioak"
@@ -441,10 +437,6 @@ msgstr "Kolaboratzaileak"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "Ezarpen orokorrak azalaren zati guztietan aplikatzen dira."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Menu nagusiarekin erlazionatutako ezarpenak: Konfiguratu etxeko pantaila nahi duzun bezala."
 
 msgctxt "#31132"
 msgid "Select Program"

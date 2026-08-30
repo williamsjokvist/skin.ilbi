@@ -296,10 +296,7 @@ msgstr ""
 
 #empty strings from id 31059 to 31060
 
-#: /xml/SkinSettings.xml
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr ""
+#empty string with id 31061
 
 #empty string with id 31062
 
@@ -578,10 +575,7 @@ msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr ""
 
-#: /xml/Variables.xml
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr ""
+#empty string with id 31130
 
 #empty string with id 31131
 
@@ -925,4 +919,16 @@ msgstr ""
 #. Home settings toggle for the per-genre rows on the series home
 msgctxt "#31707"
 msgid "Series genre rows"
+msgstr ""
+
+#. Description label for skin settings area
+#: /xml/Variables.xml
+msgctxt "#31708"
+msgid "Movie related settings: Configure the movies home screen."
+msgstr ""
+
+#. Description label for skin settings area
+#: /xml/Variables.xml
+msgctxt "#31709"
+msgid "Series related settings: Configure the series home screen."
 msgstr ""

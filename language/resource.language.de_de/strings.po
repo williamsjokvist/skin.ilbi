@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Automatische Anmeldung beim Programmstart"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Hauptmenüeinträge"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Abschnitte"
@@ -441,10 +437,6 @@ msgstr "Mitwirkende"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "Allgemeine Einstellungen, die für den gesamten Skin gelten."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Einstellungen für das Hauptmenü. Der Hauptbildschirm kann gemäß persönlicher Vorlieben angepasst werden."
 
 msgctxt "#31132"
 msgid "Select Program"

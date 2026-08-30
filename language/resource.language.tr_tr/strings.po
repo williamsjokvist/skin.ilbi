@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Başlangıçta otomatik olarak oturum aç"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Ana menü ögeleri"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Bölümler"
@@ -441,10 +437,6 @@ msgstr "Katkıda bulunanlar"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "Genel ayarlar dış görünümün tüm alanlarına uygulanır."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Ana menü ile ilgili ayarlar: Ana ekranı kendi zevkinize göre yapılandırın."
 
 msgctxt "#31132"
 msgid "Select Program"

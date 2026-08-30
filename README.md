@@ -1,6 +1,8 @@
 # Ilbi
 
-WIP minimalist, streaming-service-style skin for [Kodi](https://kodi.tv), forked from Estuary.
+> ⚠️ **Work in progress.** This skin is under active development — things may break or change without notice.
+
+A minimalist, streaming-service-style skin for [Kodi](https://kodi.tv), forked from Estuary.
 
 Scope is deliberately narrow: **movies and TV shows only**.
 
@@ -14,7 +16,7 @@ Scope is deliberately narrow: **movies and TV shows only**.
 
 ## Skin settings
 
-Reachable from Kodi Options (the logo in the top right) → Skin settings. Three categories:
+Reachable from Kodi Options (the logo in the top right) → Skin settings. Four categories:
 
 **General**
 
@@ -25,13 +27,18 @@ Reachable from Kodi Options (the logo in the top right) → Skin settings. Three
 | Show media flags | on | Resolution / codec / audio badges on media items |
 | Choose kind of profile identification | — | Profile name, avatar, or none |
 
-**Main menu items**
+**Movies**
 
 | Setting | Default | |
 | --- | --- | --- |
 | Random movie spotlight | off | Hero spotlight above the movie rows |
 | Movie genre rows | on | One poster row per genre on the movies home screen |
 | Default select action for movie sets | — | Browse, continue watching, play from beginning, play next, or queue |
+
+**Series**
+
+| Setting | Default | |
+| --- | --- | --- |
 | Random series spotlight | off | Hero spotlight above the series rows |
 | Series genre rows | on | One poster row per genre on the series home screen |
 | Default select action for TV shows | — | Same options as movie sets |

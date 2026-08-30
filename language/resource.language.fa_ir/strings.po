@@ -236,10 +236,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "ورود خودکار هنگام آغاز"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "موردهای فهرست اصلی"
-
 # empty string with id 31062
 
 msgctxt "#31063"
@@ -456,10 +452,6 @@ msgstr "مشارکت‌کنندگان"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "تنظیمات عمومی به تمامی نواحی پوسته اعمال می‌شوند."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr ""
 
 msgctxt "#31132"
 msgid "Select Program"

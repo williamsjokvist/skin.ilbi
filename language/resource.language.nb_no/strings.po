@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Automatisk pålogging ved oppstart"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Hovedmenyelementer"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Seksjoner"
@@ -441,10 +437,6 @@ msgstr "Bidragsytere"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "Generelle innstillinger gjelder for alle deler av drakten"
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Hovedmenyrelaterte innstillinger. Tilpass hjemmeskjermen slik du ønsker."
 
 msgctxt "#31132"
 msgid "Select Program"

@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Đăng nhập tự động khi khởi động"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Mục menu chính"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Phần"
@@ -441,10 +437,6 @@ msgstr "Người đóng góp"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "Cài đặt chung áp dụng cho tất cả các khu vực của giao diện."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Cài đặt liên quan đến menu chính: Định cấu hình màn hình chính theo ý thích của bạn."
 
 msgctxt "#31132"
 msgid "Select Program"

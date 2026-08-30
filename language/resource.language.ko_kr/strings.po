@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "시작할 때 자동 로그인"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "메인 메뉴 항목"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "섹션"
@@ -441,10 +437,6 @@ msgstr "공헌자"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "모든 스킨 영역에 적용되는 일반 설정입니다."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "메인 메뉴 관련 설정: 원하는 대로 홈 화면을 설정합니다."
 
 msgctxt "#31132"
 msgid "Select Program"

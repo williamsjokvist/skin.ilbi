@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Automatické prihlásenie pri spustení"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Položky hlavnej ponuky"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Sekcie"
@@ -441,10 +437,6 @@ msgstr "Prispievatelia"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "Všeobecné nastavenia týkajúce sa všetkých oblastí vzhľadu."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Nastavenia týkajúce sa hlavnej ponuky: Nastavte si domovskú obrazovku podľa vašich predstáv."
 
 msgctxt "#31132"
 msgid "Select Program"

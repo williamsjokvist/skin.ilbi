@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Autentificare automată la pornire"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Elemente meniu principal"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Secțiuni"
@@ -441,10 +437,6 @@ msgstr "Contribuitori"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "Setări generale care se aplică tuturor porțiunilor costumului."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Setări conexe meniului principal: Configurați ecranul inițial cum vă place."
 
 msgctxt "#31132"
 msgid "Select Program"

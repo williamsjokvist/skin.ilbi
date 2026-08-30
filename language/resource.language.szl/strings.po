@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Loguj autōmatycznie po sztartniyńciu"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Elymynty przodnigo myni"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Sekcyje"
@@ -441,10 +437,6 @@ msgstr "Spōłprŏcowniki"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "Ôgōlne sztelōnki dlŏ wszyjskich przestrzyństw skōry."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Sztelōnki przodnigo myni: Kōnfiguruj przodnie myni do swojich ôbmiyłowań."
 
 msgctxt "#31132"
 msgid "Select Program"

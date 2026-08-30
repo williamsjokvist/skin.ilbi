@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Αυτόματη είσοδος κατά την έναρξη"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Αντικείμενα βασικού μενού"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Τμήματα"
@@ -441,10 +437,6 @@ msgstr "Συντελεστές"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "Γενικές ρυθμίσεις που εφαρμόζονται σε όλες τις περιοχές του κελύφους"
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Ρυθμίσεις βασικού μενού: Ρυθμίστε την αρχική οθόνη βάσει των προτιμήσεών σας."
 
 msgctxt "#31132"
 msgid "Select Program"

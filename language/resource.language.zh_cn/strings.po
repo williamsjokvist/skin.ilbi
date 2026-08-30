@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "启动时自动登录"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "主菜单项"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "区"
@@ -441,10 +437,6 @@ msgstr "贡献者"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "常规设置用于皮肤的所有区域。"
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "主菜单相关设置：按喜好设置主界面。"
 
 msgctxt "#31132"
 msgid "Select Program"

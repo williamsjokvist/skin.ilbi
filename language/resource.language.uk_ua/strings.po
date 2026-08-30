@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Автоматичний вхід при запуску"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Елементи головного меню"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Розділи"
@@ -441,10 +437,6 @@ msgstr "Учасники"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "Загальні налаштування для всіх розділів обкладинки."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Налаштування головного меню: налаштуйте головне меню згідно зі своїми уподобаннями."
 
 msgctxt "#31132"
 msgid "Select Program"

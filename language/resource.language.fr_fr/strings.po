@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Identification auto. au démarrage"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Menu principal"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Sections"
@@ -441,10 +437,6 @@ msgstr "Contributeurs"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "Paramètres généraux qui s'appliquent à l'ensemble de l'habillage."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Paramètres relatifs au menu principal : configurer l'écran d'accueil comme désiré."
 
 msgctxt "#31132"
 msgid "Select Program"

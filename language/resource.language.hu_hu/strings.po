@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Automatikus bejelentkezés indításkor"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Főmenü elemek"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Szakaszok"
@@ -441,10 +437,6 @@ msgstr "Közreműködők"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "Általános beállítások a felszín minden egyes területére vonatkozóan."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Főmenüvel kapcsolatos beállítások: állítsa be a főképernyőt az ízlésének megfelelően."
 
 msgctxt "#31132"
 msgid "Select Program"

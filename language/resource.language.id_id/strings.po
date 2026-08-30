@@ -236,10 +236,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Login Otomatis saat mulai"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Item menu utama"
-
 # empty string with id 31062
 
 msgctxt "#31063"
@@ -456,10 +452,6 @@ msgstr "Kontributor"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "Pengaturan umum berlaku untuk semua area skin."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Pengaturan terkait menu utama: Konfigurasikan layar beranda sesuai keinginan Anda."
 
 msgctxt "#31132"
 msgid "Select Program"

@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "התחברות אוטומטית באיתחול"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "פריטי תפריט ראשי"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "מקטעים"
@@ -441,10 +437,6 @@ msgstr "תורמים"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "הגדרות כלליות החלות על כל האזורים של המעטפת."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "הגדרות הקשורות לתפריט הראשי: הגדר את מסך הבית בהתאם להעדפותיך."
 
 msgctxt "#31132"
 msgid "Select Program"

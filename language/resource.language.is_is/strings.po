@@ -233,10 +233,6 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Sjálfvirk innskráning í ræsingu"
 
-msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Atriði í aðalvalmynd"
-
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Hlutar"
@@ -441,10 +437,6 @@ msgstr "Þátttakendur"
 msgctxt "#31129"
 msgid "General settings applying to all areas of the skin."
 msgstr "Almennar stillingar sem eiga við alla þætti skinnsins."
-
-msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Stillingar sem tengjast aðalvalmynd: Stilltu upphafsskjáinn eins og þér finnst henta."
 
 msgctxt "#31132"
 msgid "Select Program"
