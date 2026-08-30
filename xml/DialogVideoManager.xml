@@ -9,9 +9,9 @@
 			<height>780</height>
 			<include>Animation_DialogPopupVisible</include>
 			<include content="DialogBackgroundCommons">
-				<param name="width" value="1640" />
-				<param name="height" value="780" />
-				<param name="header_id" value="2" />
+				<param name="width" value="1640"/>
+				<param name="height" value="780"/>
+				<param name="header_id" value="2"/>
 			</include>
 			<control type="image">
 				<left>20</left>
@@ -87,40 +87,40 @@
 				<align>top</align>
 				<scrolltime tween="quadratic">200</scrolltime>
 				<include content="DefaultDialogButton">
-					<param name="id" value="21" />
-					<param name="label" value="$LOCALIZE[208]" />
+					<param name="id" value="21"/>
+					<param name="label" value="$LOCALIZE[208]"/>
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="id" value="22" />
-					<param name="label" value="$LOCALIZE[40014]" />
+					<param name="id" value="22"/>
+					<param name="label" value="$LOCALIZE[40014]"/>
 					<param name="visible">Window.IsVisible(managevideoversions)</param>
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="id" value="23" />
-					<param name="label" value="$LOCALIZE[40015]" />
+					<param name="id" value="23"/>
+					<param name="label" value="$LOCALIZE[40015]"/>
 					<param name="visible">Window.IsVisible(managevideoextras)</param>
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="id" value="27" />
-					<param name="label" value="$LOCALIZE[13511]" />
+					<param name="id" value="27"/>
+					<param name="label" value="$LOCALIZE[13511]"/>
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="id" value="24" />
-					<param name="label" value="$LOCALIZE[40004]" />
+					<param name="id" value="24"/>
+					<param name="label" value="$LOCALIZE[40004]"/>
 					<param name="visible">Window.IsVisible(managevideoversions)</param>
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="id" value="28" />
-					<param name="label" value="$LOCALIZE[118]" />
+					<param name="id" value="28"/>
+					<param name="label" value="$LOCALIZE[118]"/>
 					<param name="visible">Window.IsVisible(managevideoextras)</param>
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="id" value="26" />
-					<param name="label" value="$LOCALIZE[15015]" />
+					<param name="id" value="26"/>
+					<param name="label" value="$LOCALIZE[15015]"/>
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="id" value="25" />
-					<param name="label" value="$LOCALIZE[40023]" />
+					<param name="id" value="25"/>
+					<param name="label" value="$LOCALIZE[40023]"/>
 					<param name="visible">Window.IsVisible(managevideoversions)</param>
 				</include>
 			</control>

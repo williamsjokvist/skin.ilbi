@@ -30,7 +30,7 @@
 				<visible>Control.IsVisible(50) | Control.Isvisible(54) | [Control.IsVisible(501) + String.IsEqual(Skin.AspectRatio,21:9)]</visible>
 				<include>Visible_Left</include>
 				<include content="ContentPanel">
-					<param name="width" value="656" />
+					<param name="width" value="656"/>
 				</include>
 				<control type="group">
 					<width>550</width>
@@ -69,20 +69,20 @@
 						<top>245</top>
 						<visible>ListItem.IsCollection + String.IsEmpty(ListItem.Plot)</visible>
 						<include content="InfoList">
-							<param name="bottom" value="108" />
-							<param name="width" value="540" />
-							<param name="sortby" value="year" />
-							<param name="sortorder" value="ascending" />
-							<param name="font" value="font13" />
+							<param name="bottom" value="108"/>
+							<param name="width" value="540"/>
+							<param name="sortby" value="year"/>
+							<param name="sortorder" value="ascending"/>
+							<param name="font" value="font13"/>
 						</include>
 					</control>
 				</control>
 			</control>
 			<include content="TopBar">
-				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsVideoVar]" />
+				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsVideoVar]"/>
 			</include>
 			<include content="BottomBar">
-				<param name="info_visible" value="true" />
+				<param name="info_visible" value="true"/>
 			</include>
 			<control type="group">
 				<depth>DepthBars</depth>

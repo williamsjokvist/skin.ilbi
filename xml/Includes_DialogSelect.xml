@@ -7,10 +7,10 @@
 			<height>750</height>
 			<width>1220</width>
 			<include content="DialogBackgroundCommons">
-				<param name="width" value="1220" />
-				<param name="height" value="750" />
-				<param name="header_label" value="" />
-				<param name="header_id" value="1" />
+				<param name="width" value="1220"/>
+				<param name="height" value="750"/>
+				<param name="header_label" value=""/>
+				<param name="header_id" value="1"/>
 			</include>
 			<control type="image">
 				<left>0</left>
@@ -31,8 +31,8 @@
 				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<include content="DefaultSimpleListLayout">
-					<param name="width" value="880" />
-					<param name="list_id" value="3" />
+					<param name="width" value="880"/>
+					<param name="list_id" value="3"/>
 				</include>
 			</control>
 			<control type="list" id="6">
@@ -180,16 +180,16 @@
 				<itemgap>dialogbuttons_itemgap</itemgap>
 				<onright>3</onright>
 				<include content="DefaultDialogButton">
-					<param name="id" value="5" />
-					<param name="label" value="" />
+					<param name="id" value="5"/>
+					<param name="label" value=""/>
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="id" value="8" />
-					<param name="label" value="" />
+					<param name="id" value="8"/>
+					<param name="label" value=""/>
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="id" value="7" />
-					<param name="label" value="$LOCALIZE[222]" />
+					<param name="id" value="7"/>
+					<param name="label" value="$LOCALIZE[222]"/>
 				</include>
 			</control>
 		</control>
@@ -201,10 +201,10 @@
 			<width>1639</width>
 			<height>919</height>
 			<include content="DialogBackgroundCommons">
-				<param name="width" value="1639" />
-				<param name="height" value="919" />
-				<param name="header_label" value="35260" />
-				<param name="header_id" value="10820" />
+				<param name="width" value="1639"/>
+				<param name="height" value="919"/>
+				<param name="header_label" value="35260"/>
+				<param name="header_id" value="10820"/>
 			</include>
 			<control type="group">
 				<description>Content area</description>
@@ -314,12 +314,12 @@
 					<onleft>3</onleft>
 					<itemgap>dialogbuttons_itemgap</itemgap>
 					<include content="DefaultDialogButton">
-						<param name="id" value="10825" />
-						<param name="label" value="$LOCALIZE[35261]" />
+						<param name="id" value="10825"/>
+						<param name="label" value="$LOCALIZE[35261]"/>
 					</include>
 					<include content="DefaultDialogButton">
-						<param name="id" value="10826" />
-						<param name="label" value="$LOCALIZE[222]" />
+						<param name="id" value="10826"/>
+						<param name="label" value="$LOCALIZE[222]"/>
 					</include>
 				</control>
 				<control type="group">
@@ -399,8 +399,8 @@
 			<top>0</top>
 			<width>100%</width>
 			<bottom>540</bottom>
-			<texturefocus />
-			<texturenofocus />
+			<texturefocus/>
+			<texturenofocus/>
 			<onclick>Action(close)</onclick>
 		</control>
 		<control type="group">
@@ -505,8 +505,8 @@
 			<top>0</top>
 			<width>100%</width>
 			<bottom>410</bottom>
-			<texturefocus />
-			<texturenofocus />
+			<texturefocus/>
+			<texturenofocus/>
 			<onclick>Action(close)</onclick>
 		</control>
 		<control type="group">
@@ -600,8 +600,8 @@
 			<top>0</top>
 			<width>100%</width>
 			<bottom>540</bottom>
-			<texturefocus />
-			<texturenofocus />
+			<texturefocus/>
+			<texturenofocus/>
 			<onclick>Action(close)</onclick>
 		</control>
 		<control type="group">
@@ -718,9 +718,9 @@
 			<height>750</height>
 			<width>1640</width>
 			<include content="DialogBackgroundCommons">
-				<param name="width" value="1640" />
-				<param name="height" value="750" />
-				<param name="header_id" value="1" />
+				<param name="width" value="1640"/>
+				<param name="height" value="750"/>
+				<param name="header_id" value="1"/>
 			</include>
 			<control type="image">
 				<left>20</left>
@@ -768,19 +768,19 @@
 				<itemgap>dialogbuttons_itemgap</itemgap>
 				<onright>6</onright>
 				<include content="DefaultDialogButton">
-					<param name="id" value="5" />
-					<param name="label" value="" />
-					<param name="visible" value="false" />
+					<param name="id" value="5"/>
+					<param name="label" value=""/>
+					<param name="visible" value="false"/>
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="id" value="8" />
-					<param name="label" value="" />
-					<param name="visible" value="false" />
+					<param name="id" value="8"/>
+					<param name="label" value=""/>
+					<param name="visible" value="false"/>
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="id" value="7" />
-					<param name="label" value="$LOCALIZE[222]" />
-					</include>
+					<param name="id" value="7"/>
+					<param name="label" value="$LOCALIZE[222]"/>
+				</include>
 			</control>
 			<control type="label">
 				<right>20</right>

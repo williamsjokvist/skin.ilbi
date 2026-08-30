@@ -251,7 +251,6 @@
 			<size>30</size>
 			<style>bold</style>
 		</font>
-
 		<font>
 			<name>font32_title</name>
 			<filename>arial.ttf</filename>

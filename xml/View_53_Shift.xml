@@ -62,10 +62,10 @@
 					<preloaditems>1</preloaditems>
 					<viewtype label="31100">icon</viewtype>
 					<itemlayout width="370">
-						<include content="ShiftImageBox" />
+						<include content="ShiftImageBox"/>
 					</itemlayout>
 					<focusedlayout width="370">
-						<include content="ShiftImageBox" />
+						<include content="ShiftImageBox"/>
 					</focusedlayout>
 				</control>
 			</control>
@@ -76,16 +76,16 @@
 				<control type="group">
 					<width>50%</width>
 					<include content="ShiftTextbox">
-						<param name="textbox_id" value="53200" />
-						<param name="textbox_content" value="$VAR[ShiftLeftTextBoxVar]" />
+						<param name="textbox_id" value="53200"/>
+						<param name="textbox_content" value="$VAR[ShiftLeftTextBoxVar]"/>
 					</include>
 				</control>
 				<control type="group">
 					<left>50%</left>
 					<width>50%</width>
 					<include content="ShiftTextbox">
-						<param name="textbox_id" value="53300" />
-						<param name="textbox_content" value="$VAR[ShiftRightTextBoxVar]" />
+						<param name="textbox_id" value="53300"/>
+						<param name="textbox_content" value="$VAR[ShiftRightTextBoxVar]"/>
 					</include>
 				</control>
 				<control type="panel">
@@ -172,7 +172,7 @@
 			<top>530</top>
 			<width>298</width>
 			<height>1</height>
-			<texturebg></texturebg>
+			<texturebg/>
 			<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
 			<info>ListItem.PercentPlayed</info>
 			<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>

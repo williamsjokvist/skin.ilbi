@@ -4,19 +4,19 @@
 		<import addon="xbmc.gui" version="5.17.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
-		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
-		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
-		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
-		<res width="2040" height="1080" aspect="17:9" default="false" folder="xml" />
-		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
-		<res width="2560" height="1080" aspect="21:9" default="false" folder="xml" />
-		<res width="2338" height="1080" aspect="19.5:9" default="false" folder="xml" />
-		<res width="2160" height="1080" aspect="18:9" default="false" folder="xml" />
+		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml"/>
+		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml"/>
+		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml"/>
+		<res width="2040" height="1080" aspect="17:9" default="false" folder="xml"/>
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml"/>
+		<res width="2560" height="1080" aspect="21:9" default="false" folder="xml"/>
+		<res width="2338" height="1080" aspect="19.5:9" default="false" folder="xml"/>
+		<res width="2160" height="1080" aspect="18:9" default="false" folder="xml"/>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<license>Creative Commons Attribution Non-Commercial Share-Alike 4.0</license>
-		<forum />
+		<forum/>
 		<source>https://github.com/williamsjokvist/skin.ilbi/</source>
 		<assets>
 			<icon>resources/icon.png</icon>
@@ -28,7 +28,7 @@
 		<summary lang="ar_SA">مظهر بسيط بأسلوب خدمات البث</summary>
 		<summary lang="be_BY">Мінімалістычная абалонка ў стылі струменевых сэрвісаў</summary>
 		<summary lang="bg_BG">Минималистичен облик в стил стрийминг услуга</summary>
-		<summary lang="ca_ES">Aparença minimalista a l&apos;estil dels serveis de reproducció en línia</summary>
+		<summary lang="ca_ES">Aparença minimalista a l'estil dels serveis de reproducció en línia</summary>
 		<summary lang="cs_CZ">Minimalistický vzhled ve stylu streamovacích služeb</summary>
 		<summary lang="cy_GB">Croen minimalaidd ar arddull gwasanaeth ffrydio</summary>
 		<summary lang="da_DK">Minimalistisk brugerflade i streamingtjeneste-stil</summary>
@@ -44,8 +44,8 @@
 		<summary lang="eu_ES">Streaming zerbitzuen estiloko azal minimalista</summary>
 		<summary lang="fa_IR">پوسته‌ای کمینه‌گرا به سبک سرویس‌های پخش آنلاین</summary>
 		<summary lang="fi_FI">Minimalistinen, suoratoistopalvelun tyylinen ulkoasu</summary>
-		<summary lang="fr_CA">Habillage minimaliste dans le style d&apos;un service de diffusion en continu</summary>
-		<summary lang="fr_FR">Habillage minimaliste dans le style d&apos;un service de streaming</summary>
+		<summary lang="fr_CA">Habillage minimaliste dans le style d'un service de diffusion en continu</summary>
+		<summary lang="fr_FR">Habillage minimaliste dans le style d'un service de streaming</summary>
 		<summary lang="gl_ES">Pel minimalista ao estilo dos servizos de streaming</summary>
 		<summary lang="he_IL">מעטפת מינימליסטית בסגנון שירותי הזרמה</summary>
 		<summary lang="hr_HR">Minimalistička presvlaka u stilu usluga strujanja</summary>
@@ -77,11 +77,11 @@
 		<summary lang="vi_VN">Giao diện tối giản theo phong cách dịch vụ phát trực tuyến</summary>
 		<summary lang="zh_CN">流媒体服务风格极简皮肤</summary>
 		<summary lang="zh_TW">串流服務風格極簡佈景主題</summary>
-		<description lang="af_ZA">Ilbi is &apos;n minimalistiese koppelvlak in die styl van &apos;n stroomdiens</description>
+		<description lang="af_ZA">Ilbi is 'n minimalistiese koppelvlak in die styl van 'n stroomdiens</description>
 		<description lang="ar_SA">إلبي واجهة بسيطة بأسلوب خدمات البث</description>
 		<description lang="be_BY">Ilbi — мінімалістычны інтэрфейс у стылі струменевых сэрвісаў</description>
 		<description lang="bg_BG">Ilbi е минималистичен интерфейс в стил стрийминг услуга</description>
-		<description lang="ca_ES">Ilbi és una interfície minimalista a l&apos;estil dels serveis de reproducció en línia</description>
+		<description lang="ca_ES">Ilbi és una interfície minimalista a l'estil dels serveis de reproducció en línia</description>
 		<description lang="cs_CZ">Ilbi je minimalistické rozhraní ve stylu streamovacích služeb</description>
 		<description lang="cy_GB">Mae Ilbi yn rhyngwyneb minimalaidd ar arddull gwasanaeth ffrydio</description>
 		<description lang="da_DK">Ilbi er en minimalistisk brugerflade i stil med en streamingtjeneste</description>
@@ -97,15 +97,15 @@
 		<description lang="eu_ES">Ilbi streaming zerbitzuen estiloko interfaze minimalista bat da</description>
 		<description lang="fa_IR">ایلبی یک واسط کاربری کمینه‌گرا به سبک سرویس‌های پخش آنلاین است</description>
 		<description lang="fi_FI">Ilbi on minimalistinen, suoratoistopalvelun tyylinen käyttöliittymä</description>
-		<description lang="fr_CA">Ilbi est une interface minimaliste dans le style d&apos;un service de diffusion en continu</description>
-		<description lang="fr_FR">Ilbi est une interface minimaliste dans le style d&apos;un service de streaming</description>
+		<description lang="fr_CA">Ilbi est une interface minimaliste dans le style d'un service de diffusion en continu</description>
+		<description lang="fr_FR">Ilbi est une interface minimaliste dans le style d'un service de streaming</description>
 		<description lang="gl_ES">Ilbi é unha interface minimalista ao estilo dos servizos de streaming</description>
 		<description lang="he_IL">Ilbi היא ממשק מינימליסטי בסגנון שירותי הזרמה</description>
 		<description lang="hr_HR">Ilbi je minimalističko sučelje u stilu usluga strujanja</description>
 		<description lang="hu_HU">Az Ilbi egy minimalista, streamingszolgáltatás stílusú felület</description>
 		<description lang="id_ID">Ilbi adalah antarmuka minimalis bergaya layanan streaming</description>
 		<description lang="is_IS">Ilbi er lágstemmt viðmót í stíl streymisveitna</description>
-		<description lang="it_IT">Ilbi è un&apos;interfaccia minimalista in stile servizio di streaming</description>
+		<description lang="it_IT">Ilbi è un'interfaccia minimalista in stile servizio di streaming</description>
 		<description lang="ja_JP">Ilbi は配信サービス風のミニマルなインターフェースです</description>
 		<description lang="ko_KR">Ilbi는 스트리밍 서비스 스타일의 미니멀한 인터페이스입니다</description>
 		<description lang="lt_LT">Ilbi yra minimalistinė, srautinio transliavimo paslaugų stiliaus sąsaja</description>
@@ -136,7 +136,7 @@
 		<disclaimer lang="bg_BG">Поддържа само филми и телевизионни сериали</disclaimer>
 		<disclaimer lang="ca_ES">Només admet pel·lícules i sèries de televisió</disclaimer>
 		<disclaimer lang="cs_CZ">Podporuje pouze filmy a televizní seriály</disclaimer>
-		<disclaimer lang="cy_GB">Dim ond ffilmiau a rhaglenni teledu sy&apos;n cael eu cynnal</disclaimer>
+		<disclaimer lang="cy_GB">Dim ond ffilmiau a rhaglenni teledu sy'n cael eu cynnal</disclaimer>
 		<disclaimer lang="da_DK">Understøtter kun film og tv-serier</disclaimer>
 		<disclaimer lang="de_DE">Unterstützt nur Filme und Serien</disclaimer>
 		<disclaimer lang="el_GR">Υποστηρίζει μόνο ταινίες και τηλεοπτικές σειρές</disclaimer>

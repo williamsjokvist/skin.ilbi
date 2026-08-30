@@ -10,10 +10,10 @@
 			<height>750</height>
 			<width>1220</width>
 			<include content="DialogBackgroundCommons">
-				<param name="width" value="1220" />
-				<param name="height" value="790" />
-				<param name="header_label" value="" />
-				<param name="header_id" value="1" />
+				<param name="width" value="1220"/>
+				<param name="height" value="790"/>
+				<param name="header_label" value=""/>
+				<param name="header_id" value="1"/>
 			</include>
 			<control type="image">
 				<left>0</left>
@@ -111,8 +111,8 @@
 				<itemgap>dialogbuttons_itemgap</itemgap>
 				<onright>6</onright>
 				<include content="DefaultDialogButton">
-					<param name="id" value="7" />
-					<param name="label" value="$LOCALIZE[222]" />
+					<param name="id" value="7"/>
+					<param name="label" value="$LOCALIZE[222]"/>
 				</include>
 			</control>
 		</control>

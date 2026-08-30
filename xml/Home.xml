@@ -32,12 +32,12 @@
 				<top>120</top>
 				<bottom>0</bottom>
 				<animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
-					<effect type="slide" end="0,20" time="60" tween="sine" />
-					<effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
+					<effect type="slide" end="0,20" time="60" tween="sine"/>
+					<effect type="slide" end="0,-20" time="180" tween="sine" delay="80"/>
 				</animation>
 				<animation type="Conditional" condition="Control.IsVisible(20001)" reversible="false">
-					<effect type="slide" end="0,-20" time="60" tween="sine" />
-					<effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
+					<effect type="slide" end="0,-20" time="60" tween="sine"/>
+					<effect type="slide" end="0,20" time="180" tween="sine" delay="80"/>
 				</animation>
 				<include>OpenClose_Right</include>
 				<control type="group" id="5000">
@@ -249,8 +249,8 @@
 						</include>
 					</control>
 					<include content="ImageWidget" condition="!Library.HasContent(movies)">
-						<param name="text_label" value="$LOCALIZE[31104]" />
-						<param name="button_label" value="$LOCALIZE[31110]" />
+						<param name="text_label" value="$LOCALIZE[31104]"/>
+						<param name="button_label" value="$LOCALIZE[31110]"/>
 						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
 						<param name="button_id" value="5500"/>
 						<param name="visible_2" value="false"/>
@@ -493,8 +493,8 @@
 						</include>
 					</control>
 					<include content="ImageWidget" condition="!Library.HasContent(tvshows)">
-						<param name="text_label" value="$LOCALIZE[31104]" />
-						<param name="button_label" value="$LOCALIZE[31110]" />
+						<param name="text_label" value="$LOCALIZE[31104]"/>
+						<param name="button_label" value="$LOCALIZE[31110]"/>
 						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
 						<param name="button_id" value="6400"/>
 						<param name="visible_2" value="false"/>
@@ -522,7 +522,7 @@
 						<itemlayout width="340" height="480">
 							<control type="group">
 								<include content="HomePosterLayout">
-									<param name="fallback_image" value="DefaultFavourites.png" />
+									<param name="fallback_image" value="DefaultFavourites.png"/>
 								</include>
 							</control>
 						</itemlayout>
@@ -532,14 +532,14 @@
 								<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="155,232">Focus</animation>
 								<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="155,232">UnFocus</animation>
 								<include content="HomePosterLayout">
-									<param name="fallback_image" value="DefaultFavourites.png" />
+									<param name="fallback_image" value="DefaultFavourites.png"/>
 								</include>
 							</control>
 						</focusedlayout>
 						<content>favourites://</content>
 					</control>
 					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[31025]" />
+						<param name="text_label" value="$LOCALIZE[31025]"/>
 						<param name="button_id" value="5500"/>
 						<param name="visible" value="!Integer.IsGreater(Container(14100).NumItems,0) + !Container(14100).IsUpdating"/>
 						<param name="visible_1" value="false"/>
@@ -550,12 +550,12 @@
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<animation type="WindowOpen">
-					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
-					<effect type="slide" start="0,-200" end="0,0" time="400" tween="cubic" easing="out" />
+					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out"/>
+					<effect type="slide" start="0,-200" end="0,0" time="400" tween="cubic" easing="out"/>
 				</animation>
 				<animation type="WindowClose">
-					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-					<effect type="slide" start="0,0" end="0,-200" time="300" tween="cubic" easing="out" />
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out"/>
+					<effect type="slide" start="0,0" end="0,-200" time="300" tween="cubic" easing="out"/>
 				</animation>
 				<control type="group">
 					<description>menu bar - auto-centred on item count</description>
@@ -564,67 +564,67 @@
 					<width>1920</width>
 					<height>110</height>
 					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,1)">
-						<effect type="slide" start="0,0" end="80,0" time="0" />
+						<effect type="slide" start="0,0" end="80,0" time="0"/>
 					</animation>
 					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,2)">
-						<effect type="slide" start="0,0" end="80,0" time="0" />
+						<effect type="slide" start="0,0" end="80,0" time="0"/>
 					</animation>
 					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,3)">
-						<effect type="slide" start="0,0" end="80,0" time="0" />
+						<effect type="slide" start="0,0" end="80,0" time="0"/>
 					</animation>
 					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,4)">
-						<effect type="slide" start="0,0" end="80,0" time="0" />
+						<effect type="slide" start="0,0" end="80,0" time="0"/>
 					</animation>
 					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,5)">
-						<effect type="slide" start="0,0" end="80,0" time="0" />
+						<effect type="slide" start="0,0" end="80,0" time="0"/>
 					</animation>
 					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,6)">
-						<effect type="slide" start="0,0" end="80,0" time="0" />
+						<effect type="slide" start="0,0" end="80,0" time="0"/>
 					</animation>
 					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,7)">
-						<effect type="slide" start="0,0" end="80,0" time="0" />
+						<effect type="slide" start="0,0" end="80,0" time="0"/>
 					</animation>
 					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,8)">
-						<effect type="slide" start="0,0" end="80,0" time="0" />
+						<effect type="slide" start="0,0" end="80,0" time="0"/>
 					</animation>
 					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,9)">
-						<effect type="slide" start="0,0" end="80,0" time="0" />
+						<effect type="slide" start="0,0" end="80,0" time="0"/>
 					</animation>
 					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,10)">
-						<effect type="slide" start="0,0" end="80,0" time="0" />
+						<effect type="slide" start="0,0" end="80,0" time="0"/>
 					</animation>
 					<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).NumItems,11)">
-						<effect type="slide" start="0,0" end="80,0" time="0" />
+						<effect type="slide" start="0,0" end="80,0" time="0"/>
 					</animation>
 					<control type="group">
 						<description>morphing pill - active section</description>
 						<control type="group">
 							<animation type="Conditional" condition="Integer.IsGreater(Container(9000).CurrentItem,1)">
-								<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout" />
+								<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout"/>
 							</animation>
 							<control type="group">
 								<animation type="Conditional" condition="Integer.IsGreater(Container(9000).CurrentItem,2)">
-									<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout" />
+									<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout"/>
 								</animation>
 								<control type="group">
 									<animation type="Conditional" condition="Integer.IsGreater(Container(9000).CurrentItem,3)">
-										<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout" />
+										<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout"/>
 									</animation>
 									<control type="group">
 										<animation type="Conditional" condition="Integer.IsGreater(Container(9000).CurrentItem,4)">
-											<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout" />
+											<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout"/>
 										</animation>
 										<control type="group">
 											<animation type="Conditional" condition="Integer.IsGreater(Container(9000).CurrentItem,5)">
-												<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout" />
+												<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout"/>
 											</animation>
 											<control type="group">
 												<animation type="Conditional" condition="Integer.IsGreater(Container(9000).CurrentItem,6)">
-													<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout" />
+													<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout"/>
 												</animation>
 												<control type="group">
 													<animation type="Conditional" condition="Integer.IsGreater(Container(9000).CurrentItem,7)">
-														<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout" />
+														<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout"/>
 													</animation>
 													<control type="image">
 														<description>left cap</description>
@@ -634,7 +634,7 @@
 														<height>64</height>
 														<texture colordiffuse="33FFFFFF">pill_left.png</texture>
 														<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).CurrentItem,1)">
-															<effect type="slide" start="0,0" end="33,0" time="300" tween="cubic" easing="inout" />
+															<effect type="slide" start="0,0" end="33,0" time="300" tween="cubic" easing="inout"/>
 														</animation>
 													</control>
 													<control type="image">
@@ -645,7 +645,7 @@
 														<height>64</height>
 														<texture colordiffuse="33FFFFFF">pill_mid.png</texture>
 														<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).CurrentItem,1)">
-															<effect type="zoom" start="100,100" end="0,100" center="auto" time="200" tween="cubic" easing="inout" />
+															<effect type="zoom" start="100,100" end="0,100" center="auto" time="200" tween="cubic" easing="inout"/>
 														</animation>
 													</control>
 													<control type="image">
@@ -656,7 +656,7 @@
 														<height>64</height>
 														<texture colordiffuse="33FFFFFF">pill_right.png</texture>
 														<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).CurrentItem,1)">
-															<effect type="slide" start="0,0" end="-33,0" time="300" tween="cubic" easing="inout" />
+															<effect type="slide" start="0,0" end="-33,0" time="300" tween="cubic" easing="inout"/>
 														</animation>
 													</control>
 												</control>
@@ -673,31 +673,31 @@
 						<animation effect="fade" time="200">VisibleChange</animation>
 						<control type="group">
 							<animation type="Conditional" condition="Integer.IsGreater(Container(9000).CurrentItem,1)">
-								<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout" />
+								<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout"/>
 							</animation>
 							<control type="group">
 								<animation type="Conditional" condition="Integer.IsGreater(Container(9000).CurrentItem,2)">
-									<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout" />
+									<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout"/>
 								</animation>
 								<control type="group">
 									<animation type="Conditional" condition="Integer.IsGreater(Container(9000).CurrentItem,3)">
-										<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout" />
+										<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout"/>
 									</animation>
 									<control type="group">
 										<animation type="Conditional" condition="Integer.IsGreater(Container(9000).CurrentItem,4)">
-											<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout" />
+											<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout"/>
 										</animation>
 										<control type="group">
 											<animation type="Conditional" condition="Integer.IsGreater(Container(9000).CurrentItem,5)">
-												<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout" />
+												<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout"/>
 											</animation>
 											<control type="group">
 												<animation type="Conditional" condition="Integer.IsGreater(Container(9000).CurrentItem,6)">
-													<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout" />
+													<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout"/>
 												</animation>
 												<control type="group">
 													<animation type="Conditional" condition="Integer.IsGreater(Container(9000).CurrentItem,7)">
-														<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout" />
+														<effect type="slide" start="0,0" end="160,0" time="300" tween="cubic" easing="inout"/>
 													</animation>
 													<control type="image">
 														<description>left cap</description>
@@ -707,7 +707,7 @@
 														<height>64</height>
 														<texture>pill_left.png</texture>
 														<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).CurrentItem,1)">
-															<effect type="slide" start="0,0" end="33,0" time="300" tween="cubic" easing="inout" />
+															<effect type="slide" start="0,0" end="33,0" time="300" tween="cubic" easing="inout"/>
 														</animation>
 													</control>
 													<control type="image">
@@ -718,7 +718,7 @@
 														<height>64</height>
 														<texture>pill_mid.png</texture>
 														<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).CurrentItem,1)">
-															<effect type="zoom" start="100,100" end="0,100" center="auto" time="300" tween="cubic" easing="inout" />
+															<effect type="zoom" start="100,100" end="0,100" center="auto" time="300" tween="cubic" easing="inout"/>
 														</animation>
 													</control>
 													<control type="image">
@@ -729,7 +729,7 @@
 														<height>64</height>
 														<texture>pill_right.png</texture>
 														<animation type="Conditional" condition="!Integer.IsGreater(Container(9000).CurrentItem,1)">
-															<effect type="slide" start="0,0" end="-33,0" time="300" tween="cubic" easing="inout" />
+															<effect type="slide" start="0,0" end="-33,0" time="300" tween="cubic" easing="inout"/>
 														</animation>
 													</control>
 												</control>
@@ -901,10 +901,10 @@
 						<top>0</top>
 						<width>120</width>
 						<height>110</height>
-						<label></label>
-						<font></font>
-						<texturefocus />
-						<texturenofocus />
+						<label/>
+						<font/>
+						<texturefocus/>
+						<texturenofocus/>
 						<onclick>ActivateWindow(shutdownmenu)</onclick>
 						<onup>noop</onup>
 						<ondown>2000</ondown>

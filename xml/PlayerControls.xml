@@ -9,10 +9,10 @@
 			<centerleft>50%</centerleft>
 			<width>1115</width>
 			<include content="DialogBackgroundCommons">
-				<param name="width" value="1115" />
-				<param name="height" value="380" />
-				<param name="header_label" value="16003" />
-				<param name="header_id" value="" />
+				<param name="width" value="1115"/>
+				<param name="height" value="380"/>
+				<param name="header_label" value="16003"/>
+				<param name="header_id" value=""/>
 			</include>
 			<control type="group">
 				<left>20</left>
@@ -93,8 +93,8 @@
 					<height>76</height>
 					<radiowidth>74</radiowidth>
 					<radioheight>74</radioheight>
-					<font></font>
-					<texturenofocus />
+					<font/>
+					<texturenofocus/>
 					<radioposx>1</radioposx>
 					<radioposy>0</radioposy>
 					<selected>Player.Paused</selected>
@@ -123,10 +123,10 @@
 						<top>0</top>
 						<width>74</width>
 						<height>74</height>
-						<label></label>
-						<font></font>
+						<label/>
+						<font/>
 						<texturefocus colordiffuse="button_focus">osd/fullscreen/buttons/button-fo.png</texturefocus>
-						<texturenofocus />
+						<texturenofocus/>
 						<onleft>605</onleft>
 						<onright>607</onright>
 						<onup>1000</onup>
@@ -154,8 +154,8 @@
 					<height>76</height>
 					<radiowidth>74</radiowidth>
 					<radioheight>74</radioheight>
-					<font></font>
-					<texturenofocus />
+					<font/>
+					<texturenofocus/>
 					<radioposx>1</radioposx>
 					<radioposy>0</radioposy>
 					<animation center="62,62" effect="zoom" end="100" reversible="false" start="95" time="480" tween="back">Focus</animation>

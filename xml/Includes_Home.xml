@@ -268,14 +268,14 @@
 							<description>nothing to draw - the card above is the item</description>
 							<width>1</width>
 							<height>1</height>
-							<texture />
+							<texture/>
 						</control>
 					</itemlayout>
 					<focusedlayout width="1" height="1">
 						<control type="image">
 							<width>1</width>
 							<height>1</height>
-							<texture />
+							<texture/>
 						</control>
 					</focusedlayout>
 					<content target="$PARAM[widget_target]" limit="1">$PARAM[content_path]</content>
@@ -310,12 +310,12 @@
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<scrolltime>0</scrolltime>
-        <movement>0</movement>
-        <orientation>horizontal</orientation>
-        <pagecontrol>25</pagecontrol>
-        <scrolltime tween="sine" easing="out">200</scrolltime>
-        <focusposition>0</focusposition>
-        <movement>6</movement>
+				<movement>0</movement>
+				<orientation>horizontal</orientation>
+				<pagecontrol>25</pagecontrol>
+				<scrolltime tween="sine" easing="out">200</scrolltime>
+				<focusposition>0</focusposition>
+				<movement>6</movement>
 				<animation effect="fade" start="100" end="60" time="200" condition="!Control.HasFocus($PARAM[list_id]) + [$PARAM[dim_extra]]">Conditional</animation>
 				<left>15</left>
 				<top>0</top>
@@ -339,7 +339,7 @@
 						<description>empty slot - the wide card occupies this space</description>
 						<width>1</width>
 						<height>1</height>
-						<texture />
+						<texture/>
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="15" browse="$PARAM[browse_mode]">$PARAM[content_path]</content>
@@ -354,7 +354,7 @@
 					<description>wide card, pinned over the focused slot</description>
 					<left>15</left>
 					<top>-777</top>
-          <animation effect="fade" start="100" end="60" time="200" condition="!Control.HasFocus($PARAM[list_id]) + [$PARAM[dim_extra]]">Conditional</animation>
+					<animation effect="fade" start="100" end="60" time="200" condition="!Control.HasFocus($PARAM[list_id]) + [$PARAM[dim_extra]]">Conditional</animation>
 					<include content="HomeWideLayout">
 						<param name="list_id" value="$PARAM[list_id]"/>
 					</include>
@@ -463,7 +463,7 @@
 	</include>
 	<include name="WidgetListSquare">
 		<param name="sub_label">$INFO[ListItem.Label]</param>
-		<param name="sortby"></param>
+		<param name="sortby"/>
 		<param name="visible">True</param>
 		<param name="sortorder">ascending</param>
 		<param name="widget_limit">15</param>
@@ -498,10 +498,10 @@
 					<control type="group">
 						<left>70</left>
 						<include content="InfoWallMusicLayout">
-							<param name="main_label" value="$PARAM[main_label]" />
-							<param name="single_label" value="$PARAM[single_label]" />
-							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="focused" value="false" />
+							<param name="main_label" value="$PARAM[main_label]"/>
+							<param name="single_label" value="$PARAM[single_label]"/>
+							<param name="sub_label" value="$PARAM[sub_label]"/>
+							<param name="focused" value="false"/>
 						</include>
 					</control>
 				</itemlayout>
@@ -510,16 +510,16 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="240,120" />
+							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="240,120"/>
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="240,120" />
+							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="240,120"/>
 						</animation>
 						<include content="InfoWallMusicLayout">
-							<param name="main_label" value="$PARAM[main_label]" />
-							<param name="single_label" value="$PARAM[single_label]" />
-							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="focused" value="true" />
+							<param name="main_label" value="$PARAM[main_label]"/>
+							<param name="single_label" value="$PARAM[single_label]"/>
+							<param name="sub_label" value="$PARAM[sub_label]"/>
+							<param name="focused" value="true"/>
 						</include>
 					</control>
 				</focusedlayout>
@@ -622,7 +622,7 @@
 							<top>300</top>
 							<width>280</width>
 							<height>1</height>
-							<texturebg></texturebg>
+							<texturebg/>
 							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>ListItem.PercentPlayed</info>
 							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -632,7 +632,7 @@
 							<top>300</top>
 							<width>280</width>
 							<height>1</height>
-							<texturebg></texturebg>
+							<texturebg/>
 							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>ListItem.Progress</info>
 							<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>
@@ -644,10 +644,10 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="240,100" />
+							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="240,100"/>
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,100" />
+							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,100"/>
 						</animation>
 						<control type="image">
 							<width>319</width>
@@ -723,7 +723,7 @@
 							<top>300</top>
 							<width>280</width>
 							<height>1</height>
-							<texturebg></texturebg>
+							<texturebg/>
 							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>ListItem.PercentPlayed</info>
 							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -733,7 +733,7 @@
 							<top>300</top>
 							<width>280</width>
 							<height>1</height>
-							<texturebg></texturebg>
+							<texturebg/>
 							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>ListItem.Progress</info>
 							<visible>!Integer.IsEqual(ListItem.Progress,0)</visible>

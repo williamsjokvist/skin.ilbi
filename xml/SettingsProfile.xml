@@ -166,7 +166,7 @@
 			<depth>DepthContentPanel</depth>
 			<include>OpenClose_Left</include>
 			<include content="ContentPanel">
-				<param name="width" value="530" />
+				<param name="width" value="530"/>
 			</include>
 			<control type="list" id="9000">
 				<left>0</left>
@@ -208,18 +208,18 @@
 					<item id="1">
 						<label>$LOCALIZE[128]</label>
 						<onclick>noop</onclick>
-						<icon></icon>
+						<icon/>
 					</item>
 					<item id="2">
 						<label>$LOCALIZE[13200]</label>
 						<onclick>noop</onclick>
-						<icon></icon>
+						<icon/>
 					</item>
 				</content>
 			</control>
 		</control>
 		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[10034]" />
+			<param name="breadcrumbs_label" value="$LOCALIZE[10034]"/>
 		</include>
 		<include>BottomBar</include>
 	</controls>

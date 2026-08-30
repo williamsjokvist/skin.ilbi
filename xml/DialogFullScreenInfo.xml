@@ -7,8 +7,8 @@
 			<top>0</top>
 			<width>100%</width>
 			<height>100%</height>
-			<texturefocus />
-			<texturenofocus />
+			<texturefocus/>
+			<texturenofocus/>
 			<onright>StepForward</onright>
 			<onleft>StepBack</onleft>
 			<onup>ChapterOrBigStepForward</onup>

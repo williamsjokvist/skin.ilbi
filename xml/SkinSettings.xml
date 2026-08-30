@@ -149,7 +149,7 @@
 			<left>0</left>
 			<include>OpenClose_Left</include>
 			<include content="ContentPanel">
-				<param name="width" value="530" />
+				<param name="width" value="530"/>
 			</include>
 			<control type="list" id="9000">
 				<description>button area</description>
@@ -218,7 +218,7 @@
 				<bottom>0</bottom>
 				<width>12</width>
 				<orientation>vertical</orientation>
-				<texturesliderbackground />
+				<texturesliderbackground/>
 				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
 				<onleft condition="Control.IsVisible(620)">620</onleft>
 				<onright condition="Control.IsVisible(620)">620</onright>
@@ -228,12 +228,12 @@
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
-				<hitrect x="0" y="0" w="60" h="100%" />
+				<hitrect x="0" y="0" w="60" h="100%"/>
 				<visible>Control.IsVisible(610) | Control.IsVisible(620)</visible>
 			</control>
 		</control>
 		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[5] / $LOCALIZE[20077]" />
+			<param name="breadcrumbs_label" value="$LOCALIZE[5] / $LOCALIZE[20077]"/>
 		</include>
 		<include>BottomBar</include>
 		<control type="textbox" id="6">

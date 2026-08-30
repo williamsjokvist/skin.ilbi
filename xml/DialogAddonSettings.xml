@@ -9,10 +9,10 @@
 			<width>1820</width>
 			<include>Animation_DialogPopupVisible</include>
 			<include content="DialogBackgroundCommons">
-				<param name="width" value="1820" />
-				<param name="height" value="900" />
-				<param name="header_label" value="" />
-				<param name="header_id" value="2" />
+				<param name="width" value="1820"/>
+				<param name="height" value="900"/>
+				<param name="header_label" value=""/>
+				<param name="header_id" value="2"/>
 			</include>
 			<control type="grouplist" id="3">
 				<description>Categories Area</description>
@@ -111,16 +111,16 @@
 				<onleft>5</onleft>
 				<onright>3</onright>
 				<include content="DefaultDialogButton">
-					<param name="id" value="28" />
-					<param name="label" value="" />
+					<param name="id" value="28"/>
+					<param name="label" value=""/>
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="id" value="29" />
-					<param name="label" value="" />
+					<param name="id" value="29"/>
+					<param name="label" value=""/>
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="id" value="30" />
-					<param name="label" value="" />
+					<param name="id" value="30"/>
+					<param name="label" value=""/>
 				</include>
 			</control>
 			<control type="radiobutton" id="20">
@@ -133,7 +133,7 @@
 				<onclick>SettingsLevelChange</onclick>
 				<textoffsetx>100</textoffsetx>
 				<textoffsety>0</textoffsety>
-				<texturenofocus />
+				<texturenofocus/>
 				<radioposx>40</radioposx>
 				<radioposy>0</radioposy>
 				<radiowidth>40</radiowidth>

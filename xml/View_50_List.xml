@@ -7,9 +7,9 @@
 			<visible>Control.IsVisible(50)</visible>
 			<include>Visible_Right</include>
 			<include content="ListContainer">
-				<param name="list_id" value="50" />
-				<param name="right" value="594" />
-				<param name="viewtype_label" value="$LOCALIZE[535]" />
+				<param name="list_id" value="50"/>
+				<param name="right" value="594"/>
+				<param name="viewtype_label" value="$LOCALIZE[535]"/>
 			</include>
 			<control type="group">
 				<depth>DepthContentPanel</depth>
@@ -17,13 +17,13 @@
 					<right>-20</right>
 					<width>634</width>
 					<include content="ContentPanel">
-						<param name="left" value="0" />
-						<param name="top" value="-20" />
-						<param name="width" value="656" />
-						<param name="flipx" value="true" />
+						<param name="left" value="0"/>
+						<param name="top" value="-20"/>
+						<param name="width" value="656"/>
+						<param name="flipx" value="true"/>
 					</include>
 					<include content="RightListPanel">
-						<param name="list_id" value="50" />
+						<param name="list_id" value="50"/>
 					</include>
 					<control type="scrollbar" id="50600">
 						<left>20</left>
@@ -45,10 +45,10 @@
 			<control type="group">
 				<right>-32</right>
 				<include content="ContentPanel">
-					<param name="left" value="0" />
-					<param name="top" value="-20" />
-					<param name="width" value="656" />
-					<param name="flipx" value="true" />
+					<param name="left" value="0"/>
+					<param name="top" value="-20"/>
+					<param name="width" value="656"/>
+					<param name="flipx" value="true"/>
 				</include>
 				<control type="group">
 					<visible>!Container.Content(songs)</visible>
@@ -203,14 +203,14 @@
 		</definition>
 	</include>
 	<include name="ListThumbInfoPanel">
-		<param name="fallback_image"></param>
+		<param name="fallback_image"/>
 		<param name="flip_bg">false</param>
 		<definition>
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include content="ContentPanel">
-					<param name="width" value="656" />
-					<param name="flipx" value="$PARAM[flip_bg]" />
+					<param name="width" value="656"/>
+					<param name="flipx" value="$PARAM[flip_bg]"/>
 				</include>
 				<control type="image">
 					<left>30</left>
@@ -275,11 +275,11 @@
 					<top>640</top>
 					<visible>ListItem.IsCollection + String.IsEmpty(ListItem.Plot)</visible>
 					<include content="InfoList">
-						<param name="bottom" value="100" />
-						<param name="width" value="540" />
-						<param name="sortby" value="year" />
-						<param name="sortorder" value="ascending" />
-						<param name="font" value="font13" />
+						<param name="bottom" value="100"/>
+						<param name="width" value="540"/>
+						<param name="sortby" value="year"/>
+						<param name="sortorder" value="ascending"/>
+						<param name="font" value="font13"/>
 					</include>
 				</control>
 				<control type="group">
@@ -303,22 +303,22 @@
 						<top>640</top>
 						<visible>!String.IsEmpty(ListItem.DBID)</visible>
 						<include content="InfoList">
-							<param name="list_id" value="42000" />
-							<param name="bottom" value="100" />
-							<param name="width" value="540" />
-							<param name="sortby" value="year" />
-							<param name="sortorder" value="ascending" />
-							<param name="item_label" value="$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Label]" />
-							<param name="visible" value="String.IsEqual(ListItem.DBType,artist)" />
+							<param name="list_id" value="42000"/>
+							<param name="bottom" value="100"/>
+							<param name="width" value="540"/>
+							<param name="sortby" value="year"/>
+							<param name="sortorder" value="ascending"/>
+							<param name="item_label" value="$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Label]"/>
+							<param name="visible" value="String.IsEqual(ListItem.DBType,artist)"/>
 						</include>
 						<include content="InfoList">
-							<param name="list_id" value="43000" />
-							<param name="bottom" value="100" />
-							<param name="width" value="540" />
-							<param name="sortby" value="track" />
-							<param name="sortorder" value="ascending" />
-							<param name="item_label" value="$INFO[ListItem.Duration,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Label]" />
-							<param name="visible" value="String.IsEqual(ListItem.DBType,album)" />
+							<param name="list_id" value="43000"/>
+							<param name="bottom" value="100"/>
+							<param name="width" value="540"/>
+							<param name="sortby" value="track"/>
+							<param name="sortorder" value="ascending"/>
+							<param name="item_label" value="$INFO[ListItem.Duration,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Label]"/>
+							<param name="visible" value="String.IsEqual(ListItem.DBType,album)"/>
 						</include>
 					</control>
 				</control>

@@ -115,7 +115,7 @@
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
 				<include content="ContentPanel">
-					<param name="width" value="550" />
+					<param name="width" value="550"/>
 				</include>
 				<control type="grouplist" id="9000">
 					<orientation>vertical</orientation>
@@ -132,36 +132,36 @@
 						<height>110</height>
 						<aligny>top</aligny>
 						<textoffsetx>40</textoffsetx>
-						<texturenofocus />
+						<texturenofocus/>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<alttexturenofocus></alttexturenofocus>
+						<alttexturenofocus/>
 						<alttexturefocus colordiffuse="button_focus">lists/focus.png</alttexturefocus>
 						<textoffsety>35</textoffsety>
 						<label>$LOCALIZE[31032]: $LOCALIZE[584]</label>
 						<altlabel>$LOCALIZE[31032]: $LOCALIZE[585]</altlabel>
 					</control>
 					<include content="PlaylistWindowButton">
-						<param name="control_id" value="21" />
-						<param name="onclick" value="" />
-						<param name="label" value="" />
+						<param name="control_id" value="21"/>
+						<param name="onclick" value=""/>
+						<param name="label" value=""/>
 					</include>
 					<control type="radiobutton" id="22">
 						<height>110</height>
 						<aligny>top</aligny>
-						<texturenofocus />
+						<texturenofocus/>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>35</textoffsety>
 					</control>
 					<include content="PlaylistWindowButton">
-						<param name="control_id" value="20" />
-						<param name="onclick" value="" />
-						<param name="label" value="$LOCALIZE[192]" />
+						<param name="control_id" value="20"/>
+						<param name="onclick" value=""/>
+						<param name="label" value="$LOCALIZE[192]"/>
 					</include>
 					<include content="PlaylistWindowButton">
-						<param name="control_id" value="501" />
-						<param name="onclick" value="ActivateWindow(systemsettings,logging)" />
-						<param name="label" value="$LOCALIZE[5]" />
+						<param name="control_id" value="501"/>
+						<param name="onclick" value="ActivateWindow(systemsettings,logging)"/>
+						<param name="label" value="$LOCALIZE[5]"/>
 					</include>
 				</control>
 				<control type="image">
@@ -189,7 +189,7 @@
 			</control>
 		</control>
 		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[31067]" />
+			<param name="breadcrumbs_label" value="$LOCALIZE[31067]"/>
 		</include>
 		<include>BottomBar</include>
 	</controls>

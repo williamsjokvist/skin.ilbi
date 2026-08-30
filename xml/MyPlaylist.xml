@@ -17,15 +17,15 @@
 				<include>ListThumbInfoPanel</include>
 			</control>
 			<include content="TopBar" condition="Window.IsActive(videoplaylist)">
-				<param name="breadcrumbs_label" value="$LOCALIZE[31065]" />
+				<param name="breadcrumbs_label" value="$LOCALIZE[31065]"/>
 				<param name="sublabel">$LOCALIZE[31073] - $INFO[Container.TotalTime,,  ∙  ]$INFO[Container.CurrentItem,,/]$INFO[Container.NumItems]</param>
 			</include>
 			<include content="TopBar" condition="Window.IsActive(musicplaylist)">
-				<param name="breadcrumbs_label" value="$LOCALIZE[31066]" />
+				<param name="breadcrumbs_label" value="$LOCALIZE[31066]"/>
 				<param name="sublabel">$LOCALIZE[31074] - $INFO[Container.TotalTime]</param>
 			</include>
 			<include content="BottomBar">
-				<param name="info_visible" value="true" />
+				<param name="info_visible" value="true"/>
 			</include>
 			<control type="group">
 				<visible>!Container.Content(songs)</visible>
@@ -52,7 +52,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<texturenofocus />
+						<texturenofocus/>
 						<radioposx>280</radioposx>
 						<textoffsetx>20</textoffsetx>
 						<label>$LOCALIZE[191]</label>
@@ -62,16 +62,16 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<texturenofocus />
+						<texturenofocus/>
 						<textoffsetx>20</textoffsetx>
-						<label></label>
+						<label/>
 					</control>
 					<control type="button" id="21">
 						<height>80</height>
 						<align>left</align>
 						<aligny>center</aligny>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<texturenofocus />
+						<texturenofocus/>
 						<textoffsetx>20</textoffsetx>
 						<label>$LOCALIZE[190]</label>
 					</control>
@@ -80,7 +80,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<texturenofocus />
+						<texturenofocus/>
 						<textoffsetx>20</textoffsetx>
 						<label>$LOCALIZE[192]</label>
 					</control>

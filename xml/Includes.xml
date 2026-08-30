@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include file="Defaults.xml" />
-	<include file="Includes_Home.xml" />
-	<include file="Includes_Animations.xml" />
-	<include file="Includes_MediaMenu.xml" />
-	<include file="Includes_Buttons.xml" />
-	<include file="Includes_DialogSelect.xml" />
-	<include file="Includes_PVR.xml" />
-	<include file="View_50_List.xml" />
-	<include file="View_51_Poster.xml" />
-	<include file="View_52_IconWall.xml" />
-	<include file="View_53_Shift.xml" />
-	<include file="View_54_InfoWall.xml" />
-	<include file="View_55_WideList.xml" />
-	<include file="View_503_NowPlaying.xml" />
-	<include file="View_500_Wall.xml" />
-	<include file="View_501_Banner.xml" />
-	<include file="View_502_FanArt.xml" />
-	<include file="Variables.xml" />
+	<include file="Defaults.xml"/>
+	<include file="Includes_Home.xml"/>
+	<include file="Includes_Animations.xml"/>
+	<include file="Includes_MediaMenu.xml"/>
+	<include file="Includes_Buttons.xml"/>
+	<include file="Includes_DialogSelect.xml"/>
+	<include file="Includes_PVR.xml"/>
+	<include file="View_50_List.xml"/>
+	<include file="View_51_Poster.xml"/>
+	<include file="View_52_IconWall.xml"/>
+	<include file="View_53_Shift.xml"/>
+	<include file="View_54_InfoWall.xml"/>
+	<include file="View_55_WideList.xml"/>
+	<include file="View_503_NowPlaying.xml"/>
+	<include file="View_500_Wall.xml"/>
+	<include file="View_501_Banner.xml"/>
+	<include file="View_502_FanArt.xml"/>
+	<include file="Variables.xml"/>
 	<constant name="DepthDialog">0.50</constant>
 	<constant name="DepthDialog+">0.52</constant>
 	<constant name="DepthDialog-">0.48</constant>
@@ -63,7 +63,7 @@
 						<onright condition="![Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist)]">50</onright>
 						<onright condition="Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist)">55</onright>
 						<orientation>vertical</orientation>
-						<texturesliderbackground />
+						<texturesliderbackground/>
 						<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
 						<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 						<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(531)">conditional</animation>
@@ -81,7 +81,7 @@
 						<bottom>0</bottom>
 						<width>100%</width>
 						<height>12</height>
-						<texturesliderbackground />
+						<texturesliderbackground/>
 						<onup>50</onup>
 						<ondown>50</ondown>
 						<orientation>horizontal</orientation>
@@ -90,7 +90,7 @@
 						<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
 						<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 						<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
-						<hitrect x="0" y="20" w="100%" h="40" />
+						<hitrect x="0" y="20" w="100%" h="40"/>
 					</control>
 				</control>
 			</control>
@@ -101,10 +101,10 @@
 		<top>-3000</top>
 		<width>1</width>
 		<height>1</height>
-		<texturefocus />
-		<texturenofocus />
-		<label></label>
-		<font></font>
+		<texturefocus/>
+		<texturenofocus/>
+		<label/>
+		<font/>
 	</include>
 	<include name="InfoList">
 		<param name="item_label">$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Label]</param>
@@ -114,7 +114,7 @@
 		<param name="width">1152</param>
 		<param name="list_id">5000</param>
 		<param name="font">font13</param>
-		<param name="sortby"></param>
+		<param name="sortby"/>
 		<param name="sortorder">ascending</param>
 		<param name="visible">true</param>
 		<definition>
@@ -318,7 +318,7 @@
 		</definition>
 	</include>
 	<include name="MediaFlags">
-		<param name="infolabel_prefix"></param>
+		<param name="infolabel_prefix"/>
 		<param name="resolution_var">$VAR[ResolutionFlagVar]</param>
 		<definition>
 			<control type="grouplist">
@@ -335,7 +335,7 @@
 					<width>150</width>
 					<visible>System.AddonIsEnabled(resource.images.studios.white) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Studio)</visible>
 					<include content="MediaFlag">
-						<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.Studio,resource://resource.images.studios.white/,.png]" />
+						<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.Studio,resource://resource.images.studios.white/,.png]"/>
 					</include>
 				</control>
 				<control type="group">
@@ -343,8 +343,8 @@
 					<width>200</width>
 					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Premiered)</visible>
 					<include content="InfoFlag">
-						<param name="icon" value="lists/year.png" />
-						<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Premiered]" />
+						<param name="icon" value="lists/year.png"/>
+						<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Premiered]"/>
 					</include>
 				</control>
 				<control type="group">
@@ -359,32 +359,32 @@
 						<font>font_flag</font>
 					</control>
 					<include content="MediaFlag">
-						<param name="texture" value="flags/flag.png" />
+						<param name="texture" value="flags/flag.png"/>
 					</include>
 				</control>
 				<include content="MediaFlag">
-					<param name="texture" value="$INFO[ListItem.VideoCodec,flags/videocodec/,.png]" />
-					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoCodec)" />
+					<param name="texture" value="$INFO[ListItem.VideoCodec,flags/videocodec/,.png]"/>
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoCodec)"/>
 				</include>
 				<include content="MediaFlag">
-					<param name="texture" value="$PARAM[resolution_var]" />
-					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoResolution)" />
+					<param name="texture" value="$PARAM[resolution_var]"/>
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoResolution)"/>
 				</include>
 				<include content="MediaFlag">
-					<param name="texture" value="$INFO[ListItem.HdrType,flags/videohdr/,.png]" />
-					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.HdrType)" />
+					<param name="texture" value="$INFO[ListItem.HdrType,flags/videohdr/,.png]"/>
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.HdrType)"/>
 				</include>
 				<include content="MediaFlag">
-					<param name="texture" value="$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]" />
-					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoAspect)" />
+					<param name="texture" value="$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]"/>
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoAspect)"/>
 				</include>
 				<include content="MediaFlag">
-					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.AudioCodec,flags/audiocodec/,.png]" />
-					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioCodec)" />
+					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.AudioCodec,flags/audiocodec/,.png]"/>
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioCodec)"/>
 				</include>
 				<include content="MediaFlag">
-					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.AudioChannels,flags/audiochannel/,.png]" />
-					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioChannels)" />
+					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.AudioChannels,flags/audiochannel/,.png]"/>
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioChannels)"/>
 				</include>
 			</control>
 			<control type="grouplist">
@@ -410,7 +410,7 @@
 						<font>font_flag</font>
 					</control>
 					<include content="MediaFlag">
-						<param name="texture" value="flags/flag.png" />
+						<param name="texture" value="flags/flag.png"/>
 					</include>
 				</control>
 				<control type="group">
@@ -425,12 +425,12 @@
 						<font>font_flag</font>
 					</control>
 					<include content="MediaFlag">
-						<param name="texture" value="flags/flag.png" />
+						<param name="texture" value="flags/flag.png"/>
 					</include>
 				</control>
 				<include content="MediaFlag">
-					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.MusicChannels,flags/audiochannel/,.png]" />
-					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.MusicChannels)" />
+					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.MusicChannels,flags/audiochannel/,.png]"/>
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.MusicChannels)"/>
 				</include>
 				<control type="group">
 					<visible>!String.IsEmpty(ListItem.Samplerate)</visible>
@@ -444,7 +444,7 @@
 						<font>font_flag</font>
 					</control>
 					<include content="MediaFlag">
-						<param name="texture" value="flags/flag.png" />
+						<param name="texture" value="flags/flag.png"/>
 					</include>
 				</control>
 				<control type="group">
@@ -459,7 +459,7 @@
 						<font>font_flag</font>
 					</control>
 					<include content="MediaFlag">
-						<param name="texture" value="flags/flag.png" />
+						<param name="texture" value="flags/flag.png"/>
 					</include>
 				</control>
 				<control type="group">
@@ -474,7 +474,7 @@
 						<font>font_flag</font>
 					</control>
 					<include content="MediaFlag">
-						<param name="texture" value="flags/flag.png" />
+						<param name="texture" value="flags/flag.png"/>
 					</include>
 				</control>
 				<control type="group">
@@ -489,15 +489,15 @@
 						<font>font_flag</font>
 					</control>
 					<include content="MediaFlag">
-						<param name="texture" value="flags/flag.png" />
+						<param name="texture" value="flags/flag.png"/>
 					</include>
 				</control>
 			</control>
 		</definition>
 	</include>
 	<include name="FileManagerPanel">
-		<param name="width"></param>
-		<param name="right"></param>
+		<param name="width"/>
+		<param name="right"/>
 		<definition>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
@@ -612,7 +612,7 @@
 							<control type="group">
 								<top>150</top>
 								<include content="InfoWallMusicLayout">
-									<param name="fallback_image" value="DefaultAddon.png" />
+									<param name="fallback_image" value="DefaultAddon.png"/>
 								</include>
 							</control>
 						</itemlayout>
@@ -622,8 +622,8 @@
 								<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="150,320">Focus</animation>
 								<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="150,320">UnFocus</animation>
 								<include content="InfoWallMusicLayout">
-									<param name="fallback_image" value="DefaultAddon.png" />
-									<param name="focused" value="true" />
+									<param name="fallback_image" value="DefaultAddon.png"/>
+									<param name="focused" value="true"/>
 								</include>
 							</control>
 						</focusedlayout>
@@ -635,7 +635,7 @@
 						<width>12</width>
 						<height>920</height>
 						<orientation>vertical</orientation>
-						<texturesliderbackground />
+						<texturesliderbackground/>
 						<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus($PARAM[group_id]30)">conditional</animation>
 						<onleft>$PARAM[group_id]50</onleft>
 						<onright>noop</onright>
@@ -644,8 +644,8 @@
 				<control type="group">
 					<left>462</left>
 					<include content="ImageWidget">
-						<param name="text_label" value="$LOCALIZE[31153]" />
-						<param name="button_label" value="$LOCALIZE[31144]" />
+						<param name="text_label" value="$LOCALIZE[31153]"/>
+						<param name="button_label" value="$LOCALIZE[31144]"/>
 						<param name="button_onclick" value="$PARAM[imagewidget_onclick]"/>
 						<param name="button_id" value="$PARAM[group_id]333"/>
 						<param name="visible_2" value="false"/>
@@ -794,8 +794,8 @@
 				<top>$PARAM[posy]</top>
 				<width>28</width>
 				<height>28</height>
-				<texturefocus />
-				<texturenofocus />
+				<texturefocus/>
+				<texturenofocus/>
 				<onclick>Control.Move($PARAM[list_id],-1)</onclick>
 				<visible allowhiddenfocus="true">Container($PARAM[list_id]).HasPrevious + [Control.HasFocus($PARAM[list_id]) | Control.HasFocus($PARAM[list_id]500)]</visible>
 			</control>
@@ -804,8 +804,8 @@
 				<top>$PARAM[posy]</top>
 				<width>28</width>
 				<height>28</height>
-				<texturefocus />
-				<texturenofocus />
+				<texturefocus/>
+				<texturenofocus/>
 				<onclick>Control.Move($PARAM[list_id],1)</onclick>
 				<visible allowhiddenfocus="true">Container($PARAM[list_id]).HasNext + [Control.HasFocus($PARAM[list_id]) | Control.HasFocus($PARAM[list_id]501)]</visible>
 			</control>
@@ -828,8 +828,8 @@
 			<top>-2000</top>
 			<width>6000</width>
 			<height>6000</height>
-			<texturefocus />
-			<texturenofocus />
+			<texturefocus/>
+			<texturenofocus/>
 			<onclick>Action(close)</onclick>
 		</control>
 		<control type="group">
@@ -865,8 +865,8 @@
 				<top>0</top>
 				<right>0</right>
 				<bottom>0</bottom>
-				<texturefocus />
-				<texturenofocus />
+				<texturefocus/>
+				<texturenofocus/>
 				<onclick>noop</onclick>
 			</control>
 			<control type="radiobutton">
@@ -876,9 +876,9 @@
 				<height>48</height>
 				<radiowidth>48</radiowidth>
 				<radioheight>48</radioheight>
-				<texturefocus />
-				<texturenofocus />
-				<label></label>
+				<texturefocus/>
+				<texturenofocus/>
+				<label/>
 				<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
 				<textureradiooffnofocus colordiffuse="EEFFFFFF">special://xbmc/media/vendor_icon.png</textureradiooffnofocus>
 				<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
@@ -905,14 +905,14 @@
 				<control type="grouplist">
 					<width>900</width>
 					<include content="TopBarLabels">
-						<param name="breadcrumbs_label" value="$PARAM[breadcrumbs_label]" />
+						<param name="breadcrumbs_label" value="$PARAM[breadcrumbs_label]"/>
 					</include>
 					<visible>Player.HasMedia</visible>
 				</control>
 				<control type="grouplist">
 					<width>1800</width>
 					<include content="TopBarLabels">
-						<param name="breadcrumbs_label" value="$PARAM[breadcrumbs_label]" />
+						<param name="breadcrumbs_label" value="$PARAM[breadcrumbs_label]"/>
 					</include>
 					<visible>!Player.HasMedia</visible>
 				</control>
@@ -920,11 +920,11 @@
 					<top>0</top>
 					<width>200</width>
 					<height>100</height>
-					<label></label>
+					<label/>
 					<onclick>Action(Back)</onclick>
 					<visible>!Window.IsActive(home)</visible>
-					<texturefocus />
-					<texturenofocus />
+					<texturefocus/>
+					<texturenofocus/>
 				</control>
 				<control type="label" id="18900">
 					<top>50</top>
@@ -1236,8 +1236,8 @@
 						<shadowcolor>text_shadow</shadowcolor>
 						<label>$LOCALIZE[33063]</label>
 						<onclick>SetFocus(9000)</onclick>
-						<texturefocus />
-						<texturenofocus />
+						<texturefocus/>
+						<texturenofocus/>
 					</control>
 				</control>
 			</control>
@@ -1362,7 +1362,7 @@
 	<include name="ContentPanel">
 		<param name="width">500</param>
 		<param name="left">-40</param>
-		<param name="right"></param>
+		<param name="right"/>
 		<param name="top">-10%</param>
 		<param name="height">120%</param>
 		<param name="flipx">false</param>
@@ -1411,10 +1411,10 @@
 			<control type="group">
 				<depth>DepthContentPopout</depth>
 				<animation type="Focus" reversible="false">
-					<effect type="zoom" center="200,140" start="100" end="110" time="250" tween="sine" />
+					<effect type="zoom" center="200,140" start="100" end="110" time="250" tween="sine"/>
 				</animation>
 				<animation type="UnFocus" reversible="false">
-					<effect type="zoom" center="200,140" start="110" end="100" time="250" tween="sine" />
+					<effect type="zoom" center="200,140" start="110" end="100" time="250" tween="sine"/>
 				</animation>
 				<control type="image">
 					<left>-5</left>

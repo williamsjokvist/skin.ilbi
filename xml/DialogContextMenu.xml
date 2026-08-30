@@ -21,8 +21,8 @@
 			<top>-1080</top>
 			<width>5760</width>
 			<height>3240</height>
-			<texturefocus />
-			<texturenofocus />
+			<texturefocus/>
+			<texturenofocus/>
 			<onclick>Action(close)</onclick>
 		</control>
 		<control type="group">
@@ -44,21 +44,21 @@
 				<usecontrolcoords>true</usecontrolcoords>
 			</control>
 			<include content="UpDownArrows">
-				<param name="container_id" value="996" />
-				<param name="posx" value="201" />
-				<param name="up_posy" value="-40" />
-				<param name="down_posy" value="798" />
+				<param name="container_id" value="996"/>
+				<param name="posx" value="201"/>
+				<param name="up_posy" value="-40"/>
+				<param name="down_posy" value="798"/>
 			</include>
 		</control>
 		<control type="button" id="1000">
 			<description>button template</description>
 			<left>0</left>
-			<top></top>
+			<top/>
 			<width>450</width>
 			<height>65</height>
 			<align>center</align>
 			<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-			<texturenofocus />
+			<texturenofocus/>
 		</control>
 	</controls>
 </window>

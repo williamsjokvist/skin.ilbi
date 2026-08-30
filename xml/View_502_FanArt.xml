@@ -6,10 +6,10 @@
 			<visible>Control.IsVisible(502)</visible>
 			<include>Visible_Left</include>
 			<include content="ListContainer">
-				<param name="left" value="-5" />
-				<param name="right" value="1195" />
-				<param name="list_id" value="502" />
-				<param name="viewtype_label" value="$LOCALIZE[20445]" />
+				<param name="left" value="-5"/>
+				<param name="right" value="1195"/>
+				<param name="list_id" value="502"/>
+				<param name="viewtype_label" value="$LOCALIZE[20445]"/>
 			</include>
 		</control>
 		<control type="group">
@@ -21,10 +21,10 @@
 				<right>-20</right>
 				<width>1235</width>
 				<include content="ContentPanel">
-					<param name="width" value="1235" />
-					<param name="left" value="0" />
-					<param name="top" value="-20" />
-					<param name="flipx" value="true" />
+					<param name="width" value="1235"/>
+					<param name="left" value="0"/>
+					<param name="top" value="-20"/>
+					<param name="flipx" value="true"/>
 				</include>
 				<control type="image">
 					<left>38</left>
@@ -58,11 +58,11 @@
 					<top>770</top>
 					<visible>ListItem.IsCollection + String.IsEmpty(ListItem.PlotOutline) + String.IsEmpty(ListItem.Plot)</visible>
 					<include content="InfoList">
-						<param name="bottom" value="108" />
-						<param name="width" value="1000" />
-						<param name="sortby" value="year" />
-						<param name="sortorder" value="ascending" />
-						<param name="font" value="font13" />
+						<param name="bottom" value="108"/>
+						<param name="width" value="1000"/>
+						<param name="sortby" value="year"/>
+						<param name="sortorder" value="ascending"/>
+						<param name="font" value="font13"/>
 					</include>
 				</control>
 			</control>

@@ -9,8 +9,8 @@
 			<top>0</top>
 			<width>100%</width>
 			<bottom>546</bottom>
-			<texturefocus />
-			<texturenofocus />
+			<texturefocus/>
+			<texturenofocus/>
 			<onclick>Action(close)</onclick>
 		</control>
 		<control type="group">
@@ -45,20 +45,20 @@
 				<onup>11</onup>
 				<ondown>11</ondown>
 				<include content="DefaultDialogButton">
-					<param name="id" value="2" />
-					<param name="label" value="$LOCALIZE[294]" />
-					<param name="width" value="350" />
+					<param name="id" value="2"/>
+					<param name="label" value="$LOCALIZE[294]"/>
+					<param name="width" value="350"/>
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="id" value="3" />
-					<param name="label" value="$LOCALIZE[296]" />
-					<param name="width" value="350" />
+					<param name="id" value="3"/>
+					<param name="label" value="$LOCALIZE[296]"/>
+					<param name="width" value="350"/>
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="id" value="4" />
-					<param name="label" value="$LOCALIZE[20406]" />
-					<param name="width" value="350" />
-					<param name="visible" value="Control.IsEnabled(4)" />
+					<param name="id" value="4"/>
+					<param name="label" value="$LOCALIZE[20406]"/>
+					<param name="width" value="350"/>
+					<param name="visible" value="Control.IsEnabled(4)"/>
 				</include>
 			</control>
 			<control type="panel" id="11">

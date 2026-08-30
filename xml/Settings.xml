@@ -110,7 +110,7 @@
 			</control>
 		</control>
 		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[13000]" />
+			<param name="breadcrumbs_label" value="$LOCALIZE[13000]"/>
 		</include>
 		<include>BottomBar</include>
 	</controls>

@@ -13,8 +13,8 @@
 		<height>76</height>
 		<radiowidth>74</radiowidth>
 		<radioheight>74</radioheight>
-		<font></font>
-		<texturenofocus />
+		<font/>
+		<texturenofocus/>
 		<radioposx>1</radioposx>
 		<radioposy>0</radioposy>
 	</include>
@@ -32,8 +32,8 @@
 				<font>font12</font>
 				<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
 				<alttexturefocus colordiffuse="button_focus">lists/focus.png</alttexturefocus>
-				<texturenofocus />
-				<alttexturenofocus />
+				<texturenofocus/>
+				<alttexturenofocus/>
 				<onclick>noop</onclick>
 				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick]</onclick>
 				<altclick>noop</altclick>
@@ -56,7 +56,7 @@
 			<invalidcolor>invalid</invalidcolor>
 			<selectedcolor>selected</selectedcolor>
 			<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-			<texturenofocus />
+			<texturenofocus/>
 		</definition>
 	</include>
 	<include name="DialogSettingButton">
@@ -77,7 +77,7 @@
 		<left>0</left>
 		<top>0</top>
 		<height>75</height>
-		<label></label>
+		<label/>
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>font25_title</font>
@@ -104,7 +104,7 @@
 		<param name="height">100</param>
 		<param name="wrapmultiline">false</param>
 		<param name="font">font25_title</param>
-		<param name="onclick"></param>
+		<param name="onclick"/>
 		<param name="visible">true</param>
 		<param name="enable">true</param>
 		<definition>
@@ -129,7 +129,7 @@
 		<param name="height">100</param>
 		<param name="wrapmultiline">false</param>
 		<param name="font">font25_title</param>
-		<param name="onclick"></param>
+		<param name="onclick"/>
 		<param name="visible">true</param>
 		<param name="enable">true</param>
 		<param name="usealttexture">false</param>
@@ -159,7 +159,7 @@
 		<height>120</height>
 		<textoffsety>27</textoffsety>
 		<texturefocus colordiffuse="button_focus">buttons/roundbutton-fo.png</texturefocus>
-		<texturenofocus />
+		<texturenofocus/>
 		<align>center</align>
 		<aligny>top</aligny>
 		<font>font45</font>
@@ -173,7 +173,7 @@
 				<align>left</align>
 				<aligny>top</aligny>
 				<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-				<texturenofocus />
+				<texturenofocus/>
 				<textoffsetx>40</textoffsetx>
 				<textoffsety>35</textoffsety>
 				<label>$PARAM[label]</label>
@@ -193,10 +193,10 @@
 				<aligny>center</aligny>
 				<onclick>$PARAM[onclick]</onclick>
 				<onclick>$PARAM[onclick_2]</onclick>
-				<font></font>
+				<font/>
 				<label>$PARAM[label]</label>
 				<texturefocus colordiffuse="button_focus">buttons/roundbutton-fo.png</texturefocus>
-				<texturenofocus />
+				<texturenofocus/>
 				<radioposx>40</radioposx>
 				<radioposy>0</radioposy>
 				<radiowidth>40</radiowidth>
@@ -218,10 +218,10 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<onclick>$PARAM[onclick]</onclick>
-				<font></font>
+				<font/>
 				<label>$PARAM[label]</label>
 				<texturefocus colordiffuse="button_focus">buttons/roundbutton-fo.png</texturefocus>
-				<texturenofocus />
+				<texturenofocus/>
 				<radioposx>40</radioposx>
 				<radioposy>0</radioposy>
 				<radiowidth>40</radiowidth>

@@ -8,10 +8,10 @@
 			<width>960</width>
 			<top>330</top>
 			<include content="DialogBackgroundCommons">
-				<param name="width" value="960" />
-				<param name="height" value="500" />
-				<param name="header_label" value="$LOCALIZE[21421]" />
-				<param name="header_id" value="2" />
+				<param name="width" value="960"/>
+				<param name="height" value="500"/>
+				<param name="header_label" value="$LOCALIZE[21421]"/>
+				<param name="header_id" value="2"/>
 			</include>
 			<control type="label">
 				<description>Rule match label</description>
@@ -65,12 +65,12 @@
 				<onup>9002</onup>
 				<ondown>15</ondown>
 				<include content="DefaultDialogButton">
-					<param name="id" value="18" />
-					<param name="label" value="$LOCALIZE[186]" />
+					<param name="id" value="18"/>
+					<param name="label" value="$LOCALIZE[186]"/>
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="id" value="19" />
-					<param name="label" value="$LOCALIZE[222]" />
+					<param name="id" value="19"/>
+					<param name="label" value="$LOCALIZE[222]"/>
 				</include>
 			</control>
 		</control>
