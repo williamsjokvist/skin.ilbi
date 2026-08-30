@@ -506,37 +506,33 @@
 						<param name="id" value="favorites"/>
 					</include>
 					<control type="panel" id="14100">
-						<left>65</left>
-						<top>0</top>
+						<left>75</left>
+						<top>15</top>
 						<right>0</right>
 						<bottom>0</bottom>
-						<onleft>9000</onleft>
-						<onright>9000</onright>
-						<onup>14100</onup>
+						<onleft>14100</onleft>
+						<onright>14100</onright>
+						<onup>9000</onup>
 						<ondown>14100</ondown>
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
 						<orientation>vertical</orientation>
 						<pagecontrol>14010</pagecontrol>
 						<visible>Integer.IsGreater(Container(14100).NumItems,0) | Container(14100).IsUpdating</visible>
-						<itemlayout width="330" height="401">
+						<itemlayout width="340" height="480">
 							<control type="group">
-								<top>130</top>
-								<include content="InfoWallMusicLayout">
+								<include content="HomePosterLayout">
 									<param name="fallback_image" value="DefaultFavourites.png" />
-									<param name="focused" value="false" />
 								</include>
 							</control>
 						</itemlayout>
-						<focusedlayout width="330" height="401">
+						<focusedlayout width="340" height="480">
 							<control type="group">
 								<depth>DepthContentPopout</depth>
-								<top>130</top>
-								<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="170,320">Focus</animation>
-								<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="170,320">UnFocus</animation>
-								<include content="InfoWallMusicLayout">
+								<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="155,232">Focus</animation>
+								<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="155,232">UnFocus</animation>
+								<include content="HomePosterLayout">
 									<param name="fallback_image" value="DefaultFavourites.png" />
-									<param name="focused" value="true" />
 								</include>
 							</control>
 						</focusedlayout>

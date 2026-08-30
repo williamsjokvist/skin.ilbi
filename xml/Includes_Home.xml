@@ -29,6 +29,7 @@
 		</definition>
 	</include>
 	<include name="HomePosterLayout">
+		<param name="fallback_image">DefaultVideo.png</param>
 		<definition>
 			<control type="image">
 				<description>poster</description>
@@ -36,7 +37,7 @@
 				<top>0</top>
 				<width>310</width>
 				<height>465</height>
-				<texture background="true" fallback="DefaultVideo.png">$VAR[HomePosterArtVar]</texture>
+				<texture background="true" fallback="$PARAM[fallback_image]">$VAR[HomePosterArtVar]</texture>
 				<aspectratio>scale</aspectratio>
 			</control>
 			<control type="image">
