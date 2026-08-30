@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "Søg..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "Vis mediefankunst som baggrund"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "Biograftilstand"
@@ -119,10 +115,6 @@ msgstr "Sorter efter"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Visningstype"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr "Vælg bedømmelse der vises for medieelementer"
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -454,10 +446,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Indstillinger for hovedmenuen: konfigurer hovedskærmen efter din egen smag."
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "Vælg fankunst-pakke til skinnet"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr "Vælg program"
@@ -530,10 +518,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "Kategorier"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "Vælg fankunst genrepakke"
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr "Kilde"
@@ -561,14 +545,6 @@ msgstr "Ingen bogmærker oprettet endnu."
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Vælg baggrundsmønster"
-
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "Rediger kategorier"
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "Grafik"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -605,11 +581,6 @@ msgstr "Profilavatar"
 msgctxt "#31167"
 msgid "Animate background"
 msgstr "Animer baggrund"
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
-msgstr "billedrelaterede indstillinger."
 
 #. Label for OSD settings category
 msgctxt "#31170"

@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "Gelintar..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "Tunjuk seni peminat media sebagai latar belakang"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "Mod wayang"
@@ -119,10 +115,6 @@ msgstr "Isih mengikut"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Jenispaparan"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr "Memilih rating untuk paparan item-item media"
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -454,10 +446,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Tetapan berkaitan-menu utama: Konfigur skrin rumah mengikut citarasa anda."
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "Pilih pek kulit seni peminat"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr "Pilih Program"
@@ -530,10 +518,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "Kategori"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "Pilih pek seni peminat genre"
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr ""
@@ -561,14 +545,6 @@ msgstr "Tiada tanda buku dicipta lagi"
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Pilih pola latar belakang"
-
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "Sunting kategori"
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "Kerja seni"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -605,11 +581,6 @@ msgstr "Avatar profil"
 msgctxt "#31167"
 msgid "Animate background"
 msgstr "Animasikan latar belakang"
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
-msgstr ""
 
 #. Label for OSD settings category
 msgctxt "#31170"

@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "Etsi..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "Näytä median fanitaide taustana"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "Teatteritila"
@@ -119,10 +115,6 @@ msgstr "Lajitteluperuste"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Näkymä"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr "Valitse mediakohteille näytettävä arvio"
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -454,10 +446,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Päävalikon asetukset: Tee aloitusnäytöstä haluamasi näköinen."
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "Valitse ulkoasun fanitaidepaketti"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr "Valitse ohjelma"
@@ -530,10 +518,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "Kategoriat"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "Valitse lajityyppien fanitaidepaketti"
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr "Alkuperä"
@@ -561,14 +545,6 @@ msgstr "Kirjanmerkkejä ei ole vielä luotu."
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Valitse taustan kuvio"
-
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "Muokkaa kategorioita"
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "Mediakuvitukset"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -605,11 +581,6 @@ msgstr "Profiilin kuva"
 msgctxt "#31167"
 msgid "Animate background"
 msgstr "Animoitu tausta"
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
-msgstr "Mediakuvituksiin liittyvät asetukset."
 
 #. Label for OSD settings category
 msgctxt "#31170"

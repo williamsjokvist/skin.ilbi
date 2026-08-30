@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "Pretraga..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "Prikaži slike ljubitelja kao pozadinu"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "Bioskopski režim"
@@ -119,10 +115,6 @@ msgstr "Poređaj po"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Prikaz"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr ""
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -454,10 +446,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Podešavanja vezana za glavni meni: Podesite glavni ekran prema vašim željama."
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "Izaberite paket umetnosti ljubitelja za masku"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr ""
@@ -530,10 +518,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "Kategorije"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "Izaberite paket umetnosti ljubitelja žanra"
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr ""
@@ -561,14 +545,6 @@ msgstr "Nijedan obeleživač još nije napravljen."
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Izaberite šablon pozadine"
-
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "Uredi kategorije"
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "Ilustracije"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -604,11 +580,6 @@ msgstr ""
 #. Label of a setting
 msgctxt "#31167"
 msgid "Animate background"
-msgstr ""
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
 msgstr ""
 
 #. Label for OSD settings category

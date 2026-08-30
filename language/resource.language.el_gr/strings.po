@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "Αναζήτηση..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "Εμφάνιση μέσων fanart ως φόντο"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "Λειτουργία σινεμά"
@@ -119,10 +115,6 @@ msgstr "Ταξινόμηση κατά"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Τύπος προβολής"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr ""
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -454,10 +446,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Ρυθμίσεις βασικού μενού: Ρυθμίστε την αρχική οθόνη βάσει των προτιμήσεών σας."
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "Επιλογή πακέτου fanart"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr ""
@@ -530,10 +518,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "Κατηγορίες"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr ""
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr ""
@@ -561,14 +545,6 @@ msgstr "Δεν έχουν δημιουργηθεί σελιδοδείκτες α
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Επιλέξτε μοτίβο υποβάθρου"
-
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "Επεξεργασία κατηγοριών"
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "Εικόνες"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -604,11 +580,6 @@ msgstr ""
 #. Label of a setting
 msgctxt "#31167"
 msgid "Animate background"
-msgstr ""
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
 msgstr ""
 
 #. Label for OSD settings category

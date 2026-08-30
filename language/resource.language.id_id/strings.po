@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "Cari..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "Tampilkan fanart sebagai latar belakang"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "Mode bioskop"
@@ -119,10 +115,6 @@ msgstr "Urut berdasarkan"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Jenis tampilan"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr "Pilih peringkat yang akan ditampilkan untuk item media"
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -469,10 +461,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Pengaturan terkait menu utama: Konfigurasikan layar beranda sesuai keinginan Anda."
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "Pilih paket skin fanart"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr "Pilih Program"
@@ -545,10 +533,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "Kategori"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "Pilih paket fanart genre"
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr "Asal"
@@ -577,15 +561,7 @@ msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Pilih pola latar belakang"
 
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "Sunting kategori"
-
 # empty string with id 31158
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "Karya seni"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -624,11 +600,6 @@ msgid "Animate background"
 msgstr "Animasi latar belakang"
 
 # empty string with id 31168
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
-msgstr "Pengaturan terkait karya seni."
 
 #. Label for OSD settings category
 msgctxt "#31170"

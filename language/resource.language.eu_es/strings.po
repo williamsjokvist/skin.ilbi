@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "Bilatu..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "Erakutsi multimediaren fanart-a atzeko plano bezala"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "Zinema modua"
@@ -119,10 +115,6 @@ msgstr "Ordenatu honen baitan"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Ikusteko modua"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr "Aukeratu klasifikazioa ikusteko multimedia elementuak"
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -454,10 +446,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Menu nagusiarekin erlazionatutako ezarpenak: Konfiguratu etxeko pantaila nahi duzun bezala."
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "Aukeratu azalaren fanart paketea"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr "Hautatu Programa"
@@ -530,10 +518,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "Kategoriak"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "Hautatu generoaren fanart paketea"
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr ""
@@ -561,14 +545,6 @@ msgstr "Laster-markarik ez dago oraindik."
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Aukeratu atzeko planoko eredua"
-
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "Editatu kategoriak"
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "Artea"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -604,11 +580,6 @@ msgstr ""
 #. Label of a setting
 msgctxt "#31167"
 msgid "Animate background"
-msgstr ""
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
 msgstr ""
 
 #. Label for OSD settings category

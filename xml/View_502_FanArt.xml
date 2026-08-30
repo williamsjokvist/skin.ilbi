@@ -35,11 +35,6 @@
 					<texture border="2" background="true">$VAR[FanartImageVar]</texture>
 					<aspectratio align="center" aligny="bottom">scale</aspectratio>
 				</control>
-				<control type="group">
-					<left>600</left>
-					<top>82</top>
-					<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
-				</control>
 				<control type="textbox">
 					<left>50</left>
 					<right>50</right>

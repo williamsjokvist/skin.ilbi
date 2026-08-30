@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "البحث..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "أظهر Fanart الوسائط كخلفية"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "وضع السينما"
@@ -119,10 +115,6 @@ msgstr "رتب حسب"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "طريقة العرض"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr "اختر التصنيف الذي تريد عرضه لعناصر الوسائط"
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -470,10 +462,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "الإعدادات المتعلقة بالقائمة الرئيسية: قم بتكوين الشاشة الرئيسية حسب رغبتك."
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "اختر حزمة fanart للمظهر"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr "حدد البرنامج"
@@ -578,15 +566,7 @@ msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "اختر نمط الخلفية"
 
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "تحرير الفئات"
-
 # empty string with id 31158
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "Artwork"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -625,11 +605,6 @@ msgid "Animate background"
 msgstr "تحريك الخلفية"
 
 # empty string with id 31168
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
-msgstr "الإعدادات المتعلقة بال Artwork."
 
 #. Label for OSD settings category
 msgctxt "#31170"

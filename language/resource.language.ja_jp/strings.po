@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "検索..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "背景にメディアのファンアートを表示"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "シネマモード"
@@ -119,10 +115,6 @@ msgstr "ソート"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "表示タイプ"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr "メディアアイテムへ表示する評価を選択"
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -454,10 +446,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "メインメニュー関連設定: 好きなようにホーム画面を設定できます。"
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "スキンのファンアートパック選択"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr "プログラム選択"
@@ -530,10 +518,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "カテゴリー"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "ジャンルのファンアートパック選択"
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr "オリジン"
@@ -561,14 +545,6 @@ msgstr "ブックマークをまだ作成していません。"
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "背景のパターン選択"
-
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "カテゴリー編集"
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "アートワーク"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -605,11 +581,6 @@ msgstr "プロファイルアバター"
 msgctxt "#31167"
 msgid "Animate background"
 msgstr "アニメーション背景"
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
-msgstr "アートワーク関連の設定。"
 
 #. Label for OSD settings category
 msgctxt "#31170"

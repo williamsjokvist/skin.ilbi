@@ -112,11 +112,6 @@
 					<align>center</align>
 				</control>
 			</control>
-			<control type="group">
-				<left>133</left>
-				<top>2</top>
-				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
-			</control>
 		</definition>
 	</include>
 	<include name="InfoWallEpisodeLayout">
@@ -222,11 +217,6 @@
 				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-			</control>
-			<control type="group">
-				<left>134</left>
-				<top>8</top>
-				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 			</control>
 		</definition>
 	</include>
@@ -346,11 +336,6 @@
 					<height>24</height>
 					<texture>$VAR[ItemStatusIconVar]</texture>
 				</control>
-			</control>
-			<control type="group">
-				<left>135</left>
-				<top>-8</top>
-				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 			</control>
 			<control type="progress">
 				<left>35</left>

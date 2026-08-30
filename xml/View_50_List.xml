@@ -63,13 +63,6 @@
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar]</texture>
 					</control>
-					<control type="group">
-						<left>291</left>
-						<top>950</top>
-						<include content="RatingCircle">
-							<param name="animation" value="True" />
-						</include>
-					</control>
 				</control>
 				<control type="group">
 					<visible>Control.IsVisible(503) + Window.IsActive(musicplaylist)</visible>
@@ -81,19 +74,6 @@
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<fadetime>300</fadetime>
 						<texture fallback="DefaultAudio.png" background="true">$INFO[Player.Icon]</texture>
-					</control>
-					<control type="group">
-						<left>301</left>
-						<top>560</top>
-						<control type="group">
-							<animation effect="fade" time="0" condition="$PARAM[animation]">VisibleChange</animation>
-							<include content="UserRatingContent" condition="Skin.HasSetting(circle_userrating)">
-								<param name="infolabel" value="MusicPlayer.UserRating" />
-							</include>
-							<include content="UserRatingContent" condition="Skin.HasSetting(circle_rating)">
-								<param name="infolabel" value="MusicPlayer.Rating" />
-							</include>
-						</control>
 					</control>
 					<control type="textbox" id="15599">
 						<visible>Player.HasAudio + Window.IsActive(musicplaylist)</visible>
@@ -261,12 +241,6 @@
 					<fadetime>300</fadetime>
 					<texture fallback="DefaultAudio.png" background="true">$VAR[IconWallThumbVar]</texture>
 					<visible>String.IsEqual(ListItem.DBType,song)</visible>
-				</control>
-				<control type="group">
-					<left>273</left>
-					<top>560</top>
-					<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
-					<animation effect="slide" end="0,-140" time="0" condition="String.IsEqual(ListItem.DbType,episode)">conditional</animation>
 				</control>
 				<control type="group">
 					<visible>!Container.Content() | !String.isempty(ListItem.Plot)</visible>

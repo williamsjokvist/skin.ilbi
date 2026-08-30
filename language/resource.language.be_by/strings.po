@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "Пошук..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "Паказваць ілюстрацыі для медыяфайлаў як фон"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "Рэжым кінатэатра"
@@ -119,10 +115,6 @@ msgstr "Упарадкаваць па"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Выгляд"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr "Абраць рэйтынг для паказу мультымедыйных элементаў"
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -454,10 +446,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Налады галоўнага меню: наладзьце свой хатні экран."
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "Абраць набор ілюстрацый абалонкі"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr "Абраць праграму"
@@ -530,10 +518,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "Катэгорыі"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "Абраць набор ілюстрацый да жанраў"
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr "Крыніца"
@@ -561,14 +545,6 @@ msgstr "Закладак яшчэ не створана."
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Абраць фон"
-
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "Рэдагаваць катэгорыі"
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "Ілюстрацыі"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -605,11 +581,6 @@ msgstr "Выява профілю"
 msgctxt "#31167"
 msgid "Animate background"
 msgstr "Анімаваны фон"
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
-msgstr "Налады ілюстрацый."
 
 #. Label for OSD settings category
 msgctxt "#31170"

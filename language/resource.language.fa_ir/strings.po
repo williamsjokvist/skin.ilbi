@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "جستجو ..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "نمایش هنرهای هواداری به عنوان پس‌زمینه"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "حالت سینما"
@@ -119,10 +115,6 @@ msgstr "چینش با"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "گونهٔ نما"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr "گزینش رتبه‌بندی برای نمایش موارد رسانه"
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -469,10 +461,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr ""
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "گزینش بستهٔ هنر هواداری پوسته"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr "گزینش برنامه"
@@ -545,10 +533,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "دسته‌ها"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "گزینش بستهٔ هنر هواداری سبک"
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr "خاستگاه"
@@ -577,15 +561,7 @@ msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "گزینش الگوی پس‌زمینه"
 
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "ویرایش دسته‌ها"
-
 # empty string with id 31158
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "اثر هنری"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -624,11 +600,6 @@ msgid "Animate background"
 msgstr "پویانمایی پس‌زمینه"
 
 # empty string with id 31168
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
-msgstr "تنظمیات مربوط به اثر هنری."
 
 #. Label for OSD settings category
 msgctxt "#31170"

@@ -38,10 +38,7 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr ""
 
-#: /xml/SkinSettings.xml
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr ""
+#empty string with id 31002
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31003"
@@ -143,10 +140,7 @@ msgctxt "#31023"
 msgid "Viewtype"
 msgstr ""
 
-#: /xml/SkinSettings.xml
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr ""
+#empty string with id 31024
 
 #: /xml/DialogFavourites.xml
 msgctxt "#31025"
@@ -589,10 +583,7 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr ""
 
-#: /xml/SkinSettings.xml
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr ""
+#empty string with id 31131
 
 #: /xml/Custom_1101_SettingsList.xml
 msgctxt "#31132"
@@ -681,10 +672,7 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr ""
 
-#: /xml/SkinSettings.xml
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr ""
+#empty string with id 31149
 
 #: /xml/DialogAddonInfo.xml
 msgctxt "#31150"
@@ -721,17 +709,11 @@ msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr ""
 
-#: /xml/SkinSettings.xml
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr ""
+#empty string with id 31157
 
 #empty string with id 31158
 
-#: /xml/SkinSettings.xml
-msgctxt "#31159"
-msgid "Artwork"
-msgstr ""
+#empty string with id 31159
 
 #: /xml/SkinSettings.xml
 msgctxt "#31160"
@@ -779,11 +761,7 @@ msgstr ""
 
 #empty string with id 31168
 
-#. Description label for skin settings area
-#: /xml/Variables.xml
-msgctxt "#31169"
-msgid "Artwork related settings."
-msgstr ""
+#empty string with id 31169
 
 #: /xml/SkinSettings.xml
 #. Label for OSD settings category

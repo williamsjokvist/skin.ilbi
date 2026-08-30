@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "Hledat…"
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "Zobrazit fanart médií jako pozadí"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "Režim kino"
@@ -119,10 +115,6 @@ msgstr "Řadit podle"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Typ zobrazení"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr "Zvolte hodnocení zobrazené pro položky médií"
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -454,10 +446,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Nastavení související s hlavní nabídkou: Konfigurujte domovskou obrazovku podle svých představ."
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "Zvolte balíček fanartů vzhledu"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr "Vybrat program"
@@ -530,10 +518,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "Kategorie"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "Zvolte balíček fanartů žánru"
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr "Původ"
@@ -561,14 +545,6 @@ msgstr "Zatím nebyly vytvořeny žádné záložky."
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Zvolte vzor pozadí"
-
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "Upravit kategorie"
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "Obrázek"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -605,11 +581,6 @@ msgstr "Avatar profilu"
 msgctxt "#31167"
 msgid "Animate background"
 msgstr "Animovat pozadí"
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
-msgstr "Nastavení související s grafikou alb."
 
 #. Label for OSD settings category
 msgctxt "#31170"

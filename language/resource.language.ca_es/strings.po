@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "Cerca..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "Mostra el fanart dels mitjans com a fons"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "Mode cinema"
@@ -119,10 +115,6 @@ msgstr "Ordena per"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Tipus de vista"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr "Trieu la puntuació a mostrar per als elements multimèdia"
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -454,10 +446,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Opcions que estan relacionades amb el menú principal: Configureu la pantalla d'inici segons els vostres gustos."
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "Tria el paquet de fanart de l'aparença"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr "Seleccioneu Programa"
@@ -530,10 +518,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "Categories"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "Seleccioneu un paquet de fanart de gènere"
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr "Origen"
@@ -561,14 +545,6 @@ msgstr "Encara no s'ha creat cap marcador."
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Trieu el patró del fons"
-
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "Edita les categories"
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "Artwork"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -605,11 +581,6 @@ msgstr "Avatar del perfil"
 msgctxt "#31167"
 msgid "Animate background"
 msgstr "Anima el fons"
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
-msgstr "Configuració relacionada amb les obres d'art."
 
 #. Label for OSD settings category
 msgctxt "#31170"

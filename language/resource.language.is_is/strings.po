@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "Leita..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "Birta aðdáendamyndir sem bakgrunn"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "Bíóhamur"
@@ -119,10 +115,6 @@ msgstr "Raða eftir"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Tegund sýnar"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr "Veldu einkunn til að birta með margmiðlunaratriðum"
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -454,10 +446,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Stillingar sem tengjast aðalvalmynd: Stilltu upphafsskjáinn eins og þér finnst henta."
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "Veldu pakka með aðdáendamyndum fyrir skinn"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr "Veldu forrit"
@@ -530,10 +518,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "Flokkar"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "Veldu pakka með aðdáendamyndum fyrir flokkun"
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr "Uppruni"
@@ -561,14 +545,6 @@ msgstr "Engin bókamerki útbúin ennþá."
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Veldu bakgrunnsmynstur"
-
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "Breyta flokkum"
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "Myndskreytingar"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -605,11 +581,6 @@ msgstr "Notandatáknmynd"
 msgctxt "#31167"
 msgid "Animate background"
 msgstr "Lifandi bakgrunnur"
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
-msgstr "Stillingar tengdar myndefni."
 
 #. Label for OSD settings category
 msgctxt "#31170"

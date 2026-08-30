@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "Ara..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "Medya fanartını arka plan olarak göster"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "Sinema modu"
@@ -119,10 +115,6 @@ msgstr "Sırala"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Görünüm türü"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr "Medya ögeleri için gösterilecek derecelendirmeyi seçin"
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -454,10 +446,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Ana menü ile ilgili ayarlar: Ana ekranı kendi zevkinize göre yapılandırın."
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "Dış görünüm için fanart paketi seçin"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr "Program Seçin"
@@ -530,10 +518,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "Kategoriler"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "Tarz fanart paketini seçin"
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr "Kaynak"
@@ -561,14 +545,6 @@ msgstr "Henüz yer işareti oluşturulmadı."
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Arka plan deseni seçin"
-
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "Kategorileri düzenle"
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "Çizim"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -605,11 +581,6 @@ msgstr "Profil avatarı"
 msgctxt "#31167"
 msgid "Animate background"
 msgstr "Arka plana animasyon ekle"
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
-msgstr "Resimle ilgili ayarlar."
 
 #. Label for OSD settings category
 msgctxt "#31170"

@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "Tìm kiếm..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "Hiển thị fanart của đa phương tiện làm ảnh nền"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "Chế độ chiếu phim"
@@ -119,10 +115,6 @@ msgstr "Sắp xếp theo"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Kiểu xem"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr "Chọn đánh giá để hiển thị cho các mục đa phương tiện"
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -454,10 +446,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Cài đặt liên quan đến menu chính: Định cấu hình màn hình chính theo ý thích của bạn."
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "Chọn gói giao diện fanart"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr "Chọn chương trình"
@@ -530,10 +518,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "Danh mục"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "Chọn thể loại của gói fanart"
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr "Gốc"
@@ -561,14 +545,6 @@ msgstr "Chưa có đánh dấu nào được tạo."
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Chọn mẫu nền"
-
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "Chỉnh sửa danh mục"
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "Ảnh minh họa"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -605,11 +581,6 @@ msgstr "Ảnh đại diện hồ sơ"
 msgctxt "#31167"
 msgid "Animate background"
 msgstr "Ảnh nền hoạt hình"
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
-msgstr ""
 
 #. Label for OSD settings category
 msgctxt "#31170"

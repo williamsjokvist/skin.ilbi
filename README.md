@@ -12,7 +12,7 @@ Scope is deliberately narrow: **movies and TV shows only**.
 
 ## Skin settings
 
-Reachable from Kodi Options (the logo in the top right) → Skin settings. Four categories:
+Reachable from Kodi Options (the logo in the top right) → Skin settings. Three categories:
 
 **General**
 
@@ -21,7 +21,6 @@ Reachable from Kodi Options (the logo in the top right) → Skin settings. Four 
 | Use slide animations | on | Slide transitions between windows and views |
 | Enable auto scrolling for plot & review | off | Auto-scrolls long plot text |
 | Show media flags | on | Resolution / codec / audio badges on media items |
-| Choose rating to display for media items | — | User rating, rating, or none |
 | Choose kind of profile identification | — | Profile name, avatar, or none |
 
 **Main menu items**
@@ -30,20 +29,10 @@ Reachable from Kodi Options (the logo in the top right) → Skin settings. Four 
 | --- | --- | --- |
 | Random movie spotlight | off | Hero spotlight above the movie rows |
 | Movie genre rows | on | One poster row per genre on the movies home screen |
-| Edit categories | — | Opens the library node editor add-on |
 | Default select action for movie sets | — | Browse, continue watching, play from beginning, play next, or queue |
 | Random series spotlight | off | Hero spotlight above the series rows |
 | Series genre rows | on | One poster row per genre on the series home screen |
-| Edit categories | — | Opens the library node editor add-on |
 | Default select action for TV shows | — | Same options as movie sets |
-
-**Artwork**
-
-| Setting | Default | |
-| --- | --- | --- |
-| Show media fanart as background | on | Uses item fanart behind the UI |
-| Choose skin fanart pack | — | Needs the `script.image.resource.select` add-on |
-| Select genre fanart pack | — | Needs the same add-on |
 
 **On screen display**
 

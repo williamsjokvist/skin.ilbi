@@ -206,13 +206,6 @@
 				<animation effect="fade" time="100">VisibleChange</animation>
 				<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
 			</control>
-			<control type="group">
-				<left>216</left>
-				<top>-18</top>
-				<include content="RatingCircle">
-					<param name="animation" value="True" />
-				</include>
-			</control>
 		</control>
 	</include>
 </includes>

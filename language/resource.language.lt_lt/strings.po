@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "Ieškoti..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "Rodyti media įrašo Fanart fone"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "Kino teatro režimas"
@@ -119,10 +115,6 @@ msgstr "Rūšiuoti pagal"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Rodinio tipas"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr "Pasirinkite kurį media elementų reitingą rodyti"
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -454,10 +446,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Su pagrindiniu meniu susiję nustatymai: susikonfigūruokite pradinį ekraną taip kaip patinka."
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "Pasirinkti teminės išvaizdos Fanart paketą"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr "Pasirinkite programą"
@@ -530,10 +518,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "Kategorijos"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "Pasirinkti žanrų Fanart paketą"
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr "Kilmė"
@@ -561,14 +545,6 @@ msgstr "Kol kas nėra jokių žymų."
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Pasirinkite fono raštą"
-
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "Redaguoti kategorijas"
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "Iliustracijos"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -605,11 +581,6 @@ msgstr "Profilio avataras"
 msgctxt "#31167"
 msgid "Animate background"
 msgstr "Animuoti foną"
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
-msgstr "Su iliustracijomis susiję nustatymai."
 
 #. Label for OSD settings category
 msgctxt "#31170"

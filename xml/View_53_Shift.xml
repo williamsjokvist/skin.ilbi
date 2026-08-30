@@ -167,11 +167,6 @@
 			<label>$INFO[ListItem.Label]</label>
 		</control>
 		<include>IconStatusOverlay</include>
-		<control type="group">
-			<left>158</left>
-			<top>92</top>
-			<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
-		</control>
 		<control type="progress">
 			<left>32</left>
 			<top>530</top>

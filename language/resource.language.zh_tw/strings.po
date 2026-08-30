@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "搜尋..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "以背景圖的方式顯示劇照"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "劇院模式"
@@ -119,10 +115,6 @@ msgstr "排序以"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "檢視模式"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr "選擇欲顯示的評等類型"
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -454,10 +446,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "主選單相關設定：將首頁依照您的喜好做規劃。"
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "選擇佈景主題粉絲自製圖集"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr "選擇程式"
@@ -530,10 +518,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "分類"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "選擇影音類型的粉絲自製圖集"
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr "原始"
@@ -561,14 +545,6 @@ msgstr "尚未建立任何書籤。"
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "選擇背景貼圖樣式"
-
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "編輯分類"
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "美術作品"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -605,11 +581,6 @@ msgstr "個人資料圖像"
 msgctxt "#31167"
 msgid "Animate background"
 msgstr "動畫背景"
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
-msgstr "美術圖片相關的設定。"
 
 #. Label for OSD settings category
 msgctxt "#31170"

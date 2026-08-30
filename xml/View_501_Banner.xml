@@ -45,10 +45,6 @@
 							<aligny>center</aligny>
 							<visible>String.IsEmpty(ListItem.Art(banner)) + !Listitem.IsParentFolder</visible>
 						</control>
-						<control type="group">
-							<left>405</left>
-							<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
-						</control>
 					</control>
 				</itemlayout>
 				<focusedlayout height="220" width="900">
@@ -154,10 +150,6 @@
 								<aligny>center</aligny>
 								<label>$VAR[WatchedStatusVar]</label>
 							</control>
-						</control>
-						<control type="group">
-							<left>405</left>
-							<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 						</control>
 					</control>
 				</focusedlayout>

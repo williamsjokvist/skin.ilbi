@@ -37,10 +37,6 @@ msgctxt "#31001"
 msgid "Search..."
 msgstr "Buscar..."
 
-msgctxt "#31002"
-msgid "Show media fanart as background"
-msgstr "Mostrar fanart de contenido como fondo"
-
 msgctxt "#31003"
 msgid "Cinema mode"
 msgstr "Modo cine"
@@ -119,10 +115,6 @@ msgstr "Ordenar por"
 msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Tipo de vista"
-
-msgctxt "#31024"
-msgid "Choose rating to display for media items"
-msgstr "Escoger qué valoración mostrar para el contenido"
 
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
@@ -454,10 +446,6 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Ajustes relativos al menú principal: configure la pantalla principal a su gusto."
 
-msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "Elegir pack de fanart de skin"
-
 msgctxt "#31132"
 msgid "Select Program"
 msgstr "Elija Programa"
@@ -530,10 +518,6 @@ msgctxt "#31148"
 msgid "Categories"
 msgstr "Categorías"
 
-msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "Elegir pack de fanart para los géneros"
-
 msgctxt "#31150"
 msgid "Origin"
 msgstr "Origen"
@@ -561,14 +545,6 @@ msgstr "No se han creado marcadores aún."
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Elegir patrón del fondo"
-
-msgctxt "#31157"
-msgid "Edit categories"
-msgstr "Editar categorías"
-
-msgctxt "#31159"
-msgid "Artwork"
-msgstr "Ilustraciones"
 
 msgctxt "#31160"
 msgid "Show media flags"
@@ -605,11 +581,6 @@ msgstr "Avatar de perfil"
 msgctxt "#31167"
 msgid "Animate background"
 msgstr "Animar fondo"
-
-#. Description label for skin settings area
-msgctxt "#31169"
-msgid "Artwork related settings."
-msgstr "Ajustes relacionados con el arte."
 
 #. Label for OSD settings category
 msgctxt "#31170"
