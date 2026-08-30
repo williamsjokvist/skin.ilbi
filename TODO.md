@@ -12,3 +12,4 @@
 - Propogate description, fanart etc for Favorites
 - Prune unused screens
 - Prune unused translations
+- Use more appropriate UI sounds
