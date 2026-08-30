@@ -14,6 +14,8 @@ Scope is deliberately narrow: **movies and TV shows only**.
 
 ![Favorites](resources/favorites.jpg)
 
+![Search](resources/search.jpg)
+
 ## Skin settings
 
 Reachable from Kodi Options (the logo in the top right) → Skin settings. Four categories:
