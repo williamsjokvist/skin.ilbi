@@ -41,6 +41,12 @@
 					<onclick>Skin.ToggleSetting(no_poster_radius)</onclick>
 					<selected>!Skin.HasSetting(no_poster_radius)</selected>
 				</control>
+				<control type="radiobutton" id="709">
+					<label>$LOCALIZE[31723]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(info_extended_options)</onclick>
+					<selected>Skin.HasSetting(info_extended_options)</selected>
+				</control>
 				<control type="radiobutton" id="706">
 					<label>$LOCALIZE[31719]</label>
 					<include>DefaultSettingButton</include>
@@ -101,6 +107,12 @@
 					<selected>Skin.HasSetting(home_movie_random)</selected>
 					<onclick>Skin.ToggleSetting(home_movie_random)</onclick>
 				</control>
+				<control type="button" id="628">
+					<label>$LOCALIZE[31723]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SelectBool(31723, 31724|movie_onclick_info, 13362|movie_onclick_continuewatching, 12021|movie_onclick_playfrombeginning, 10008|movie_onclick_playnext, 13347|movie_onclick_queue)</onclick>
+					<label2>$VAR[MovieOnClickActionLabel2Var]</label2>
+				</control>
 				<control type="button" id="627">
 					<label>$LOCALIZE[31176]</label>
 					<include>DefaultSettingButton</include>
@@ -152,7 +164,7 @@
 				<control type="button" id="626">
 					<label>$LOCALIZE[31175]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.SelectBool(31175, 37015|tvshow_onclick_browse, 13362|tvshow_onclick_continuewatching, 12021|tvshow_onclick_playfrombeginning, 10008|tvshow_onclick_playnext, 13347|tvshow_onclick_queue)</onclick>
+					<onclick>Skin.SelectBool(31175, 31724|tvshow_onclick_info, 37015|tvshow_onclick_browse, 13362|tvshow_onclick_continuewatching, 12021|tvshow_onclick_playfrombeginning, 10008|tvshow_onclick_playnext, 13347|tvshow_onclick_queue)</onclick>
 					<label2>$VAR[TVShowOnClickActionLabel2Var]</label2>
 				</control>
 			</control>

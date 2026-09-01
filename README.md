@@ -12,9 +12,9 @@ Scope is deliberately narrow: **movies and TV shows only**.
 
 ![Series](resources/series.jpg)
 
-![Search](resources/search.jpg)
+![Information](resources/info.jpg)
 
-![Favorites](resources/favorites.jpg)
+![Search](resources/search.jpg)
 
 ## Skin settings
 
@@ -31,6 +31,7 @@ are not:
 | Enable auto scrolling for plot & review | off | Auto-scrolls long plot text |
 | Show media flags | on | Resolution / codec / audio badges on media items |
 | Rounded poster corners | on | Use rounded corners everywhere |
+| Extended options in the information screen | off | Row of icon buttons on the information screen: plot, cast, rating, versions, extras, set, same director, choose art, refresh |
 | Favorites menu item | off | Standalone Favorites entry in the main menu; its content is also a row on My Kodi |
 | Choose kind of profile identification | — | Profile name, avatar, or none |
 

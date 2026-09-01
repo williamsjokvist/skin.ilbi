@@ -344,6 +344,7 @@
 							<top>62</top>
 							<right>0</right>
 							<bottom>0</bottom>
+							<onclick>$VAR[HomeMediaOnClickActionVar]</onclick>
 							<onleft>15100</onleft>
 							<onright>15200</onright>
 							<onup>9000</onup>
@@ -565,6 +566,8 @@
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5100"/>
 							<param name="visible" value="Skin.HasSetting(home_movie_inprogress)"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="ControlGroup(2000).HasFocus | $EXP[home_movie_spotlight_visible]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -573,6 +576,8 @@
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5200"/>
 							<param name="visible" value="Skin.HasSetting(home_movie_recent)"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="ControlGroup(2000).HasFocus | $EXP[home_movie_spotlight_visible] | Integer.IsGreater(Container(5100).NumItems,0)"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -581,6 +586,8 @@
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5300"/>
 							<param name="visible" value="Skin.HasSetting(home_movie_unwatched)"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="ControlGroup(2000).HasFocus | $EXP[home_movie_spotlight_visible] | Integer.IsGreater(Container(5100).NumItems,0) | Integer.IsGreater(Container(5200).NumItems,0)"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -590,6 +597,8 @@
 							<param name="browse_mode" value="never"/>
 							<param name="list_id" value="5400"/>
 							<param name="visible" value="Skin.HasSetting(home_movie_random)"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="ControlGroup(2000).HasFocus | $EXP[home_movie_spotlight_visible] | Integer.IsGreater(Container(5100).NumItems,0) | Integer.IsGreater(Container(5200).NumItems,0) | Integer.IsGreater(Container(5300).NumItems,0)"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -609,6 +618,8 @@
 							<param name="widget_header" value="Action"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5801"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -617,6 +628,8 @@
 							<param name="widget_header" value="Adventure"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5802"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -625,6 +638,8 @@
 							<param name="widget_header" value="Animation"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5803"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -633,6 +648,8 @@
 							<param name="widget_header" value="Comedy"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5804"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -641,6 +658,8 @@
 							<param name="widget_header" value="Crime"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5805"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -649,6 +668,8 @@
 							<param name="widget_header" value="Documentary"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5806"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -657,6 +678,8 @@
 							<param name="widget_header" value="Drama"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5807"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -665,6 +688,8 @@
 							<param name="widget_header" value="Family"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5808"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -673,6 +698,8 @@
 							<param name="widget_header" value="Fantasy"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5809"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -681,6 +708,8 @@
 							<param name="widget_header" value="History"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5810"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -689,6 +718,8 @@
 							<param name="widget_header" value="Horror"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5811"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -697,6 +728,8 @@
 							<param name="widget_header" value="Music"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5812"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -705,6 +738,8 @@
 							<param name="widget_header" value="Mystery"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5813"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -713,6 +748,8 @@
 							<param name="widget_header" value="Romance"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5814"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -721,6 +758,8 @@
 							<param name="widget_header" value="Science Fiction"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5815"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -729,6 +768,8 @@
 							<param name="widget_header" value="Thriller"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5816"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -737,6 +778,8 @@
 							<param name="widget_header" value="TV Movie"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5817"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -745,6 +788,8 @@
 							<param name="widget_header" value="War"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5818"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
@@ -753,6 +798,8 @@
 							<param name="widget_header" value="Western"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5819"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_movie_genre_row_dim]"/>
 						</include>
 					</control>
@@ -779,7 +826,10 @@
 							<param name="visible" value="$EXP[home_tvshow_spotlight_visible]"/>
 							<param name="dim_extra" value="ControlGroup(2000).HasFocus"/>
 							<param name="onclick_condition" value="true"/>
-							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
+							<!-- the card's Play button hands its click to this list, so it browses the show
+							     outright rather than following the select action setting: that setting
+							     defaults to the info dialog, which the card's other button already opens -->
+							<param name="onclick_action" value="ActivateWindow(videos,videodb://tvshows/titles/$INFO[ListItem.DBID]/,return)"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
 							<param name="content_path" value="videodb://inprogresstvshows"/>
@@ -1071,6 +1121,8 @@
 							<param name="widget_header" value="$LOCALIZE[31010]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="16100"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="ControlGroup(2000).HasFocus"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
@@ -1089,6 +1141,8 @@
 							<param name="widget_header" value="$LOCALIZE[31007]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="16300"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="ControlGroup(2000).HasFocus | Integer.IsGreater(Container(16100).NumItems,0) | Integer.IsGreater(Container(16200).NumItems,0)"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">
@@ -1112,6 +1166,8 @@
 							<param name="widget_header" value="$LOCALIZE[20386]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="16600"/>
+							<param name="onclick_condition" value="true"/>
+							<param name="onclick_action" value="$VAR[MovieOnClickActionVar]"/>
 							<param name="dim_extra" value="$EXP[home_mykodi_tail_row_dim]"/>
 						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(tvshows)">

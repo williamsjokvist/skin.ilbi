@@ -1004,3 +1004,27 @@ msgstr ""
 msgctxt "#31721"
 msgid "Random movies row"
 msgstr ""
+
+#: /xml/DialogVideoInfo.xml
+#. Info dialog button opening TMDb recommendations for the item
+msgctxt "#31722"
+msgid "More like this"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+#. Movie settings option choosing what selecting a movie on the home screen does
+msgctxt "#31723"
+msgid "Default select action for movies on the home screen"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+#. Select action option: open the info dialog for the item
+msgctxt "#31724"
+msgid "View information"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+#. General settings toggle for the icon row of secondary actions in the info dialog
+msgctxt "#31723"
+msgid "Extended options in the information screen"
+msgstr ""

@@ -1,7 +1,6 @@
 # TODO
 
 - Configurable button for focusing the main menu
-- Implement information screen
 - Implement series episode list screen
 - Align OSD styling
 - Align "Kodi Options" dialog styling

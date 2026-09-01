@@ -191,13 +191,33 @@
 		<value condition="Skin.HasSetting(album_onclick_queue)">QueueMedia(musicdb://albums/$INFO[ListItem.DBID]/)</value>
 		<value>ActivateWindow(music,musicdb://albums/$INFO[ListItem.DBID]/,return)</value>
 	</variable>
+	<!-- What clicking a movie or a series on the home screen does. Both default to the info dialog:
+	     the last <value> in each is the fallback, so a fresh profile with none of the bools set
+	     lands there. The matching *_onclick_info bool exists so Skin.SelectBool can show it as the
+	     picked option and clear the others. -->
+	<variable name="MovieOnClickActionLabel2Var">
+		<value condition="Skin.HasSetting(movie_onclick_continuewatching)">$LOCALIZE[13362]</value>
+		<value condition="Skin.HasSetting(movie_onclick_playfrombeginning)">$LOCALIZE[12021]</value>
+		<value condition="Skin.HasSetting(movie_onclick_playnext)">$LOCALIZE[10008]</value>
+		<value condition="Skin.HasSetting(movie_onclick_queue)">$LOCALIZE[13347]</value>
+		<value>$LOCALIZE[31724]</value>
+	</variable>
+	<variable name="MovieOnClickActionVar">
+		<value condition="String.IsEqual(ListItem.Property(node.type),target_folder)">ActivateWindow(videos,$INFO[ListItem.FilenameAndPath],return)</value>
+		<!-- a movie is a file, not a videodb folder, so these play the item itself -->
+		<value condition="Skin.HasSetting(movie_onclick_continuewatching)">PlayMedia($ESCINFO[ListItem.FileNameAndPath],resume)</value>
+		<value condition="Skin.HasSetting(movie_onclick_playfrombeginning)">PlayMedia($ESCINFO[ListItem.FileNameAndPath],noresume)</value>
+		<value condition="Skin.HasSetting(movie_onclick_playnext)">QueueMedia($ESCINFO[ListItem.FileNameAndPath],playnext)</value>
+		<value condition="Skin.HasSetting(movie_onclick_queue)">QueueMedia($ESCINFO[ListItem.FileNameAndPath])</value>
+		<value>Action(Info)</value>
+	</variable>
 	<variable name="TVShowOnClickActionLabel2Var">
 		<value condition="Skin.HasSetting(tvshow_onclick_browse)">$LOCALIZE[37015]</value>
 		<value condition="Skin.HasSetting(tvshow_onclick_continuewatching)">$LOCALIZE[13362]</value>
 		<value condition="Skin.HasSetting(tvshow_onclick_playfrombeginning)">$LOCALIZE[12021]</value>
 		<value condition="Skin.HasSetting(tvshow_onclick_playnext)">$LOCALIZE[10008]</value>
 		<value condition="Skin.HasSetting(tvshow_onclick_queue)">$LOCALIZE[13347]</value>
-		<value>$LOCALIZE[37015]</value>
+		<value>$LOCALIZE[31724]</value>
 	</variable>
 	<variable name="TVShowOnClickActionVar">
 		<value condition="String.IsEqual(ListItem.Property(node.type),target_folder)">ActivateWindow(videos,$INFO[ListItem.FilenameAndPath],return)</value>
@@ -206,7 +226,13 @@
 		<value condition="Skin.HasSetting(tvshow_onclick_playfrombeginning)">PlayMedia(videodb://tvshows/titles/$INFO[ListItem.DBID]/,noresume)</value>
 		<value condition="Skin.HasSetting(tvshow_onclick_playnext)">QueueMedia(videodb://tvshows/titles/$INFO[ListItem.DBID]/,playnext)</value>
 		<value condition="Skin.HasSetting(tvshow_onclick_queue)">QueueMedia(videodb://tvshows/titles/$INFO[ListItem.DBID]/)</value>
-		<value>ActivateWindow(videos,videodb://tvshows/titles/$INFO[ListItem.DBID]/,return)</value>
+		<value>Action(Info)</value>
+	</variable>
+	<!-- for the one home container that mixes both types: the search result grid, which holds
+	     either movies or series depending on what the side list asked for -->
+	<variable name="HomeMediaOnClickActionVar">
+		<value condition="String.IsEqual(ListItem.DBType,tvshow)">$VAR[TVShowOnClickActionVar]</value>
+		<value>$VAR[MovieOnClickActionVar]</value>
 	</variable>
 	<variable name="MovieSetOnClickActionLabel2Var">
 		<value condition="Skin.HasSetting(movieset_onclick_browse)">$LOCALIZE[37015]</value>
@@ -258,10 +284,6 @@
 		<value condition="Container.ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
 		<value>$INFO[Container.ListItem.VideoResolution,flags/videoresolution/,.png]</value>
 	</variable>
-	<variable name="BannerVar">
-		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
-		<value>$INFO[ListItem.Art(tvshow.banner)]</value>
-	</variable>
 	<variable name="PosterVar">
 		<value condition="ListItem.IsParentFolder">DefaultFolderBackPoster.png</value>
 		<value condition="!String.IsEmpty(Container.Art(season.poster)) + Container.Content(episodes)">$INFO[Container.Art(season.poster)]</value>
@@ -270,11 +292,6 @@
 		<value condition="Container.Content(actors) | Container.Content(directors)">$INFO[Container.ListItem.Art(thumb)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster)) + !String.IsEqual(listitem.dbtype,season)">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value>$INFO[ListItem.Art(poster)]</value>
-	</variable>
-	<variable name="InfoDialogPosterVar">
-		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
 	</variable>
 	<variable name="HomePosterArtVar">
 		<!-- home widget rows are posters, so episode items borrow their season/show poster -->
@@ -398,25 +415,91 @@
 		<value condition="ListItem.IsCollection"/>
 		<value>[COLOR grey]$INFO[ListItem.Year, (,)][/COLOR]</value>
 	</variable>
-	<variable name="VideoInfoMainLabelVar">
+	<!-- stream badges: Kodi's raw codec and resolution strings, spelled the way a player would -->
+	<variable name="InfoDialogResolutionBadgeVar">
+		<value condition="ListItem.IsStereoscopic">3D</value>
+		<value condition="String.StartsWith(ListItem.VideoResolution,8K)">8K</value>
+		<value condition="String.StartsWith(ListItem.VideoResolution,4K)">4K</value>
+		<value condition="String.StartsWith(ListItem.VideoResolution,1080)">Full HD</value>
+		<value condition="String.StartsWith(ListItem.VideoResolution,720)">HD</value>
+		<value>SD</value>
+	</variable>
+	<variable name="InfoDialogHdrBadgeVar">
+		<value condition="String.Contains(ListItem.HdrType,dolbyvision)">Dolby Vision</value>
+		<value condition="String.Contains(ListItem.HdrType,hdr10)">HDR10</value>
+		<value condition="String.Contains(ListItem.HdrType,hlg)">HLG</value>
+		<value>$INFO[ListItem.HdrType]</value>
+	</variable>
+	<variable name="InfoDialogVideoCodecBadgeVar">
+		<value condition="String.IsEqual(ListItem.VideoCodec,h264) | String.IsEqual(ListItem.VideoCodec,avc1)">H.264</value>
+		<value condition="String.IsEqual(ListItem.VideoCodec,hevc) | String.IsEqual(ListItem.VideoCodec,hev1) | String.IsEqual(ListItem.VideoCodec,hvc1)">HEVC</value>
+		<value condition="String.IsEqual(ListItem.VideoCodec,mpeg2video) | String.IsEqual(ListItem.VideoCodec,mpeg2)">MPEG-2</value>
+		<value condition="String.IsEqual(ListItem.VideoCodec,mpeg4)">MPEG-4</value>
+		<value>$INFO[ListItem.VideoCodec]</value>
+	</variable>
+	<variable name="InfoDialogAudioCodecBadgeVar">
+		<value condition="String.IsEqual(ListItem.AudioCodec,ac3)">Dolby Digital</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,eac3)">Dolby Digital Plus</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,truehd)">Dolby TrueHD</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma) | String.IsEqual(ListItem.AudioCodec,dtsma)">DTS-HD MA</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_hra)">DTS-HD HRA</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,dts) | String.IsEqual(ListItem.AudioCodec,dca)">DTS</value>
+		<value>$INFO[ListItem.AudioCodec]</value>
+	</variable>
+	<variable name="InfoDialogAudioChannelsBadgeVar">
+		<value condition="Integer.IsEqual(ListItem.AudioChannels,10)">9.1</value>
+		<value condition="Integer.IsEqual(ListItem.AudioChannels,8)">7.1</value>
+		<value condition="Integer.IsEqual(ListItem.AudioChannels,7)">6.1</value>
+		<value condition="Integer.IsEqual(ListItem.AudioChannels,6)">5.1</value>
+		<value condition="Integer.IsEqual(ListItem.AudioChannels,5)">4.1</value>
+		<value condition="Integer.IsEqual(ListItem.AudioChannels,3)">2.1</value>
+		<value condition="Integer.IsEqual(ListItem.AudioChannels,2)">2.0</value>
+		<value condition="Integer.IsEqual(ListItem.AudioChannels,1)">Mono</value>
+		<value>$INFO[ListItem.AudioChannels]</value>
+	</variable>
+	<!-- info dialog: the header block reads title, then a subtitle, then one meta line -->
+	<variable name="InfoDialogFanartVar">
+		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.fanart))">$INFO[ListItem.Art(tvshow.fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+		<value>$INFO[ListItem.Art(poster)]</value>
+	</variable>
+	<variable name="InfoDialogLogoVar">
+		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+		<value>$INFO[ListItem.Art(tvshow.clearlogo)]</value>
+	</variable>
+	<variable name="InfoDialogTitleVar">
 		<value condition="String.IsEqual(ListItem.DBType,set)">$INFO[ListItem.Title]</value>
-		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Year, ([COLOR grey],[/COLOR])]</value>
-		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]$INFO[ListItem.Year, ([COLOR grey],[/COLOR])]</value>
-		<value>$INFO[ListItem.Label]$INFO[ListItem.Year, ([COLOR grey],[/COLOR])]</value>
+		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]</value>
+		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+		<value>$INFO[ListItem.Label]</value>
+	</variable>
+	<variable name="InfoDialogSubLabelVar">
+		<value condition="String.IsEqual(ListItem.DBType,episode)">$INFO[ListItem.Season]$INFO[ListItem.Episode,[COLOR grey]x[/COLOR],: ]$INFO[ListItem.Title]</value>
+		<value condition="String.IsEqual(ListItem.DBType,season)">$INFO[ListItem.Label]</value>
+		<value>$INFO[ListItem.Tagline,[I],[/I]]</value>
+	</variable>
+	<variable name="InfoDialogMetaLabelVar">
+		<value condition="String.IsEqual(ListItem.DBType,set)">$INFO[Container(50).NumItems,, $LOCALIZE[342]]</value>
+		<value>$INFO[ListItem.Year]$INFO[ListItem.Genre,   [COLOR 33FFFFFF]•[/COLOR]   ]$INFO[ListItem.Duration,   [COLOR 33FFFFFF]•[/COLOR]   ]$INFO[ListItem.Property(TotalEpisodes),   [COLOR 33FFFFFF]•[/COLOR]   , $LOCALIZE[20360]]$INFO[ListItem.Mpaa,   [COLOR 33FFFFFF]•[/COLOR]   ]</value>
+	</variable>
+	<!-- the icon row buttons carry no label of their own, so the focused one is named here -->
+	<variable name="InfoDialogHintVar">
+		<value condition="Control.HasFocus(138)">$LOCALIZE[207]</value>
+		<value condition="Control.HasFocus(11)">$LOCALIZE[20410]</value>
+		<value condition="Control.HasFocus(4400) + String.IsEqual(ListItem.DBType,set)">$LOCALIZE[342]</value>
+		<value condition="Control.HasFocus(4400)">$LOCALIZE[206]</value>
+		<value condition="Control.HasFocus(7)">$LOCALIZE[31033]$INFO[ListItem.UserRating,: ]</value>
+		<value condition="Control.HasFocus(14)">$LOCALIZE[40000]</value>
+		<value condition="Control.HasFocus(15)">$LOCALIZE[40211]</value>
+		<value condition="Control.HasFocus(443)">$LOCALIZE[20457]</value>
+		<value condition="Control.HasFocus(13)">$LOCALIZE[31123]</value>
+		<value condition="Control.HasFocus(10)">$LOCALIZE[13511]</value>
+		<value condition="Control.HasFocus(6)">$LOCALIZE[184]</value>
 	</variable>
 	<variable name="VideoInfoPlayButtonLabelVar">
 		<value condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,set)">$LOCALIZE[1024]</value>
 		<value>$LOCALIZE[208]</value>
-	</variable>
-	<variable name="VideoInfoSubLabelVar">
-		<value condition="String.IsEqual(ListItem.DBType,episode)">$INFO[ListItem.Season]$INFO[ListItem.Episode,[COLOR grey]x[/COLOR],: ]$INFO[ListItem.Title]</value>
-		<value condition="String.IsEqual(ListItem.DBType,season)">$INFO[ListItem.Label]</value>
-		<value condition="String.IsEqual(ListItem.DBType,movie)">$INFO[ListItem.Tagline,[I],[/I]]</value>
-		<value>$INFO[ListItem.Genre]</value>
-	</variable>
-	<variable name="VideoInfoBottomLabelVar">
-		<value condition="Control.HasFocus(8)">$INFO[ListItem.LastPlayed,$LOCALIZE[568]: ]</value>
-		<value condition="Control.HasFocus(6)">$INFO[ListItem.FileNameAndPath]</value>
 	</variable>
 	<variable name="PictureInfoMainLabelVar">
 		<value condition="Window.IsActive(Slideshow)">$INFO[SlideShow.Filename]</value>
