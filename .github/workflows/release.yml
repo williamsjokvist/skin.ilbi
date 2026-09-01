@@ -45,6 +45,7 @@ jobs:
 
       - name: Commit the version bump
         run: |
+          git checkout master
           git add addon.xml
           if git diff --cached --quiet; then
             echo "addon.xml already at ${GITHUB_REF_NAME#v} on master"
