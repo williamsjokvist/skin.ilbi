@@ -1,3 +1,8 @@
+[bootstrap.packages]
+"apt:libxml2-utils" = "latest"
+"apk:libxml2-utils" = "latest"
+# "brew:libxml2" = "latest" (included in macOS)
+
 [tasks.bump]
 description = "Set the skin version in addon.xml"
 run = "./scripts/bump.sh"
