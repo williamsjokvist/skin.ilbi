@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.ilbi" version="0.0.5" name="Ilbi" provider-name="williamsjokvist">
+<addon id="skin.ilbi" version="0.0.6" name="Ilbi" provider-name="williamsjokvist">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
 	</requires>
