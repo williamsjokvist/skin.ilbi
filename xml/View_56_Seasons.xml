@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Seasons of one series: the strip only. The backdrop and the header are in TVShowScreen,
+	     shared with the episodes view. The only view offered for seasons content, so browsing into
+	     a series always lands here -->
+	<include name="View_56_Seasons">
+		<control type="group">
+			<centertop>50%</centertop>
+			<height>1080</height>
+			<centerleft>50%</centerleft>
+			<width>1920</width>
+			<visible>Control.IsVisible(56)</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+			<control type="panel" id="56">
+				<description>one row of season posters - the panel wraps, but only one row fits its height</description>
+				<left>60</left>
+				<top>620</top>
+				<width>1816</width>
+				<height>434</height>
+				<orientation>horizontal</orientation>
+				<scrolltime tween="sine" easing="out">300</scrolltime>
+				<preloaditems>2</preloaditems>
+				<onup>9000</onup>
+				<ondown>noop</ondown>
+				<onleft>56</onleft>
+				<onright>56</onright>
+				<onback>ReplaceWindow(home)</onback>
+				<onback>SetFocus(9000)</onback>
+				<viewtype label="31725">icon</viewtype>
+				<visible>Container.Content(seasons)</visible>
+				<itemlayout width="236" height="372">
+					<control type="group">
+						<left>28</left>
+						<top>28</top>
+						<include content="TVShowScreenBackTile">
+							<param name="top" value="128"/>
+						</include>
+					</control>
+					<control type="group">
+						<left>28</left>
+						<top>28</top>
+						<include>TVShowSeasonCard</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="236" height="372">
+					<control type="group">
+						<description>the back tile is a button, not a card, and keeps its own focus
+						     treatment - it sits outside the zoom so it holds the position it shares
+						     with the episodes screen</description>
+						<left>28</left>
+						<top>28</top>
+						<include content="TVShowScreenBackTile">
+							<param name="top" value="128"/>
+							<param name="focused" value="true"/>
+						</include>
+					</control>
+					<control type="group">
+						<left>28</left>
+						<top>28</top>
+						<depth>DepthContentPopout</depth>
+						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="100,150">Focus</animation>
+						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="100,150">UnFocus</animation>
+						<include content="TVShowSeasonCard">
+							<param name="focused" value="true"/>
+						</include>
+					</control>
+				</focusedlayout>
+			</control>
+			<include content="LeftRightArrows">
+				<param name="list_id" value="56"/>
+				<param name="left_posx" value="40"/>
+				<param name="right_posx" value="1852"/>
+				<param name="posy" value="784"/>
+			</include>
+		</control>
+	</include>
+</includes>

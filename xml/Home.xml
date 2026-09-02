@@ -1159,13 +1159,6 @@
 							<param name="onclick_action" value="$VAR[TVShowOnClickActionVar]"/>
 							<param name="dim_extra" value="ControlGroup(2000).HasFocus | Integer.IsGreater(Container(16100).NumItems,0) | Integer.IsGreater(Container(16200).NumItems,0) | Integer.IsGreater(Container(16300).NumItems,0)"/>
 						</include>
-						<include content="WidgetListPoster">
-							<param name="content_path" value="favourites://"/>
-							<param name="widget_header" value="$LOCALIZE[1036]"/>
-							<param name="widget_target" value="videos"/>
-							<param name="list_id" value="16500"/>
-							<param name="dim_extra" value="ControlGroup(2000).HasFocus | Integer.IsGreater(Container(16100).NumItems,0) | Integer.IsGreater(Container(16200).NumItems,0) | Integer.IsGreater(Container(16300).NumItems,0) | Integer.IsGreater(Container(16400).NumItems,0)"/>
-						</include>
 						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
 							<param name="content_path" value="special://skin/playlists/recent_unwatched_movies.xsp"/>
 							<param name="widget_header" value="$LOCALIZE[20386]"/>
@@ -1181,6 +1174,14 @@
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="16700"/>
 							<param name="dim_extra" value="$EXP[home_mykodi_tail_row_dim] | Integer.IsGreater(Container(16600).NumItems,0)"/>
+						</include>
+						<include content="WidgetGridPoster">
+							<param name="content_path" value="favourites://"/>
+							<param name="widget_header" value="$LOCALIZE[1036]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="16500"/>
+							<param name="fallback_image" value="DefaultFavourites.png"/>
+							<param name="dim_extra" value="$EXP[home_mykodi_tail_row_dim] | Integer.IsGreater(Container(16600).NumItems,0) | Integer.IsGreater(Container(16700).NumItems,0)"/>
 						</include>
 					</control>
 					<include content="ImageWidget" condition="!Library.HasContent(movies) + !Library.HasContent(tvshows)">

@@ -7,12 +7,15 @@
 	<include file="Includes_Buttons.xml"/>
 	<include file="Includes_DialogSelect.xml"/>
 	<include file="Includes_PVR.xml"/>
+	<include file="Includes_TVShow.xml"/>
 	<include file="View_50_List.xml"/>
 	<include file="View_51_Poster.xml"/>
 	<include file="View_52_IconWall.xml"/>
 	<include file="View_53_Shift.xml"/>
 	<include file="View_54_InfoWall.xml"/>
 	<include file="View_55_WideList.xml"/>
+	<include file="View_56_Seasons.xml"/>
+	<include file="View_57_Episodes.xml"/>
 	<include file="View_503_NowPlaying.xml"/>
 	<include file="View_500_Wall.xml"/>
 	<include file="View_501_Banner.xml"/>
@@ -36,12 +39,17 @@
 	<constant name="list_top_offset">100</constant>
 	<constant name="list_item_height">75</constant>
 	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-image.xml)</expression>
+	<!-- Kodi skips the seasons screen for a series with a single season, and marks the episode
+	     listing it lands on with season id -2 (GUIWindowVideoNav::GetDirectory, gated on the
+	     videolibrary.flattentvshows setting). Nothing was stepped over, so there is no parent
+	     screen to step back to -->
+	<expression name="tvshow_flattened_episodes">Container.Content(episodes) + String.Contains(Container.FolderPath,/-2/)</expression>
 	<expression name="sidebar_visible">ControlGroup(9000).HasFocus | Control.HasFocus(6130) | Control.HasFocus(6131)</expression>
 	<expression name="home_movie_spotlight_visible">Skin.HasSetting(home_movie_spotlight) + Library.HasContent(movies)</expression>
 	<expression name="home_tvshow_spotlight_visible">Skin.HasSetting(home_tvshow_spotlight) + Library.HasContent(tvshows)</expression>
 	<expression name="home_movie_genre_row_dim">ControlGroup(2000).HasFocus | $EXP[home_movie_spotlight_visible] | Integer.IsGreater(Container(5100).NumItems,0) | Integer.IsGreater(Container(5200).NumItems,0) | Integer.IsGreater(Container(5300).NumItems,0) | Integer.IsGreater(Container(5400).NumItems,0) | Integer.IsGreater(Container(5600).NumItems,0)</expression>
 	<expression name="home_tvshow_genre_row_dim">ControlGroup(2000).HasFocus | $EXP[home_tvshow_spotlight_visible] | Integer.IsGreater(Container(6100).NumItems,0) | Integer.IsGreater(Container(6200).NumItems,0) | Integer.IsGreater(Container(6300).NumItems,0)</expression>
-	<expression name="home_mykodi_tail_row_dim">ControlGroup(2000).HasFocus | Integer.IsGreater(Container(16100).NumItems,0) | Integer.IsGreater(Container(16200).NumItems,0) | Integer.IsGreater(Container(16300).NumItems,0) | Integer.IsGreater(Container(16400).NumItems,0) | Integer.IsGreater(Container(16500).NumItems,0)</expression>
+	<expression name="home_mykodi_tail_row_dim">ControlGroup(2000).HasFocus | Integer.IsGreater(Container(16100).NumItems,0) | Integer.IsGreater(Container(16200).NumItems,0) | Integer.IsGreater(Container(16300).NumItems,0) | Integer.IsGreater(Container(16400).NumItems,0)</expression>
 	<expression name="home_search_movie_genres">Library.HasContent(movies) + !Skin.HasSetting(home_no_movie_genres)</expression>
 	<expression name="home_search_tvshow_genres">Library.HasContent(tvshows) + !Skin.HasSetting(home_no_tvshow_genres)</expression>
 	<expression name="home_search_movie_genres_any">Integer.IsGreater(Container(15801).NumItems,0) | Integer.IsGreater(Container(15802).NumItems,0) | Integer.IsGreater(Container(15803).NumItems,0) | Integer.IsGreater(Container(15804).NumItems,0) | Integer.IsGreater(Container(15805).NumItems,0) | Integer.IsGreater(Container(15806).NumItems,0) | Integer.IsGreater(Container(15807).NumItems,0) | Integer.IsGreater(Container(15808).NumItems,0) | Integer.IsGreater(Container(15809).NumItems,0) | Integer.IsGreater(Container(15810).NumItems,0) | Integer.IsGreater(Container(15811).NumItems,0) | Integer.IsGreater(Container(15812).NumItems,0) | Integer.IsGreater(Container(15813).NumItems,0) | Integer.IsGreater(Container(15814).NumItems,0) | Integer.IsGreater(Container(15815).NumItems,0) | Integer.IsGreater(Container(15816).NumItems,0) | Integer.IsGreater(Container(15817).NumItems,0) | Integer.IsGreater(Container(15818).NumItems,0) | Integer.IsGreater(Container(15819).NumItems,0)</expression>

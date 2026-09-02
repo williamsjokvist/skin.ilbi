@@ -1,6 +1,5 @@
 # TODO
 
-- Implement series episode list screen
 - Align OSD styling
 - Align "Kodi Options" dialog styling
 - Integrate 'changelog.txt' with cicd workflow

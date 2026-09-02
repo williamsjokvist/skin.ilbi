@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Episodes of one season: the strip and the stream badges. Backdrop and header come from
+	     TVShowScreen. The only view offered for episodes content -->
+	<include name="View_57_Episodes">
+		<control type="group">
+			<centertop>50%</centertop>
+			<height>1080</height>
+			<centerleft>50%</centerleft>
+			<width>1920</width>
+			<visible>Control.IsVisible(57)</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+			<control type="grouplist">
+				<description>stream badges for the focused episode, opposite the clearlogo</description>
+				<visible>!Skin.HasSetting(hide_mediaflags)</visible>
+				<right>88</right>
+				<top>84</top>
+				<width>900</width>
+				<height>44</height>
+				<orientation>horizontal</orientation>
+				<align>right</align>
+				<itemgap>10</itemgap>
+				<include content="InfoBadge">
+					<param name="label" value="$VAR[InfoDialogResolutionBadgeVar]"/>
+					<param name="visible" value="!String.IsEmpty(ListItem.VideoResolution)"/>
+				</include>
+				<include content="InfoBadge">
+					<param name="label" value="$VAR[InfoDialogHdrBadgeVar]"/>
+					<param name="visible" value="!String.IsEmpty(ListItem.HdrType)"/>
+				</include>
+				<include content="InfoBadge">
+					<param name="label" value="$VAR[InfoDialogVideoCodecBadgeVar]"/>
+					<param name="visible" value="!String.IsEmpty(ListItem.VideoCodec)"/>
+				</include>
+				<include content="InfoBadge">
+					<param name="label" value="$VAR[InfoDialogAudioCodecBadgeVar]"/>
+					<param name="visible" value="!String.IsEmpty(ListItem.AudioCodec)"/>
+				</include>
+				<include content="InfoBadge">
+					<param name="label" value="$VAR[InfoDialogAudioChannelsBadgeVar]"/>
+					<param name="visible" value="!String.IsEmpty(ListItem.AudioChannels)"/>
+				</include>
+			</control>
+			<control type="panel" id="57">
+				<description>one row of episode stills - the panel wraps, but only one row fits its
+				     height. A single-season series is flattened straight past the seasons screen, so
+				     there is no seasons screen for back to return to - only the main menu. Every
+				     other episode list has one, and falls through to Kodi's own parent-folder step</description>
+				<left>60</left>
+				<top>674</top>
+				<width>1816</width>
+				<height>380</height>
+				<orientation>horizontal</orientation>
+				<scrolltime tween="sine" easing="out">300</scrolltime>
+				<preloaditems>2</preloaditems>
+				<onup>9000</onup>
+				<ondown>noop</ondown>
+				<onleft>57</onleft>
+				<onright>57</onright>
+				<onback condition="$EXP[tvshow_flattened_episodes]">ReplaceWindow(home)</onback>
+				<onback condition="$EXP[tvshow_flattened_episodes]">SetFocus(9000)</onback>
+				<viewtype label="20360">icon</viewtype>
+				<visible>Container.Content(episodes)</visible>
+				<itemlayout width="456" height="318">
+					<control type="group">
+						<left>28</left>
+						<top>28</top>
+						<include content="TVShowScreenBackTile">
+							<param name="top" value="74"/>
+						</include>
+					</control>
+					<control type="group">
+						<left>28</left>
+						<top>28</top>
+						<include>TVShowEpisodeCard</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="456" height="318">
+					<control type="group">
+						<description>see View_56_Seasons: the back tile does not zoom with the cards</description>
+						<left>28</left>
+						<top>28</top>
+						<include content="TVShowScreenBackTile">
+							<param name="top" value="74"/>
+							<param name="focused" value="true"/>
+						</include>
+					</control>
+					<control type="group">
+						<left>28</left>
+						<top>28</top>
+						<depth>DepthContentPopout</depth>
+						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="210,118">Focus</animation>
+						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="210,118">UnFocus</animation>
+						<include content="TVShowEpisodeCard">
+							<param name="focused" value="true"/>
+						</include>
+					</control>
+				</focusedlayout>
+			</control>
+			<include content="LeftRightArrows">
+				<param name="list_id" value="57"/>
+				<param name="left_posx" value="40"/>
+				<param name="right_posx" value="1852"/>
+				<param name="posy" value="806"/>
+			</include>
+		</control>
+	</include>
+</includes>

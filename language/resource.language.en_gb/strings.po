@@ -1028,3 +1028,9 @@ msgstr ""
 msgctxt "#31723"
 msgid "Extended options in the information screen"
 msgstr ""
+
+#: /xml/View_56_Seasons.xml
+#. View name for the seasons screen
+msgctxt "#31725"
+msgid "Seasons"
+msgstr ""

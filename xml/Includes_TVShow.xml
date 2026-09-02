@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- The seasons and episodes screens. Both show one series dressed like the information
+	     screen - full bleed fanart, left scrim, clearlogo over a meta line and the plot - with the
+	     children of the thing being browsed as a strip along the bottom.
+
+	     They are views on MyVideoNav rather than windows of their own: only a control listed in
+	     that window's <views> is bound to the directory Kodi is browsing, so a window of our own
+	     would have nothing to fill. Views 56 and 57 are the only ones offered for seasons and
+	     episodes, so browsing into a series always lands here. -->
+	<include name="TVShowScreenBackdrop">
+		<definition>
+			<control type="group">
+				<include>FullScreenDimensions</include>
+				<control type="image">
+					<description>opaque backing: the view under this one must not show through</description>
+					<include>FullScreenDimensions</include>
+					<texture>colors/black.png</texture>
+				</control>
+				<control type="image">
+					<description>no fadetime: the backdrop is the series', not the focused card's, so it
+					     must hold still while the strip is swapped between the two screens</description>
+					<include>FullScreenDimensions</include>
+					<aspectratio>scale</aspectratio>
+					<texture background="true" fallback="DefaultVideo.png">$VAR[TVShowScreenFanartVar]</texture>
+				</control>
+				<control type="image">
+					<description>flat dim over the whole frame - bright fanart would swallow the cards</description>
+					<include>FullScreenDimensions</include>
+					<texture colordiffuse="4DFFFFFF">colors/black.png</texture>
+				</control>
+				<control type="image">
+					<description>left scrim: the gradient the title, meta line and plot sit on</description>
+					<include>FullScreenDimensions</include>
+					<texture>scrim_left.png</texture>
+				</control>
+				<control type="image">
+					<description>bottom scrim: seats the card strip</description>
+					<left>0</left>
+					<bottom>0</bottom>
+					<width>100%</width>
+					<height>460</height>
+					<texture colordiffuse="DD000000">overlays/overlayfade.png</texture>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<!-- The text block, identical in both screens: the series names the page, the focused card
+	     names itself underneath. Same coordinates as the information screen's header -->
+	<include name="TVShowScreenHeader">
+		<control type="image">
+			<description>clearlogo, bottom aligned so short and tall logos share a baseline. No
+			     fadetime: it is the series', so it holds still across the two screens</description>
+			<left>88</left>
+			<top>60</top>
+			<width>620</width>
+			<height>190</height>
+			<aspectratio align="left" aligny="bottom">keep</aspectratio>
+			<texture>$VAR[TVShowScreenLogoVar]</texture>
+			<visible>!String.IsEmpty(Container.Art(tvshow.clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+		</control>
+		<control type="label">
+			<description>series title, the fallback when there is no clearlogo</description>
+			<left>92</left>
+			<top>60</top>
+			<width>1180</width>
+			<height>190</height>
+			<aligny>bottom</aligny>
+			<font>font52_title</font>
+			<label>$VAR[TVShowScreenTitleVar]</label>
+			<scroll>true</scroll>
+			<shadowcolor>text_shadow</shadowcolor>
+			<visible>String.IsEmpty(Container.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+		</control>
+		<control type="label">
+			<description>the focused card: the season, or the episode number and title</description>
+			<left>92</left>
+			<top>274</top>
+			<width>1180</width>
+			<height>38</height>
+			<font>font27_title</font>
+			<textcolor>grey</textcolor>
+			<label>$VAR[InfoDialogSubLabelVar]</label>
+			<shadowcolor>text_shadow</shadowcolor>
+			<visible>!ListItem.IsParentFolder</visible>
+		</control>
+		<control type="label">
+			<left>92</left>
+			<top>336</top>
+			<width>1400</width>
+			<height>46</height>
+			<aligny>center</aligny>
+			<font>font27_title</font>
+			<label>$VAR[TVShowScreenMetaVar]</label>
+			<shadowcolor>text_shadow</shadowcolor>
+			<visible>!ListItem.IsParentFolder</visible>
+		</control>
+		<control type="textbox">
+			<description>plot: four lines, fixed - anything longer would run into the strip below</description>
+			<left>92</left>
+			<top>396</top>
+			<width>884</width>
+			<height>148</height>
+			<font>font27</font>
+			<label fallback="19055">$INFO[ListItem.Plot]</label>
+			<shadowcolor>text_shadow</shadowcolor>
+			<visible>!ListItem.IsParentFolder</visible>
+			<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+		</control>
+	</include>
+	<!-- The page frame both screens share. Emitted once, and visible for either view, so stepping
+	     from seasons into episodes never changes its visibility - the series keeps its backdrop and
+	     its logo without a blink, and only the strip underneath is swapped -->
+	<include name="TVShowScreen">
+		<definition>
+			<control type="group">
+				<description>backdrop, deliberately without a fade of its own. The information screen
+				     puts the same fanart behind the same scrims, so cutting straight to this one reads
+				     as a single continuous background - cross-fading two identical layers dips through
+				     the black underneath instead. It stays lit under that dialog for the same reason,
+				     which is why it is not in the group that dims for it</description>
+				<visible>Control.IsVisible(56) | Control.IsVisible(57)</visible>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<include>TVShowScreenBackdrop</include>
+			</control>
+			<control type="group">
+				<centertop>50%</centertop>
+				<height>1080</height>
+				<centerleft>50%</centerleft>
+				<width>1920</width>
+				<visible>Control.IsVisible(56) | Control.IsVisible(57)</visible>
+				<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+				<include>OpenClose_Left</include>
+				<include>TVShowScreenHeader</include>
+			</control>
+		</definition>
+	</include>
+	<!-- season card: poster over the season name and its watched tally -->
+	<include name="TVShowSeasonCard">
+		<param name="focused">false</param>
+		<definition>
+			<control type="group">
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>372</height>
+				<description>hidden for the parent item Kodi inserts - that slot gets the back tile
+				     the layout places instead</description>
+				<visible>!ListItem.IsParentFolder</visible>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>200</width>
+					<height>300</height>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<texture background="true" fallback="DefaultVideo.png">$VAR[SeasonCardArtVar]</texture>
+				</control>
+				<control type="image">
+					<description>rounds the corners against the scrim</description>
+					<left>0</left>
+					<top>0</top>
+					<width>200</width>
+					<height>300</height>
+					<texture border="24">poster_mask.png</texture>
+					<visible>!Skin.HasSetting(no_poster_radius)</visible>
+				</control>
+				<control type="image">
+					<description>tick, only once every episode in the season has been watched</description>
+					<left>148</left>
+					<top>12</top>
+					<width>36</width>
+					<height>36</height>
+					<texture>OverlayWatched.png</texture>
+					<visible>!String.IsEmpty(ListItem.Property(TotalEpisodes)) + String.IsEqual(ListItem.Property(WatchedEpisodes),ListItem.Property(TotalEpisodes))</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>310</top>
+					<width>200</width>
+					<height>32</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<scroll>$PARAM[focused]</scroll>
+					<label>$INFO[ListItem.Label]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>342</top>
+					<width>200</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+					<label>$VAR[WatchedStatusVar]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<!-- Kodi inserts a parent item into any listing that is not the directory the window was
+	     opened at. Style it as the information screen's icon buttons: same 64px pill, same dim
+	     fill, same inversion to a white pill with a dark glyph on focus. It cannot be an
+	     InfoIconButton, because an item layout only takes image, label and group controls - no
+	     focusable ones - so both of that button's states are drawn out here instead.
+
+	     Placed at the same screen position on both strips, which have different card sizes and
+	     sit at different heights: each passes the top that lands this at 776, and left 0 puts it
+	     on the same 88 as the clearlogo and the text block above -->
+	<include name="TVShowScreenBackTile">
+		<param name="focused">false</param>
+		<definition>
+			<control type="group">
+				<left>0</left>
+				<top>$PARAM[top]</top>
+				<width>64</width>
+				<height>64</height>
+				<visible>ListItem.IsParentFolder</visible>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>64</width>
+					<height>64</height>
+					<texture border="31" colordiffuse="33FFFFFF">pill.png</texture>
+					<visible>!$PARAM[focused]</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>64</width>
+					<height>64</height>
+					<texture border="31">pill.png</texture>
+					<visible>$PARAM[focused]</visible>
+				</control>
+				<control type="image">
+					<left>16</left>
+					<top>16</top>
+					<width>32</width>
+					<height>32</height>
+					<aspectratio>keep</aspectratio>
+					<texture flipx="true" colordiffuse="white">overlays/arrowright.png</texture>
+					<visible>!$PARAM[focused]</visible>
+				</control>
+				<control type="image">
+					<left>16</left>
+					<top>16</top>
+					<width>32</width>
+					<height>32</height>
+					<aspectratio>keep</aspectratio>
+					<texture flipx="true" colordiffuse="FF181818">overlays/arrowright.png</texture>
+					<visible>$PARAM[focused]</visible>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<!-- episode card: the still, its resume position, then the number and title -->
+	<include name="TVShowEpisodeCard">
+		<param name="focused">false</param>
+		<definition>
+			<control type="group">
+				<left>0</left>
+				<top>0</top>
+				<width>420</width>
+				<height>318</height>
+				<description>hidden for the parent item Kodi inserts - that slot gets the back tile
+				     the layout places instead</description>
+				<visible>!ListItem.IsParentFolder</visible>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>420</width>
+					<height>236</height>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<texture background="true" fallback="DefaultVideo.png">$VAR[EpisodeCardArtVar]</texture>
+				</control>
+				<control type="progress">
+					<left>0</left>
+					<top>228</top>
+					<width>420</width>
+					<height>6</height>
+					<texturebg border="3" colordiffuse="40FFFFFF">progress/texturebg_alt_white.png</texturebg>
+					<midtexture border="3" colordiffuse="button_focus">progress/texturebg_alt_white.png</midtexture>
+					<info>ListItem.PercentPlayed</info>
+					<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+				</control>
+				<control type="image">
+					<description>rounds the corners against the scrim</description>
+					<left>0</left>
+					<top>0</top>
+					<width>420</width>
+					<height>236</height>
+					<texture border="24">poster_mask.png</texture>
+					<visible>!Skin.HasSetting(no_poster_radius)</visible>
+				</control>
+				<control type="image">
+					<left>372</left>
+					<top>12</top>
+					<width>36</width>
+					<height>36</height>
+					<texture>$VAR[ItemStatusIconVar]</texture>
+				</control>
+				<control type="label">
+					<left>4</left>
+					<top>246</top>
+					<width>412</width>
+					<height>32</height>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<scroll>$PARAM[focused]</scroll>
+					<label>$INFO[ListItem.Episode,,.  ]$INFO[ListItem.Title]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+				</control>
+				<control type="label">
+					<left>4</left>
+					<top>278</top>
+					<width>412</width>
+					<height>30</height>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+					<label>$VAR[EpisodeCardSubLabelVar]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+</includes>

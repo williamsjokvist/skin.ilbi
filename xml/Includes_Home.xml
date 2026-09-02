@@ -540,6 +540,78 @@
 			</control>
 		</definition>
 	</include>
+	<include name="WidgetGridPoster">
+		<param name="dim_extra">true</param>
+		<param name="onclick_condition">false</param>
+		<param name="browse_mode">auto</param>
+		<param name="visible">true</param>
+		<param name="fallback_image">DefaultVideo.png</param>
+		<definition>
+			<control type="panel" id="$PARAM[list_id]">
+				<description>widget slot that wraps its items into a grid instead of a carousel row - no wide card, no plot,
+				     same posters as the search results. Sits in the grouplist directly, like the fixedlist of a poster row
+				     does: the grouplist chains up/down between its children by control id, and the chain has to land on
+				     the control that actually takes focus, or the grid can be entered but never left.
+				     top + height must come to the grouplist height: a grouplist measures a child as top + height, and on a
+				     move down it scrolls the focused child's bottom edge to the viewport bottom, so any other total leaves
+				     the slot hanging below the screen - and the slot's own total is what buys the scroll room to get there.
+				     The item height is deliberately taller than the poster: it keeps the panel at one row per page, so a
+				     second row scrolls into view the way the search grid does instead of sitting clipped off the screen.</description>
+				<left>15</left>
+				<top>62</top>
+				<right>0</right>
+				<height>1018</height>
+				<animation effect="fade" start="100" end="60" time="200" condition="!Control.HasFocus($PARAM[list_id]) + [$PARAM[dim_extra]]">Conditional</animation>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<visible>$PARAM[visible]</visible>
+				<orientation>vertical</orientation>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<preloaditems>2</preloaditems>
+				<onleft>noop</onleft>
+				<onright>noop</onright>
+				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
+				<onback condition="!Integer.IsEqual(Container($PARAM[list_id]).CurrentItem,1)">SetFocus($PARAM[list_id],0,absolute)</onback>
+				<onback condition="Integer.IsEqual(Container($PARAM[list_id]).CurrentItem,1)">SetFocus(9000)</onback>
+				<itemlayout width="340" height="520">
+					<control type="group">
+						<include content="HomePosterLayout">
+							<param name="fallback_image" value="$PARAM[fallback_image]"/>
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="340" height="520">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="155,232">Focus</animation>
+						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="155,232">UnFocus</animation>
+						<include content="HomePosterLayout">
+							<param name="fallback_image" value="$PARAM[fallback_image]"/>
+						</include>
+					</control>
+				</focusedlayout>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" browse="$PARAM[browse_mode]">$PARAM[content_path]</content>
+			</control>
+			<control type="group" id="$PARAM[list_id]777">
+				<description>slot chrome: the grouplist has already advanced past the panel, so pull back up to put the
+				     header at the top of the slot. The height is the whole slot - it is the only thing left contributing to
+				     the slot's measured size, and the grid cannot be scrolled to unless that size covers the viewport.</description>
+				<top>-1080</top>
+				<height>1080</height>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<visible>$PARAM[visible]</visible>
+				<include content="CategoryLabel">
+					<param name="label">$PARAM[widget_header]</param>
+					<param name="list_id" value="$PARAM[list_id]"/>
+					<param name="dim_extra" value="$PARAM[dim_extra]"/>
+				</include>
+				<include content="BusyListSpinner">
+					<param name="list_id" value="$PARAM[list_id]"/>
+					<param name="posy" value="250"/>
+					<param name="visible" value="$PARAM[visible]"/>
+				</include>
+			</control>
+		</definition>
+	</include>
 	<include name="ImageWidget">
 		<param name="visible">true</param>
 		<param name="visible_1">true</param>
