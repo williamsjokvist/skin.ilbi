@@ -11,7 +11,6 @@
 			<width>1920</width>
 			<visible>Control.IsVisible(56)</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="panel" id="56">
 				<description>one row of season posters - the panel wraps, but only one row fits its height</description>
 				<left>60</left>

@@ -10,7 +10,6 @@
 			<width>1920</width>
 			<visible>Control.IsVisible(57)</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="grouplist">
 				<description>stream badges for the focused episode, opposite the clearlogo</description>
 				<visible>!Skin.HasSetting(hide_mediaflags)</visible>

@@ -114,11 +114,9 @@
 	<include name="TVShowScreen">
 		<definition>
 			<control type="group">
-				<description>backdrop, deliberately without a fade of its own. The information screen
-				     puts the same fanart behind the same scrims, so cutting straight to this one reads
-				     as a single continuous background - cross-fading two identical layers dips through
-				     the black underneath instead. It stays lit under that dialog for the same reason,
-				     which is why it is not in the group that dims for it</description>
+				<description>backdrop. No entrance animation of its own: it belongs to the series
+				     rather than to either screen, so it has to hold still while the strip is swapped
+				     between seasons and episodes. It still fades out with the window</description>
 				<visible>Control.IsVisible(56) | Control.IsVisible(57)</visible>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<include>TVShowScreenBackdrop</include>
@@ -129,7 +127,6 @@
 				<centerleft>50%</centerleft>
 				<width>1920</width>
 				<visible>Control.IsVisible(56) | Control.IsVisible(57)</visible>
-				<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 				<include>OpenClose_Left</include>
 				<include>TVShowScreenHeader</include>
 			</control>

@@ -7,16 +7,10 @@
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
-			<description>the seasons and episodes screens sit outside the group that dims for the
-			     information screen: that dialog draws the same fanart behind the same scrims, so
-			     their backdrop has to stay lit underneath for the two to read as one background.
-			     They dim their own text and cards instead</description>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<include>TVShowScreen</include>
 			<include>View_56_Seasons</include>
 			<include>View_57_Episodes</include>
-		</control>
-		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<include>View_50_List</include>
 			<include>View_51_Poster</include>
 			<include>View_52_IconWall</include>
