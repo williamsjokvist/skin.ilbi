@@ -61,6 +61,7 @@
 						<ondown>noop</ondown>
 						<onleft>noop</onleft>
 						<onright>15200</onright>
+						<onback>SetFocus(9000)</onback>
 						<include>SearchActionButton</include>
 						<include content="SearchResultTypeButton">
 							<param name="id" value="15591"/>
@@ -349,6 +350,8 @@
 							<onright>15200</onright>
 							<onup>9000</onup>
 							<ondown>15200</ondown>
+							<onback condition="!Integer.IsEqual(Container(15200).CurrentItem,1)">SetFocus(15200,0,absolute)</onback>
+							<onback condition="Integer.IsEqual(Container(15200).CurrentItem,1)">SetFocus(9000)</onback>
 							<preloaditems>2</preloaditems>
 							<scrolltime tween="cubic" easing="out">500</scrolltime>
 							<orientation>vertical</orientation>
@@ -1075,6 +1078,8 @@
 						<onright>14100</onright>
 						<onup>9000</onup>
 						<ondown>14100</ondown>
+						<onback condition="!Integer.IsEqual(Container(14100).CurrentItem,1)">SetFocus(14100,0,absolute)</onback>
+						<onback condition="Integer.IsEqual(Container(14100).CurrentItem,1)">SetFocus(9000)</onback>
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
 						<orientation>vertical</orientation>
@@ -1529,6 +1534,7 @@
 						<ondown>2000</ondown>
 						<onleft>SetFocus(9000,99,absolute)</onleft>
 						<onright>noop</onright>
+						<onback>SetFocus(9000)</onback>
 					</control>
 				</control>
 			</control>
