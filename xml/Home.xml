@@ -829,8 +829,7 @@
 							<param name="visible" value="$EXP[home_tvshow_spotlight_visible]"/>
 							<param name="dim_extra" value="ControlGroup(2000).HasFocus"/>
 							<param name="onclick_condition" value="true"/>
-							<param name="onclick_action" value="ActivateWindow(videos,videodb://tvshows/titles/$INFO[ListItem.DBID]/,return)"/>
-							<param name="onclick_action_2" value="Container.SetViewMode(58)"/>
+							<param name="onclick_action" value="PlayMedia(videodb://tvshows/titles/$INFO[ListItem.DBID]/,resume)"/>
 							<param name="info_action" value="ActivateWindow(videos,videodb://tvshows/titles/$INFO[Container(6700).ListItem.DBID]/,return)"/>
 							<param name="info_action_2" value="Container.SetViewMode(58)"/>
 						</include>
