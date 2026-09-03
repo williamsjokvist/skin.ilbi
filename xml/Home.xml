@@ -26,7 +26,7 @@
 			<visible>![Player.HasVideo | [Player.HasAudio + Visualisation.Enabled]]</visible>
 		</control>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+			<include>InfoDialogRecede_Right</include>
 			<control type="group" id="2000">
 				<left>60</left>
 				<top>120</top>
@@ -829,19 +829,6 @@
 							<param name="visible" value="$EXP[home_tvshow_spotlight_visible]"/>
 							<param name="dim_extra" value="ControlGroup(2000).HasFocus"/>
 							<param name="onclick_condition" value="true"/>
-							<!-- Both buttons open the show's own node, and both ask for the information
-							     screen on it (View_58_Info) rather than the information dialog. That is
-							     what keeps the series flow inside one window: from here every step - the
-							     information screen, the seasons, the episodes - is a view swap on a
-							     container that never reloads, so the fanart and the logo never move.
-
-							     The view has to be named explicitly. Kodi remembers one view per content
-							     type, and the seasons strip claims 56 for seasons content the moment it is
-							     used, so without this the next series would open on the strip instead.
-
-							     Play and more info therefore land in the same place for a series. Play
-							     used to be the one that browsed outright; now the screen it lands on
-							     carries its own play pill -->
 							<param name="onclick_action" value="ActivateWindow(videos,videodb://tvshows/titles/$INFO[ListItem.DBID]/,return)"/>
 							<param name="onclick_action_2" value="Container.SetViewMode(58)"/>
 							<param name="info_action" value="ActivateWindow(videos,videodb://tvshows/titles/$INFO[Container(6700).ListItem.DBID]/,return)"/>

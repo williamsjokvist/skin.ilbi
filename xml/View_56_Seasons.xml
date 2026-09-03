@@ -13,9 +13,7 @@
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<include>OpenClose_Left</include>
 			<control type="panel" id="56">
-				<description>one row of season posters - the panel wraps, but only one row fits its
-				     height. Back steps up to the series information screen rather than out of the
-				     window: same container, same chrome, just the other view - View_58_Info</description>
+				<description>one row of season posters</description>
 				<left>60</left>
 				<top>620</top>
 				<width>1816</width>
@@ -28,13 +26,6 @@
 				<onleft>56</onleft>
 				<onright>56</onright>
 				<onback>5610</onback>
-				<!-- and the tile at the head of the strip does the same, for the keys onback cannot
-				     reach: Escape arrives as ACTION_PREVIOUS_MENU, which a control never sees, so the
-				     window handles it and steps out of the series.
-
-				     Conditioned, so it is the parent item alone that is redirected: a container runs
-				     its click actions only if one meets its condition, and falls through to Kodi's own
-				     navigation otherwise, which is what has to happen for the season cards -->
 				<onclick condition="ListItem.IsParentFolder">Container.SetViewMode(58)</onclick>
 				<onclick condition="ListItem.IsParentFolder">SetFocus(5800)</onclick>
 				<viewtype label="31725">icon</viewtype>

@@ -6,28 +6,9 @@
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include>DefaultBackground</include>
-		<!-- The series chrome - backdrop and header - sits outside the fade below, so it stays lit
-		     while the information dialog is open. This window is the one place the whole series flow
-		     happens: the dialog over a series, its seasons, its episodes. It draws the same backdrop
-		     and header from the same include the dialog does (Includes_InfoScreen.xml), and holds
-		     them standing across all of it, so nothing between those steps has anything to fade -
-		     the fanart and the logo are these controls throughout, and only what sits on them, the
-		     dialog's pills or the card strip, is exchanged.
-
-		     Emitted before the group below so the views draw over it -->
 		<include>TVShowScreen</include>
 		<control type="group">
-			<description>dimmed while the information dialog is up. Landing on a strip screen it
-			     stays dimmed for the dialog's close animation as well, which is what the second term
-			     buys: browsing a series out of the dialog swaps the container underneath it, so the
-			     view it was opened over fades out and the bars discover they are not wanted, all
-			     while the dialog is still on screen and translucent. The chrome above is outside
-			     this group and covers the lot, so none of that churn is worth showing - the dialog
-			     fades off a finished screen and only the card strip comes back in.
-
-			     Anything else is left on infodialog_active, where the window starts coming back
-			     under the closing dialog: there is nothing shared to hold still, so overlapping the
-			     two is the shorter transition</description>
+			<description>dimmed while an information dialog is open</description>
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active] | [$EXP[infodialog_onscreen] + [Control.IsVisible(56) | Control.IsVisible(57)]]">Conditional</animation>
 			<include>View_56_Seasons</include>
 			<include>View_57_Episodes</include>
@@ -103,9 +84,6 @@
 				</control>
 			</control>
 			<control type="group">
-				<description>the three series screens are full bleed and name the series themselves,
-				     so they run without the bars. Up off the strip, or off the information screen's
-				     pills, still reaches the options menu, the same way the poster view does</description>
 				<visible>!Control.IsVisible(56) + !Control.IsVisible(57) + !Control.IsVisible(58)</visible>
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<include content="TopBar">

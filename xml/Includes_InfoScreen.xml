@@ -1,46 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<!-- The information screen's chrome: a full bleed backdrop and the text block over its left
-	     scrim. Two places draw it - the information dialog (DialogVideoInfo) and the seasons and
-	     episodes screens (View_56_Seasons, View_57_Episodes, framed by TVShowScreen) - and the two
-	     hand off to each other constantly: browsing a series from the dialog lands on the seasons
-	     screen, and pressing info on a card opens the dialog back over it.
-
-	     Both sides emit these includes, so the two blocks are the same pixels at the same
-	     coordinates and the handover has nothing to animate. Only the sources differ: the dialog
-	     reads its own item, the screens read the series off the container. Keep any geometry change
-	     in here - splitting it back into two copies is what made the handover visible. -->
 	<include name="InfoScreenBackdrop">
-		<param name="fadetime">0</param>
 		<definition>
 			<control type="group">
 				<include>FullScreenDimensions</include>
 				<control type="image">
-					<description>opaque backing: whatever is under this must not show through - the
-					     dialog covers the window below it, and the screens cover the view below them</description>
+					<description>opaque backing</description>
 					<include>FullScreenDimensions</include>
 					<texture>colors/black.png</texture>
 				</control>
 				<control type="image">
+					<description>fanart, full bleed on every aspect</description>
 					<include>FullScreenDimensions</include>
 					<aspectratio>scale</aspectratio>
-					<fadetime>$PARAM[fadetime]</fadetime>
 					<texture background="true" fallback="DefaultVideo.png">$PARAM[fanart]</texture>
 				</control>
 				<control type="image">
-					<description>flat dim over the whole frame - bright fanart would swallow the pills
-					     and the cards</description>
+					<description>flat dim over the whole frame</description>
 					<include>FullScreenDimensions</include>
 					<texture colordiffuse="4DFFFFFF">colors/black.png</texture>
 				</control>
 				<control type="image">
-					<description>left scrim: the gradient the title, meta line and plot sit on</description>
+					<description>left scrim, under the text block</description>
 					<include>FullScreenDimensions</include>
 					<texture>scrim_left.png</texture>
 				</control>
 				<control type="image">
-					<description>bottom scrim: seats the pills and the cast row in the dialog, the card
-					     strip on the screens</description>
+					<description>bottom scrim, under the pills or the card strip</description>
 					<left>0</left>
 					<bottom>0</bottom>
 					<width>100%</width>
@@ -50,9 +36,6 @@
 			</control>
 		</definition>
 	</include>
-	<!-- Title, then a subtitle, then one meta line. The plot is not in here: the dialog flows it
-	     into a grouplist with the pills under it, the screens pin it above the strip. Both put it at
-	     left 88, top 400, four lines of font27 wide 884, which is what keeps it aligned too -->
 	<include name="InfoScreenHeader">
 		<param name="logo_fadetime">0</param>
 		<param name="visible">true</param>
@@ -83,9 +66,7 @@
 				<visible>![$PARAM[has_logo]]</visible>
 			</control>
 			<control type="label">
-				<description>the season, the episode number and title, or the movie tagline. Gated
-				     apart from the meta line under it, because the series information screen has no
-				     focused card for this to name while the meta line still describes the series</description>
+				<description>the season, the episode number and title, or the movie tagline</description>
 				<left>92</left>
 				<top>274</top>
 				<width>1180</width>
@@ -97,6 +78,7 @@
 				<visible>$PARAM[sublabel_visible]</visible>
 			</control>
 			<control type="label">
+				<description>one meta line</description>
 				<left>92</left>
 				<top>336</top>
 				<width>1400</width>

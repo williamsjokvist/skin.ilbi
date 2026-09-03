@@ -3,6 +3,23 @@
 A Kodi skin, forked from Estuary. Scope is deliberately narrow: **movies and TV shows only**.
 Music, PVR/live TV, games, pictures and weather have been removed from the skin.
 
+## Style
+
+Comments are a code smell. Code should be readable and self-explanatory. Name controls,
+includes and variables so their purpose is obvious and let the structure of the XML carry the
+rest; if a piece of code seems to need explaining, rename or restructure it instead of
+annotating it.
+
+Saying *why* something is built the way it is, is worth it - a constraint in Kodi that forced
+the shape, a non-obvious reason a value is what it is. Saying *what* the code does is not.
+
+Put it in a `<description>`, which is part of the control spec, and keep it to a line or two.
+Where there is no control to hang one on - expressions, variables, animation includes - a
+short `<!-- -->` is the only place one belongs.
+
+Comments already in the tree predate this; leave them alone unless you are changing the code
+they sit on.
+
 ## Resources
 
 - https://kodi.wiki/view/Skinning_Manual

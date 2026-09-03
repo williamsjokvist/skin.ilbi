@@ -1,34 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Kodi's information dialog, window 12003 (movieinformation). No longer the screen for a series:
-     that is View_58_Info, a view on the show's own node, so browsing a series never opens this.
-
-     What still does:
-       - a movie, clicked or asked for by name - MovieOnClickActionVar falls through to Action(Info)
-       - the movie spotlight's more info button - HomeSpotlight's info_action default
-       - a season or an episode card in the two strip screens, via Kodi's own info action
-     Movie sets never reach it either; their variable browses the set instead.
-
-     The filename cannot follow that narrowing. Kodi looks up a fixed name per built-in window -
-     CGUIDialogVideoInfo asks for DialogVideoInfo.xml - and only skin-defined windows get to pick
-     their own, under the Custom_<id>_<name>.xml pattern. Renamed, this window would have no skin
-     file and the dialog would fail to open at all. Hence the note rather than a rename. -->
 <window>
 	<defaultcontrol always="true">8</defaultcontrol>
 	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
 	<onunload>ClearProperty(infobackground,home)</onunload>
 	<controls>
 		<control type="group">
-			<description>backdrop: the item's fanart, full bleed on every aspect, scrimmed for the text
-			     block. Shared with the seasons and episodes screens, which draw the same thing at the
-			     same coordinates - so when the dialog opens over one of them, or hands off to one, this
-			     fade runs against an identical copy underneath and there is nothing to see</description>
+			<description>backdrop, shared with the series screens</description>
 			<include>FullScreenDimensions</include>
-			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<animation effect="fade" start="0" end="100" time="300" delay="200">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-image.xml)">Conditional</animation>
 			<include content="InfoScreenBackdrop">
 				<param name="fanart" value="$VAR[InfoDialogFanartVar]"/>
-				<param name="fadetime" value="300"/>
 			</include>
 		</control>
 		<control type="group">
@@ -38,7 +21,6 @@
 			<width>1920</width>
 			<include>OpenClose_InfoDialog</include>
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-image.xml)">Conditional</animation>
-			<!-- title block, shared with the seasons and episodes screens -->
 			<include content="InfoScreenHeader">
 				<param name="logo" value="$VAR[InfoDialogLogoVar]"/>
 				<param name="logo_fadetime" value="250"/>

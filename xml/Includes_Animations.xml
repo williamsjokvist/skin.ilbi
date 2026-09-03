@@ -101,30 +101,24 @@
 		<include condition="Skin.HasSetting(no_slide_animations)">OpenClose_Fade</include>
 		<include condition="!Skin.HasSetting(no_slide_animations)">OpenClose_FadeSlide_Left</include>
 	</include>
-	<!-- The information dialog's entrance and exit. It slides in from the left like every other
-	     content panel, except where the screen underneath is already showing the same block: over
-	     the series flow in MyVideoNav, that window holds the dialog's own backdrop and header at
-	     the dialog's own coordinates for the whole flow, so a slide would drag one copy of the logo
-	     across an identical one that is standing still. Fading instead leaves nothing to see - and
-	     on the way out, nothing to see is the whole point: what the fade uncovers is the same
-	     screen, already drawn, with the card strip returning underneath it.
-
-	     Conditioned animations rather than <include condition>: include conditions are resolved
-	     once, when the window is loaded, and these turn on the dialog's item -->
+	<!-- The open is held for the 200ms the window underneath takes to clear, so the dialog arrives after
+	     it rather than over it - which is what the series screens get for free, being views on a window
+	     that cannot open until the last has closed. The exit is stretched rather than delayed: holding a
+	     dismissed dialog on screen reads as lag -->
 	<include name="OpenClose_InfoDialog">
 		<animation type="WindowOpen" condition="$EXP[info_shares_tvshow_chrome] | Skin.HasSetting(no_slide_animations)" reversible="False">
-			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out"/>
+			<effect type="fade" start="0" end="100" time="300" delay="200" tween="sine" easing="out"/>
 		</animation>
 		<animation type="WindowOpen" condition="!$EXP[info_shares_tvshow_chrome] + !Skin.HasSetting(no_slide_animations)" reversible="False">
-			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out"/>
-			<effect type="slide" start="-320" end="0" time="400" tween="cubic" easing="out"/>
+			<effect type="fade" start="0" end="100" time="300" delay="200" tween="sine" easing="out"/>
+			<effect type="slide" start="-320" end="0" time="400" delay="200" tween="cubic" easing="out"/>
 		</animation>
 		<animation type="WindowClose" condition="$EXP[info_shares_tvshow_chrome] | Skin.HasSetting(no_slide_animations)" reversible="False">
-			<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out"/>
+			<effect type="fade" start="100" end="0" time="400" tween="sine" easing="out"/>
 		</animation>
 		<animation type="WindowClose" condition="!$EXP[info_shares_tvshow_chrome] + !Skin.HasSetting(no_slide_animations)" reversible="False">
-			<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out"/>
-			<effect type="slide" start="0" end="-320" time="300" tween="cubic" easing="out"/>
+			<effect type="fade" start="100" end="0" time="400" tween="sine" easing="out"/>
+			<effect type="slide" start="0" end="-320" time="400" tween="cubic" easing="out"/>
 		</animation>
 	</include>
 	<include name="OpenClose_FadeSlide_Left">
@@ -135,6 +129,17 @@
 		<animation type="WindowClose">
 			<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out"/>
 			<effect type="slide" start="0" end="-320" time="300" tween="cubic" easing="out"/>
+		</animation>
+	</include>
+	<!-- Home's own WindowClose animation expressed as a condition, so being covered by a dialog looks
+	     the same as being left for a screen -->
+	<include name="InfoDialogRecede_Right">
+		<animation type="Conditional" condition="$EXP[infodialog_active] + !Skin.HasSetting(no_slide_animations)">
+			<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out"/>
+			<effect type="slide" start="0" end="320" time="300" tween="cubic" easing="out"/>
+		</animation>
+		<animation type="Conditional" condition="$EXP[infodialog_active] + Skin.HasSetting(no_slide_animations)">
+			<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out"/>
 		</animation>
 	</include>
 	<include name="OpenClose_Right">
