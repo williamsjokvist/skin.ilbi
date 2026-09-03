@@ -1,97 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Kodi's information dialog, window 12003 (movieinformation). No longer the screen for a series:
+     that is View_58_Info, a view on the show's own node, so browsing a series never opens this.
+
+     What still does:
+       - a movie, clicked or asked for by name - MovieOnClickActionVar falls through to Action(Info)
+       - the movie spotlight's more info button - HomeSpotlight's info_action default
+       - a season or an episode card in the two strip screens, via Kodi's own info action
+     Movie sets never reach it either; their variable browses the set instead.
+
+     The filename cannot follow that narrowing. Kodi looks up a fixed name per built-in window -
+     CGUIDialogVideoInfo asks for DialogVideoInfo.xml - and only skin-defined windows get to pick
+     their own, under the Custom_<id>_<name>.xml pattern. Renamed, this window would have no skin
+     file and the dialog would fail to open at all. Hence the note rather than a rename. -->
 <window>
 	<defaultcontrol always="true">8</defaultcontrol>
 	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
 	<onunload>ClearProperty(infobackground,home)</onunload>
 	<controls>
 		<control type="group">
-			<description>backdrop: the item's fanart, full bleed on every aspect, scrimmed for the text block</description>
+			<description>backdrop: the item's fanart, full bleed on every aspect, scrimmed for the text
+			     block. Shared with the seasons and episodes screens, which draw the same thing at the
+			     same coordinates - so when the dialog opens over one of them, or hands off to one, this
+			     fade runs against an identical copy underneath and there is nothing to see</description>
 			<include>FullScreenDimensions</include>
 			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-image.xml)">Conditional</animation>
-			<control type="image">
-				<description>opaque backing: the dialog covers the window under it, so nothing shows through the cross-fade</description>
-				<include>FullScreenDimensions</include>
-				<texture>colors/black.png</texture>
-			</control>
-			<control type="image">
-				<include>FullScreenDimensions</include>
-				<aspectratio>scale</aspectratio>
-				<fadetime>300</fadetime>
-				<texture background="true" fallback="DefaultVideo.png">$VAR[InfoDialogFanartVar]</texture>
-			</control>
-			<control type="image">
-				<description>flat dim over the whole frame - bright fanart would swallow the flags and pills</description>
-				<include>FullScreenDimensions</include>
-				<texture colordiffuse="4DFFFFFF">colors/black.png</texture>
-			</control>
-			<control type="image">
-				<description>left scrim: the gradient the title, plot and buttons sit on</description>
-				<include>FullScreenDimensions</include>
-				<texture>scrim_left.png</texture>
-			</control>
-			<control type="image">
-				<description>bottom scrim: seats the pills and the cast row</description>
-				<left>0</left>
-				<bottom>0</bottom>
-				<width>100%</width>
-				<height>460</height>
-				<texture colordiffuse="DD000000">overlays/overlayfade.png</texture>
-			</control>
+			<include content="InfoScreenBackdrop">
+				<param name="fanart" value="$VAR[InfoDialogFanartVar]"/>
+				<param name="fadetime" value="300"/>
+			</include>
 		</control>
 		<control type="group">
 			<centertop>50%</centertop>
 			<height>1080</height>
 			<centerleft>50%</centerleft>
 			<width>1920</width>
-			<include>OpenClose_Left</include>
+			<include>OpenClose_InfoDialog</include>
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-image.xml)">Conditional</animation>
-			<control type="image">
-				<description>clearlogo, bottom aligned so short and tall logos share a baseline</description>
-				<left>88</left>
-				<top>60</top>
-				<width>620</width>
-				<height>190</height>
-				<aspectratio align="left" aligny="bottom">keep</aspectratio>
-				<fadetime>250</fadetime>
-				<texture>$VAR[InfoDialogLogoVar]</texture>
-				<visible>!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
-			</control>
-			<control type="label">
-				<description>title fallback when there is no clearlogo</description>
-				<left>92</left>
-				<top>60</top>
-				<width>1180</width>
-				<height>190</height>
-				<aligny>bottom</aligny>
-				<font>font52_title</font>
-				<label>$VAR[InfoDialogTitleVar]</label>
-				<scroll>true</scroll>
-				<shadowcolor>text_shadow</shadowcolor>
-				<visible>String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
-			</control>
-			<control type="label">
-				<description>episode number and title, or the movie tagline</description>
-				<left>92</left>
-				<top>274</top>
-				<width>1180</width>
-				<height>38</height>
-				<font>font27_title</font>
-				<textcolor>grey</textcolor>
-				<label>$VAR[InfoDialogSubLabelVar]</label>
-				<shadowcolor>text_shadow</shadowcolor>
-			</control>
-			<control type="label">
-				<left>92</left>
-				<top>336</top>
-				<width>1400</width>
-				<height>46</height>
-				<aligny>center</aligny>
-				<font>font27_title</font>
-				<label>$VAR[InfoDialogMetaLabelVar]</label>
-				<shadowcolor>text_shadow</shadowcolor>
-			</control>
+			<!-- title block, shared with the seasons and episodes screens -->
+			<include content="InfoScreenHeader">
+				<param name="logo" value="$VAR[InfoDialogLogoVar]"/>
+				<param name="logo_fadetime" value="250"/>
+				<param name="has_logo" value="!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))"/>
+				<param name="title" value="$VAR[InfoDialogTitleVar]"/>
+				<param name="sublabel" value="$VAR[InfoDialogSubLabelVar]"/>
+				<param name="meta" value="$VAR[InfoScreenMetaVar]"/>
+			</include>
 			<control type="grouplist" id="5200">
 				<description>everything under the meta line flows, so a short plot pulls the rest up</description>
 				<left>88</left>

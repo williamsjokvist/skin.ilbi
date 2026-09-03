@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- Episodes of one season: the strip and the stream badges. Backdrop and header come from
-	     TVShowScreen. The only view offered for episodes content -->
+	     TVShowScreen. The only view offered for a real season's episodes; the listing
+	     Kodi flattens a single-season series onto shares its node with View_58_Info -->
 	<include name="View_57_Episodes">
 		<control type="group">
 			<centertop>50%</centertop>
@@ -10,6 +11,7 @@
 			<width>1920</width>
 			<visible>Control.IsVisible(57)</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>
+			<include>OpenClose_Left</include>
 			<control type="grouplist">
 				<description>stream badges for the focused episode, opposite the clearlogo</description>
 				<visible>!Skin.HasSetting(hide_mediaflags)</visible>
@@ -44,8 +46,10 @@
 			<control type="panel" id="57">
 				<description>one row of episode stills - the panel wraps, but only one row fits its
 				     height. A single-season series is flattened straight past the seasons screen, so
-				     there is no seasons screen for back to return to - only the main menu. Every
-				     other episode list has one, and falls through to Kodi's own parent-folder step</description>
+				     back has no parent listing to step to - it goes to the series information
+				     screen instead, which shares this node as another view of it. Every other
+				     episode list has a seasons screen above it, and falls through to Kodi's own
+				     parent-folder step</description>
 				<left>60</left>
 				<top>674</top>
 				<width>1816</width>
@@ -57,8 +61,13 @@
 				<ondown>noop</ondown>
 				<onleft>57</onleft>
 				<onright>57</onright>
-				<onback condition="$EXP[tvshow_flattened_episodes]">ReplaceWindow(home)</onback>
-				<onback condition="$EXP[tvshow_flattened_episodes]">SetFocus(9000)</onback>
+				<onback condition="$EXP[tvshow_flattened_episodes]">5710</onback>
+				<!-- see View_56_Seasons: the tile covers the keys onback cannot. Only for a flattened
+				     series, where this listing is the series' own node and the information screen is
+				     another view of it. A real season's episodes have a seasons screen above them, and
+				     Kodi's parent-folder step is already right there -->
+				<onclick condition="ListItem.IsParentFolder + $EXP[tvshow_flattened_episodes]">Container.SetViewMode(58)</onclick>
+				<onclick condition="ListItem.IsParentFolder + $EXP[tvshow_flattened_episodes]">SetFocus(5800)</onclick>
 				<viewtype label="20360">icon</viewtype>
 				<visible>Container.Content(episodes)</visible>
 				<itemlayout width="456" height="318">
@@ -97,6 +106,9 @@
 					</control>
 				</focusedlayout>
 			</control>
+			<include content="TVShowScreenBackToInfo">
+				<param name="id" value="5710"/>
+			</include>
 			<include content="LeftRightArrows">
 				<param name="list_id" value="57"/>
 				<param name="left_posx" value="40"/>

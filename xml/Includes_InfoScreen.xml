@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- The information screen's chrome: a full bleed backdrop and the text block over its left
+	     scrim. Two places draw it - the information dialog (DialogVideoInfo) and the seasons and
+	     episodes screens (View_56_Seasons, View_57_Episodes, framed by TVShowScreen) - and the two
+	     hand off to each other constantly: browsing a series from the dialog lands on the seasons
+	     screen, and pressing info on a card opens the dialog back over it.
+
+	     Both sides emit these includes, so the two blocks are the same pixels at the same
+	     coordinates and the handover has nothing to animate. Only the sources differ: the dialog
+	     reads its own item, the screens read the series off the container. Keep any geometry change
+	     in here - splitting it back into two copies is what made the handover visible. -->
+	<include name="InfoScreenBackdrop">
+		<param name="fadetime">0</param>
+		<definition>
+			<control type="group">
+				<include>FullScreenDimensions</include>
+				<control type="image">
+					<description>opaque backing: whatever is under this must not show through - the
+					     dialog covers the window below it, and the screens cover the view below them</description>
+					<include>FullScreenDimensions</include>
+					<texture>colors/black.png</texture>
+				</control>
+				<control type="image">
+					<include>FullScreenDimensions</include>
+					<aspectratio>scale</aspectratio>
+					<fadetime>$PARAM[fadetime]</fadetime>
+					<texture background="true" fallback="DefaultVideo.png">$PARAM[fanart]</texture>
+				</control>
+				<control type="image">
+					<description>flat dim over the whole frame - bright fanart would swallow the pills
+					     and the cards</description>
+					<include>FullScreenDimensions</include>
+					<texture colordiffuse="4DFFFFFF">colors/black.png</texture>
+				</control>
+				<control type="image">
+					<description>left scrim: the gradient the title, meta line and plot sit on</description>
+					<include>FullScreenDimensions</include>
+					<texture>scrim_left.png</texture>
+				</control>
+				<control type="image">
+					<description>bottom scrim: seats the pills and the cast row in the dialog, the card
+					     strip on the screens</description>
+					<left>0</left>
+					<bottom>0</bottom>
+					<width>100%</width>
+					<height>460</height>
+					<texture colordiffuse="DD000000">overlays/overlayfade.png</texture>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<!-- Title, then a subtitle, then one meta line. The plot is not in here: the dialog flows it
+	     into a grouplist with the pills under it, the screens pin it above the strip. Both put it at
+	     left 88, top 400, four lines of font27 wide 884, which is what keeps it aligned too -->
+	<include name="InfoScreenHeader">
+		<param name="logo_fadetime">0</param>
+		<param name="visible">true</param>
+		<param name="sublabel_visible">true</param>
+		<definition>
+			<control type="image">
+				<description>clearlogo, bottom aligned so short and tall logos share a baseline</description>
+				<left>88</left>
+				<top>60</top>
+				<width>620</width>
+				<height>190</height>
+				<aspectratio align="left" aligny="bottom">keep</aspectratio>
+				<fadetime>$PARAM[logo_fadetime]</fadetime>
+				<texture>$PARAM[logo]</texture>
+				<visible>$PARAM[has_logo]</visible>
+			</control>
+			<control type="label">
+				<description>title, the fallback when there is no clearlogo</description>
+				<left>92</left>
+				<top>60</top>
+				<width>1180</width>
+				<height>190</height>
+				<aligny>bottom</aligny>
+				<font>font52_title</font>
+				<label>$PARAM[title]</label>
+				<scroll>true</scroll>
+				<shadowcolor>text_shadow</shadowcolor>
+				<visible>![$PARAM[has_logo]]</visible>
+			</control>
+			<control type="label">
+				<description>the season, the episode number and title, or the movie tagline. Gated
+				     apart from the meta line under it, because the series information screen has no
+				     focused card for this to name while the meta line still describes the series</description>
+				<left>92</left>
+				<top>274</top>
+				<width>1180</width>
+				<height>38</height>
+				<font>font27_title</font>
+				<textcolor>grey</textcolor>
+				<label>$PARAM[sublabel]</label>
+				<shadowcolor>text_shadow</shadowcolor>
+				<visible>$PARAM[sublabel_visible]</visible>
+			</control>
+			<control type="label">
+				<left>92</left>
+				<top>336</top>
+				<width>1400</width>
+				<height>46</height>
+				<aligny>center</aligny>
+				<font>font27_title</font>
+				<label>$PARAM[meta]</label>
+				<shadowcolor>text_shadow</shadowcolor>
+				<visible>$PARAM[visible]</visible>
+			</control>
+		</definition>
+	</include>
+</includes>

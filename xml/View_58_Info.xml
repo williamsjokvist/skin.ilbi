@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- The series information screen: one series presented large, with the actions that used to
+	     sit in the information dialog. A view rather than a dialog, and a view on the *seasons*
+	     node - the same directory View_56_Seasons is bound to - which is the whole point of it.
+
+	     Moving between this screen and the season strip is Container.SetViewMode, a view swap
+	     inside one window against one unchanged container. No window opens, no directory is
+	     re-read, and TVShowScreen (the backdrop and the header) is visible for both views, so the
+	     fanart and the clearlogo are the same controls before and after. There is nothing left to
+	     fade: only what sits on them is exchanged - these pills, or the card strip.
+
+	     Eligible for seasons content and for the episode listing Kodi flattens a single-season
+	     series onto ($EXP[tvshow_flattened_episodes], season id -2), so both kinds of series open
+	     on the same screen. Not for episodes generally: a real season's episode listing leaves this
+	     view ineligible, so browsing into a season can only ever land on the strip however Kodi
+	     remembers the view for episodes content -->
+	<include name="View_58_Info">
+		<control type="group">
+			<centertop>50%</centertop>
+			<height>1080</height>
+			<centerleft>50%</centerleft>
+			<width>1920</width>
+			<visible>Control.IsVisible(58)</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+			<include>OpenClose_Left</include>
+			<control type="list" id="5850">
+				<description>the series' own record. This screen is a view on the seasons node - or on
+				     the flattened episode listing - so every item in the browsed container is a child
+				     of the series and carries the child's year, episode count, plot, trailer and
+				     unique ids rather than the series'. That is what put "2009 - 2 Episodes" under a
+				     2008, 62-episode show. Kodi hangs only art and the show title off the container,
+				     so the rest has to be fetched, and the title is what there is to fetch it by.
+
+				     One row, looked up the way the search grid looks up its results (SearchResultProbe
+				     and the xsp paths in Variables.xml). 1x1 rather than hidden: a container that is
+				     never visible is not guaranteed to load at all.
+
+				     A title holding a double quote breaks the json and leaves this empty, so every
+				     label that reads it is written to fall back rather than show the wrong thing</description>
+				<left>0</left>
+				<top>0</top>
+				<width>1</width>
+				<height>1</height>
+				<itemlayout width="1" height="1">
+					<control type="image">
+						<description>nothing to draw - only the record is wanted</description>
+						<width>1</width>
+						<height>1</height>
+						<texture/>
+					</control>
+				</itemlayout>
+				<focusedlayout width="1" height="1">
+					<control type="image">
+						<width>1</width>
+						<height>1</height>
+						<texture/>
+					</control>
+				</focusedlayout>
+				<content limit="1">videodb://tvshows/titles/?xsp={"type":"tvshows","rules":{"and":[{"field":"title","operator":"is","value":"$INFO[Container.ShowTitle]"}]}}</content>
+			</control>
+			<!-- Every pill that swaps the view has to focus the view it swaps to. Kodi moves focus
+			     onto a newly selected view only when the outgoing view control held it, and here it
+			     is a pill that holds it - so without the second click action the strip arrives with
+			     focus still on this row, which has just been hidden. Nothing on the strip is focused,
+			     its onback is never consulted, and back falls through to the window, which steps out
+			     of the series node and leaves for home. Which is exactly what it did until now, but
+			     only when the strip had not been left and re-entered in between - coming back from
+			     the episodes of a season focuses the view properly and hid the bug -->
+			<control type="grouplist" id="5800">
+				<description>everything under the meta line flows, so a short plot pulls the pills up -
+				     the same grouplist the information dialog puts its plot and pills in (5200), at
+				     the same left, top and item gap, so a series reads exactly like a movie does.
+
+				     Taller than the dialog's because that one reserves the bottom of the frame for its
+				     icon row, and this screen has none</description>
+				<left>88</left>
+				<top>400</top>
+				<width>1200</width>
+				<height>600</height>
+				<orientation>vertical</orientation>
+				<align>left</align>
+				<itemgap>24</itemgap>
+				<onup>9000</onup>
+				<ondown>noop</ondown>
+				<onleft>noop</onleft>
+				<onright>noop</onright>
+				<onback>ReplaceWindow(home)</onback>
+				<onback>SetFocus(9000)</onback>
+				<control type="textbox">
+					<description>the series' plot, capped at four lines like the dialog's. Drawn here
+					     rather than by the shared header, which pins it at a fixed height for the two
+					     strip screens - inside this grouplist it has to be able to pull the pills up</description>
+					<width>884</width>
+					<height max="144">auto</height>
+					<font>font27</font>
+					<label fallback="19055">$VAR[TVShowScreenPlotVar]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+					<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+				</control>
+				<include content="InfoPill">
+					<param name="id" value="5801"/>
+					<param name="icon" value="icons/infodialogs/play.png"/>
+					<param name="label" value="$LOCALIZE[208]"/>
+					<param name="onclick_1" value="PlayMedia($INFO[Container.FolderPath],resume)"/>
+				</include>
+				<include content="InfoPill">
+					<param name="id" value="5802"/>
+					<param name="icon" value="icons/infodialogs/set.png"/>
+					<param name="label" value="$LOCALIZE[31725]"/>
+					<param name="onclick_1" value="Container.SetViewMode(56)"/>
+					<param name="onclick_2" value="SetFocus(56)"/>
+					<param name="visible" value="Container.Content(seasons)"/>
+				</include>
+				<include content="InfoPill">
+					<param name="id" value="5803"/>
+					<param name="icon" value="icons/infodialogs/set.png"/>
+					<param name="label" value="$LOCALIZE[20360]"/>
+					<param name="onclick_1" value="Container.SetViewMode(57)"/>
+					<param name="onclick_2" value="SetFocus(57)"/>
+					<param name="visible" value="$EXP[tvshow_flattened_episodes]"/>
+				</include>
+				<include content="InfoPill">
+					<param name="id" value="5804"/>
+					<param name="icon" value="icons/infodialogs/trailer.png"/>
+					<param name="label" value="$LOCALIZE[20410]"/>
+					<param name="onclick_1" value="PlayMedia($ESCINFO[Container(5850).ListItem.Trailer])"/>
+					<param name="visible" value="!String.IsEmpty(Container(5850).ListItem.Trailer)"/>
+				</include>
+				<include content="InfoPill">
+					<param name="id" value="5805"/>
+					<param name="icon" value="icons/infodialogs/similar.png"/>
+					<param name="label" value="$LOCALIZE[31722]"/>
+					<param name="onclick_1" value="ActivateWindow(Videos,plugin://plugin.video.themoviedb.helper/?info=recommendations&amp;tmdb_type=tv&amp;tmdb_id=$INFO[Container(5850).ListItem.UniqueID(tmdb)],return)"/>
+					<param name="visible" value="System.AddonIsEnabled(plugin.video.themoviedb.helper) + !String.IsEmpty(Container(5850).ListItem.UniqueID(tmdb))"/>
+				</include>
+			</control>
+		</control>
+		<control type="panel" id="58">
+			<description>the view itself, and only that: a view has to be a container bound to the
+			     directory or Kodi will not offer it, but this screen shows the series rather than
+			     any of the seasons in it, so there is nothing to lay out. One pixel, off the left
+			     edge, drawing nothing - the screen is the group above plus TVShowScreen, and the
+			     focus Kodi puts here on the view swap is handed straight to the pills</description>
+			<left>-10</left>
+			<top>-10</top>
+			<width>1</width>
+			<height>1</height>
+			<onfocus>SetFocus(5800)</onfocus>
+			<onback>ReplaceWindow(home)</onback>
+			<onback>SetFocus(9000)</onback>
+			<viewtype label="31703">icon</viewtype>
+			<visible>Container.Content(seasons) | $EXP[tvshow_flattened_episodes]</visible>
+			<itemlayout width="1" height="1">
+				<control type="image">
+					<description>nothing to draw - the series is the screen, not the items</description>
+					<width>1</width>
+					<height>1</height>
+					<texture/>
+				</control>
+			</itemlayout>
+			<focusedlayout width="1" height="1">
+				<control type="image">
+					<width>1</width>
+					<height>1</height>
+					<texture/>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+</includes>

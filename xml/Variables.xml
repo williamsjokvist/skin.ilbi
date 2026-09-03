@@ -219,6 +219,11 @@
 		<value condition="Skin.HasSetting(tvshow_onclick_queue)">$LOCALIZE[13347]</value>
 		<value>$LOCALIZE[31724]</value>
 	</variable>
+	<!-- The default is not Action(Info) the way the movie one is, and must not be: a series has an
+	     information screen of its own now (View_58_Info), a view on the show's own node, and the
+	     dialog would be a second one in front of it - open the dialog, press browse, and you land on
+	     the same screen again. So "view information" for a series means activating that node. Same
+	     builtin as the browse setting below, which is now what browsing a series has always meant -->
 	<variable name="TVShowOnClickActionVar">
 		<value condition="String.IsEqual(ListItem.Property(node.type),target_folder)">ActivateWindow(videos,$INFO[ListItem.FilenameAndPath],return)</value>
 		<value condition="Skin.HasSetting(tvshow_onclick_browse)">ActivateWindow(videos,videodb://tvshows/titles/$INFO[ListItem.DBID]/,return)</value>
@@ -226,7 +231,7 @@
 		<value condition="Skin.HasSetting(tvshow_onclick_playfrombeginning)">PlayMedia(videodb://tvshows/titles/$INFO[ListItem.DBID]/,noresume)</value>
 		<value condition="Skin.HasSetting(tvshow_onclick_playnext)">QueueMedia(videodb://tvshows/titles/$INFO[ListItem.DBID]/,playnext)</value>
 		<value condition="Skin.HasSetting(tvshow_onclick_queue)">QueueMedia(videodb://tvshows/titles/$INFO[ListItem.DBID]/)</value>
-		<value>Action(Info)</value>
+		<value>ActivateWindow(videos,videodb://tvshows/titles/$INFO[ListItem.DBID]/,return)</value>
 	</variable>
 	<!-- for the one home container that mixes both types: the search result grid, which holds
 	     either movies or series depending on what the side list asked for -->
@@ -501,9 +506,15 @@
 		<value condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,set)">$LOCALIZE[1024]</value>
 		<value>$LOCALIZE[208]</value>
 	</variable>
-	<!-- seasons and episodes screens: the series names the page, so the backdrop and the title are
-	     the show's and hold still while the strip scrolls. Kodi hangs the show's art off the
-	     container for both nodes, which is where these read it from -->
+	<!-- The series chrome: the series names the page, so the backdrop and the title are the show's
+	     and hold still while the strip scrolls. Kodi hangs the show's art off the container on the
+	     seasons and episodes nodes, which is the first place each of these looks.
+
+	     The item fallbacks under it are not just for safety. MyVideoNav draws this same chrome while
+	     the information dialog is up over a series in a poster wall, where there is no seasons
+	     container to read - the focused item is the only source. Both routes have to land on the
+	     same texture for the same show, because that is what lets the chrome stay put across the
+	     container swap when you browse out of the dialog: same path, nothing reloaded, no fade -->
 	<variable name="TVShowScreenFanartVar">
 		<value condition="!String.IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.fanart))">$INFO[ListItem.Art(tvshow.fanart)]</value>
@@ -512,18 +523,42 @@
 	</variable>
 	<variable name="TVShowScreenLogoVar">
 		<value condition="!String.IsEmpty(Container.Art(tvshow.clearlogo))">$INFO[Container.Art(tvshow.clearlogo)]</value>
-		<value>$INFO[ListItem.Art(tvshow.clearlogo)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
+		<value>$INFO[ListItem.Art(clearlogo)]</value>
 	</variable>
 	<variable name="TVShowScreenTitleVar">
 		<value condition="!String.IsEmpty(Container.ShowTitle)">$INFO[Container.ShowTitle]</value>
 		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]</value>
+		<value condition="String.IsEqual(ListItem.DBType,tvshow)">$INFO[ListItem.Title]</value>
 		<value>$INFO[Container.FolderName]</value>
 	</variable>
-	<!-- one header serves both screens, so the meta line picks its shape off the focused item.
-	     An episode has no season episode count, so it trades that for the air date and runtime -->
-	<variable name="TVShowScreenMetaVar">
+	<!-- one header serves both screens and the information dialog, so the meta line picks its shape
+	     off the item. An episode has no season episode count, so it trades that for the air date and
+	     runtime - and the dialog reads the same variable, so opening it over an episode does not
+	     reshuffle the line it is drawing on top of -->
+	<variable name="InfoScreenMetaVar">
+		<value condition="Control.IsVisible(58)">$VAR[SeriesScreenMetaVar]</value>
 		<value condition="String.IsEqual(ListItem.DBType,episode)">$VAR[EpisodeScreenMetaVar]</value>
 		<value>$VAR[InfoDialogMetaLabelVar]</value>
+	</variable>
+	<!-- The information view describes the series, but it is a view on the series' children, so the
+	     focused item is a season or an episode: ListItem.Year and ListItem.Property(TotalEpisodes)
+	     are that child's - 2009 and 2 episodes where the series is 2008 and 62. Container 5850 in
+	     View_58_Info holds the series' own record for exactly this.
+
+	     The fallback is what a child does inherit from its series, genre and certificate, with the
+	     season count off the container - correct, just thinner. It covers the lookup finding
+	     nothing, which a title holding a double quote would cause -->
+	<variable name="SeriesScreenMetaVar">
+		<value condition="Integer.IsGreater(Container(5850).NumItems,0)">$INFO[Container(5850).ListItem.Year]$INFO[Container(5850).ListItem.Genre,   [COLOR 33FFFFFF]•[/COLOR]   ]$INFO[Container(5850).ListItem.Property(TotalEpisodes),   [COLOR 33FFFFFF]•[/COLOR]   , $LOCALIZE[20360]]$INFO[Container(5850).ListItem.Mpaa,   [COLOR 33FFFFFF]•[/COLOR]   ]</value>
+		<value>$INFO[ListItem.Genre]$INFO[Container.NumItems,   [COLOR 33FFFFFF]•[/COLOR]   , $LOCALIZE[31725]]$INFO[ListItem.Mpaa,   [COLOR 33FFFFFF]•[/COLOR]   ]</value>
+	</variable>
+	<!-- Same split for the plot. On the strips it is the focused card's, and on the information
+	     view it has to be the series' - which matters most for a flattened single-season series,
+	     where the focused item is an episode and its plot is one episode's -->
+	<variable name="TVShowScreenPlotVar">
+		<value condition="Control.IsVisible(58) + Integer.IsGreater(Container(5850).NumItems,0)">$INFO[Container(5850).ListItem.Plot]</value>
+		<value>$INFO[ListItem.Plot]</value>
 	</variable>
 	<variable name="EpisodeScreenMetaVar">
 		<value>$INFO[ListItem.Premiered]$INFO[ListItem.Duration,   [COLOR 33FFFFFF]•[/COLOR]   ]$INFO[ListItem.Genre,   [COLOR 33FFFFFF]•[/COLOR]   ]$INFO[ListItem.Mpaa,   [COLOR 33FFFFFF]•[/COLOR]   ]</value>

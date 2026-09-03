@@ -8,127 +8,102 @@
 	     that window's <views> is bound to the directory Kodi is browsing, so a window of our own
 	     would have nothing to fill. Views 56 and 57 are the only ones offered for seasons and
 	     episodes, so browsing into a series always lands here. -->
-	<include name="TVShowScreenBackdrop">
-		<definition>
-			<control type="group">
-				<include>FullScreenDimensions</include>
-				<control type="image">
-					<description>opaque backing: the view under this one must not show through</description>
-					<include>FullScreenDimensions</include>
-					<texture>colors/black.png</texture>
-				</control>
-				<control type="image">
-					<description>no fadetime: the backdrop is the series', not the focused card's, so it
-					     must hold still while the strip is swapped between the two screens</description>
-					<include>FullScreenDimensions</include>
-					<aspectratio>scale</aspectratio>
-					<texture background="true" fallback="DefaultVideo.png">$VAR[TVShowScreenFanartVar]</texture>
-				</control>
-				<control type="image">
-					<description>flat dim over the whole frame - bright fanart would swallow the cards</description>
-					<include>FullScreenDimensions</include>
-					<texture colordiffuse="4DFFFFFF">colors/black.png</texture>
-				</control>
-				<control type="image">
-					<description>left scrim: the gradient the title, meta line and plot sit on</description>
-					<include>FullScreenDimensions</include>
-					<texture>scrim_left.png</texture>
-				</control>
-				<control type="image">
-					<description>bottom scrim: seats the card strip</description>
-					<left>0</left>
-					<bottom>0</bottom>
-					<width>100%</width>
-					<height>460</height>
-					<texture colordiffuse="DD000000">overlays/overlayfade.png</texture>
-				</control>
-			</control>
-		</definition>
-	</include>
-	<!-- The text block, identical in both screens: the series names the page, the focused card
-	     names itself underneath. Same coordinates as the information screen's header -->
+	<!-- The text block, identical in both screens and in the information dialog, which emits the
+	     same include: the series names the page, the focused card names itself underneath. No logo
+	     fadetime - the logo is the series', so it holds still across the two screens.
+
+	     The plot is not part of the shared include (the dialog flows it into a grouplist with the
+	     pills below it), so its geometry is repeated here and has to stay matched to the dialog's:
+	     left 88, top 400, four lines of font27 wide 884 -->
 	<include name="TVShowScreenHeader">
-		<control type="image">
-			<description>clearlogo, bottom aligned so short and tall logos share a baseline. No
-			     fadetime: it is the series', so it holds still across the two screens</description>
-			<left>88</left>
-			<top>60</top>
-			<width>620</width>
-			<height>190</height>
-			<aspectratio align="left" aligny="bottom">keep</aspectratio>
-			<texture>$VAR[TVShowScreenLogoVar]</texture>
-			<visible>!String.IsEmpty(Container.Art(tvshow.clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
-		</control>
-		<control type="label">
-			<description>series title, the fallback when there is no clearlogo</description>
-			<left>92</left>
-			<top>60</top>
-			<width>1180</width>
-			<height>190</height>
-			<aligny>bottom</aligny>
-			<font>font52_title</font>
-			<label>$VAR[TVShowScreenTitleVar]</label>
-			<scroll>true</scroll>
-			<shadowcolor>text_shadow</shadowcolor>
-			<visible>String.IsEmpty(Container.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
-		</control>
-		<control type="label">
-			<description>the focused card: the season, or the episode number and title</description>
-			<left>92</left>
-			<top>274</top>
-			<width>1180</width>
-			<height>38</height>
-			<font>font27_title</font>
-			<textcolor>grey</textcolor>
-			<label>$VAR[InfoDialogSubLabelVar]</label>
-			<shadowcolor>text_shadow</shadowcolor>
-			<visible>!ListItem.IsParentFolder</visible>
-		</control>
-		<control type="label">
-			<left>92</left>
-			<top>336</top>
-			<width>1400</width>
-			<height>46</height>
-			<aligny>center</aligny>
-			<font>font27_title</font>
-			<label>$VAR[TVShowScreenMetaVar]</label>
-			<shadowcolor>text_shadow</shadowcolor>
-			<visible>!ListItem.IsParentFolder</visible>
-		</control>
+		<include content="InfoScreenHeader">
+			<param name="logo" value="$VAR[TVShowScreenLogoVar]"/>
+			<param name="has_logo" value="!String.IsEmpty(Container.Art(tvshow.clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo)) | !String.IsEmpty(ListItem.Art(clearlogo))"/>
+			<param name="title" value="$VAR[TVShowScreenTitleVar]"/>
+			<param name="sublabel" value="$VAR[InfoDialogSubLabelVar]"/>
+			<param name="meta" value="$VAR[InfoScreenMetaVar]"/>
+			<param name="visible" value="!ListItem.IsParentFolder"/>
+			<param name="sublabel_visible" value="!ListItem.IsParentFolder + !Control.IsVisible(58)"/>
+		</include>
 		<control type="textbox">
-			<description>plot: four lines, fixed - anything longer would run into the strip below</description>
-			<left>92</left>
-			<top>396</top>
+			<description>plot: four lines, fixed - anything longer would run into the strip below. Only
+			     for the two strip screens: the information view draws its own inside the grouplist it
+			     shares with the pills, so a short plot pulls them up the way the dialog's does</description>
+			<left>88</left>
+			<top>400</top>
 			<width>884</width>
-			<height>148</height>
+			<height>144</height>
 			<font>font27</font>
-			<label fallback="19055">$INFO[ListItem.Plot]</label>
+			<label fallback="19055">$VAR[TVShowScreenPlotVar]</label>
 			<shadowcolor>text_shadow</shadowcolor>
-			<visible>!ListItem.IsParentFolder</visible>
+			<visible>!ListItem.IsParentFolder + !Control.IsVisible(58)</visible>
 			<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 		</control>
 	</include>
-	<!-- The page frame both screens share. Emitted once, and visible for either view, so stepping
-	     from seasons into episodes never changes its visibility - the series keeps its backdrop and
-	     its logo without a blink, and only the strip underneath is swapped -->
+	<!-- The page frame. Emitted once for the whole series flow - the information dialog over a
+	     series, its seasons, its episodes - so none of the steps between them changes its
+	     visibility. Stepping from seasons into episodes swaps only the strip, and browsing out of
+	     the dialog swaps only the container: the backdrop and the logo are these controls, already
+	     standing, and they are never asked to appear or disappear on the way.
+
+	     So nothing here animates on anything a step between those screens can trigger. VisibleChange
+	     covers entering the flow from a poster wall and leaving it again; WindowOpen and WindowClose
+	     cover arriving in the window and leaving it, and are the animation the information dialog
+	     plays on open - the backdrop fading while the block over it slides in from the left, or just
+	     fading when slide animations are off. A view swap fires neither, which is what keeps the
+	     fanart and the logo still - see $EXP[tvshow_screen_visible] -->
 	<include name="TVShowScreen">
 		<definition>
 			<control type="group">
-				<description>backdrop. No entrance animation of its own: it belongs to the series
-				     rather than to either screen, so it has to hold still while the strip is swapped
-				     between seasons and episodes. It still fades out with the window</description>
-				<visible>Control.IsVisible(56) | Control.IsVisible(57)</visible>
+				<description>backdrop. No fadetime on the image: the fanart is the series', not the
+				     focused card's, and the variable behind it resolves to the same texture off a
+				     focused series in a list as it does off a seasons or episodes container - so the
+				     container swap does not even restate the path, let alone cross-fade it</description>
+				<visible>$EXP[tvshow_screen_visible]</visible>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<include>TVShowScreenBackdrop</include>
+				<include content="InfoScreenBackdrop">
+					<param name="fanart" value="$VAR[TVShowScreenFanartVar]"/>
+				</include>
 			</control>
 			<control type="group">
+				<description>header. Slides in with the window where the backdrop only fades, which is
+				     the split the information dialog makes too - a full bleed backdrop slid 320px
+				     would show its own edge, and the block of text is the part worth moving</description>
 				<centertop>50%</centertop>
 				<height>1080</height>
 				<centerleft>50%</centerleft>
 				<width>1920</width>
-				<visible>Control.IsVisible(56) | Control.IsVisible(57)</visible>
+				<visible>$EXP[tvshow_screen_visible]</visible>
+				<animation effect="fade" time="200">VisibleChange</animation>
 				<include>OpenClose_Left</include>
 				<include>TVShowScreenHeader</include>
+			</control>
+		</definition>
+	</include>
+	<!-- Back off a strip screen, onto the series information screen. It has to be a control rather
+	     than a builtin: MyVideoNav is a media window, and the only <onback> that demonstrably fires
+	     in one - here and in Estuary - names a control id. Pointing onback at a builtin on a view
+	     container did nothing at all; back stayed with the window, which turns it into a
+	     parent-folder step, and since the series node is the window's start directory that step
+	     leaves for Home.
+
+	     So back moves focus here instead, and arriving is what swaps the view. One pixel, no
+	     texture, and it lives inside the strip's own group, so the moment the swap happens this is
+	     not on screen to be focused again - which is also
+	     why it has to hand the focus on itself, the same way the pills do swapping the other way -->
+	<include name="TVShowScreenBackToInfo">
+		<definition>
+			<control type="button" id="$PARAM[id]">
+				<left>0</left>
+				<top>0</top>
+				<width>1</width>
+				<height>1</height>
+				<onfocus>Container.SetViewMode(58)</onfocus>
+				<onfocus>SetFocus(5800)</onfocus>
+				<texturefocus/>
+				<texturenofocus/>
 			</control>
 		</definition>
 	</include>

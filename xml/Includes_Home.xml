@@ -275,6 +275,9 @@
 		<param name="widget_target">videos</param>
 		<param name="visible">true</param>
 		<param name="onclick_condition">false</param>
+		<param name="onclick_action_2">noop</param>
+		<param name="info_action">Action(Info)</param>
+		<param name="info_action_2">noop</param>
 		<definition>
 			<control type="group" id="$PARAM[list_id]1">
 				<description>spotlight: one random item, blown up with play / more info</description>
@@ -391,14 +394,18 @@
 						<onclick>Action(Select)</onclick>
 					</control>
 					<control type="button" id="$PARAM[list_id]4">
-						<description>more info - opens the same dialog as the context menu information item</description>
+						<description>more info. Defaults to the same dialog as the context menu
+						     information item, but a series overrides it: there the information screen
+						     is a view on the show's own node (View_58_Info), so this activates that
+						     node instead and the whole series flow stays inside one window</description>
 						<onup>9000</onup>
 						<ondown>$PARAM[down_id]</ondown>
 						<include content="SpotlightButton">
 							<param name="label" value="$LOCALIZE[31703]"/>
 						</include>
 						<onclick>SetFocus($PARAM[list_id])</onclick>
-						<onclick>Action(Info)</onclick>
+						<onclick>$PARAM[info_action]</onclick>
+						<onclick>$PARAM[info_action_2]</onclick>
 					</control>
 				</control>
 				<control type="list" id="$PARAM[list_id]">
@@ -409,6 +416,7 @@
 					<height>1</height>
 					<orientation>horizontal</orientation>
 					<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
+					<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action_2]</onclick>
 					<onleft>$PARAM[list_id]3</onleft>
 					<onright>$PARAM[list_id]3</onright>
 					<onup>$PARAM[list_id]3</onup>
@@ -474,6 +482,10 @@
 				<right>0</right>
 				<height>1080</height>
 				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
+				<!-- a series opens its own information screen, a view on the show's node
+				     (View_58_Info). Named explicitly because Kodi remembers one view per
+				     content type and the seasons strip claims 56 as soon as it is used -->
+				<onclick condition="String.IsEqual(ListItem.DBType,tvshow)">Container.SetViewMode(58)</onclick>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
@@ -570,6 +582,10 @@
 				<onleft>noop</onleft>
 				<onright>noop</onright>
 				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
+				<!-- a series opens its own information screen, a view on the show's node
+				     (View_58_Info). Named explicitly because Kodi remembers one view per
+				     content type and the seasons strip claims 56 as soon as it is used -->
+				<onclick condition="String.IsEqual(ListItem.DBType,tvshow)">Container.SetViewMode(58)</onclick>
 				<onback condition="!Integer.IsEqual(Container($PARAM[list_id]).CurrentItem,1)">SetFocus($PARAM[list_id],0,absolute)</onback>
 				<onback condition="Integer.IsEqual(Container($PARAM[list_id]).CurrentItem,1)">SetFocus(9000)</onback>
 				<itemlayout width="340" height="520">
@@ -712,6 +728,10 @@
 				<right>0</right>
 				<height>500</height>
 				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
+				<!-- a series opens its own information screen, a view on the show's node
+				     (View_58_Info). Named explicitly because Kodi remembers one view per
+				     content type and the seasons strip claims 56 as soon as it is used -->
+				<onclick condition="String.IsEqual(ListItem.DBType,tvshow)">Container.SetViewMode(58)</onclick>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>

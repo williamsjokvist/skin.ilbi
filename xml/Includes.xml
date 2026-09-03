@@ -8,6 +8,7 @@
 	<include file="Includes_DialogSelect.xml"/>
 	<include file="Includes_PVR.xml"/>
 	<include file="Includes_TVShow.xml"/>
+	<include file="Includes_InfoScreen.xml"/>
 	<include file="View_50_List.xml"/>
 	<include file="View_51_Poster.xml"/>
 	<include file="View_52_IconWall.xml"/>
@@ -16,6 +17,7 @@
 	<include file="View_55_WideList.xml"/>
 	<include file="View_56_Seasons.xml"/>
 	<include file="View_57_Episodes.xml"/>
+	<include file="View_58_Info.xml"/>
 	<include file="View_503_NowPlaying.xml"/>
 	<include file="View_500_Wall.xml"/>
 	<include file="View_501_Banner.xml"/>
@@ -39,6 +41,32 @@
 	<constant name="list_top_offset">100</constant>
 	<constant name="list_item_height">75</constant>
 	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-image.xml)</expression>
+	<!-- The same dialogs as infodialog_active, but asked with Window.IsVisible instead of
+	     Window.IsActive. The two differ over a dialog that has started its close animation but has
+	     not finished it: IsActive is already false there, IsVisible is still true. So a window keyed
+	     on infodialog_active starts coming back while the dialog is still fading out on top of it,
+	     and one keyed on this holds still until the dialog has gone -->
+	<expression name="infodialog_onscreen">Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsVisible(movieinformation) | Window.IsVisible(addoninformation) | Window.IsVisible(pvrguideinfo) | Window.IsVisible(pvrrecordinginfo) | Window.IsVisible(pictureinfo) | Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-image.xml)</expression>
+	<!-- The item types whose information dialog shares its chrome with MyVideoNav: browsing a
+	     series lands on the seasons screen, and info on a season or an episode card comes back off
+	     one. For these the dialog must not slide, and the window keeps its own copy of the backdrop
+	     and header standing underneath - see tvshow_screen_visible -->
+	<expression name="info_shares_tvshow_chrome">String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)</expression>
+	<!-- When MyVideoNav draws the shared series chrome (Includes_TVShow.xml). The three screens of
+	     the series flow - the information screen (58) and the two strips (56, 57) - plus whenever
+	     the information dialog is up over a series, a season or an episode anywhere in the window. The dialog draws the same backdrop and header from the same include
+	     (Includes_InfoScreen.xml), so having the window hold its own copy underneath for the whole
+	     flow is what makes browsing out of the dialog free - the chrome is already standing, at the
+	     same coordinates, reading art that resolves to the same textures, so the container swap
+	     moves nothing.
+
+	     Keyed on infodialog_active, which goes false the moment the dialog starts closing, so the
+	     two exits differ the way they should: browsing leaves the first term true (the container is
+	     already the seasons node) and the chrome stays, while a plain back drops it in step with the
+	     dialog, uncovering the list in one movement instead of two.
+
+	     MyVideoNav only - the control ids are that window's views -->
+	<expression name="tvshow_screen_visible">Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | [$EXP[infodialog_active] + $EXP[info_shares_tvshow_chrome]]</expression>
 	<!-- Kodi skips the seasons screen for a series with a single season, and marks the episode
 	     listing it lands on with season id -2 (GUIWindowVideoNav::GetDirectory, gated on the
 	     videolibrary.flattentvshows setting). Nothing was stepped over, so there is no parent
